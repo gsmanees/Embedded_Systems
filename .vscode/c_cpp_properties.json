@@ -10,7 +10,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "cl.exe",
+            "compilerPath": "C:/MinGW/bin/gcc.exe",
             "intelliSenseMode": "windows-msvc-x64"
         }
     ],
