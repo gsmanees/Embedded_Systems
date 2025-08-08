@@ -20,12 +20,16 @@ int main()
     printf("Enter Secod number: ");
     scanf("%d", &b);
 
+    // priting addresses of variables
+    printf("\nAddress of a =%p", &a);
+    printf("\nAddress of b is %p", &b);
+
     //function calling and return value printing
     printf("\n\nCalculation outputs\n");
     printf("Sum of the numbers: %d\n", sum(a,b));
     printf("Difference of the numbers: %d\n", sub(a,b));
     printf("Product of the two numbers: %d\n", mul(a,b));
-    printf("Division result: %f\n\n\n", div(a,b));
+    printf("Division result: %.2f\n\n\n", div(a,b));
 
     return 0;
 }
