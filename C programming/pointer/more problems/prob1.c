@@ -7,7 +7,9 @@ int main(){
     int *p=&a;
     int *arr_ptr = arr;
 
-    printf("\np = %p", p);
+    printf("a = 46");
+    printf("\narr = [1 42 32 43 51]");
+    printf("\n\np = %p", p);
     printf("\n&a = %p", &a);
     printf("\n*p = %d", *p);
     printf("\narr = %p", arr); // array first element address printing

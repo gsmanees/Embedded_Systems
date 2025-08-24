@@ -1,0 +1,62 @@
+Dynamic memory allocation
+What is dynamic memory allocation? 
+Memory is allocated at runtime, we can allocate memory according to the user need
+Dynamically allocated memory comes from the heap
+we can access dynamically allocated memory using pointers
+The <stdlib.h> library provides four functions for dynamic memory allocation in C
+--------------------------
+malloc() — Allocates specified number of bytes and returns a pointer to the first byte. 
+The allocated memory is uninitialized.
+the two conditions for malloc are memory allocation successful or not, make free after use 
+Allocates a single block of memory of a specified size (in bytes). Memory is not initialized.
+Syntax: 
+ptr = (cast_type*) malloc(size_in_bytes);
+int *arr = (int*) malloc(5 * sizeof(int));
+--------------------
+
+calloc() — Allocates memory for an array of elements, initializes all bytes to zero, 
+and returns a pointer.Allocates multiple blocks of memory and initializes all bytes to zero.
+Syntax: 
+ptr = (cast_type*) calloc(num_elements, size_of_each_element);
+int *arr = (int*) calloc(5, sizeof(int));
+--------------------------
+
+realloc() — Changes the size of previously allocated memory block.
+Syntax:
+ptr = realloc(ptr, new_size_in_bytes);
+arr = (int*) realloc(arr, 10 * sizeof(int));
+-----------------------------------
+
+free() — Frees memory previously allocated (to prevent memory leaks).
+
+int *arr = (int*)malloc(5 * sizeof(int)); // allocates space for 5 integers
+if (arr == NULL) { /* handle allocation failure */ }
+// ... use arr as an array ...
+free(arr); // release memory when done
+
+
+-------------------------
+What is a void pointer ?
+A void * (void pointer) is a special type of pointer that can point to any data type.
+It is often used for generic data handling.
+void *ptr;
+int a = 10;
+ptr = &a; // ptr can point to int, float, char, etc.
+------------------------------------------------------
+What is a dangling pointer ?
+A dangling pointer is a pointer that points to memory that has been freed or is out of scope.
+Using a dangling pointer leads to undefined behavior.
+int *ptr = malloc(sizeof(int));
+free(ptr); // ptr is now dangling// *ptr here is dangerous!
+------------------------------------------------------------
+What is a wild pointer ?
+A wild pointer is an uninitialized pointer.
+It points to some arbitrary location and using it can cause unpredictable results.
+int *ptr; // Not initialized, wild pointer*ptr = 5; // Dangerous!
+--------------------------------------------------------------
+Summary:
+Void pointer: Generic pointer, can point to any type.
+Dangling pointer: Points to memory that is no longer valid.
+Wild pointer: Uninitialized pointer, points to unknown memory.
+-----------------------------------------------------------------
+
