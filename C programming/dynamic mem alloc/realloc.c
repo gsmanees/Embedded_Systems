@@ -25,7 +25,7 @@ int main(){
     }
 
     // printing elements 
-    printf("You enered: \n");
+    printf("You entered: \n");
     for (i=0; i<n; i++){
         printf("%d ", *(ptr+i));
 
