@@ -1,4 +1,7 @@
+
 #include<stdio.h>
+
+// this program swaps two numbers without using a third variable temp
 
 int main(){
     int a,b;
@@ -16,3 +19,6 @@ int main(){
 
     return 0;
 }
+
+
+

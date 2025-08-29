@@ -1,9 +1,9 @@
 #include<stdio.h>
-// set bit
+// clear bit
 // this program takes inputs number from user and prints its binary value
-// then asks user which bit needs to be set? 
-// the setting that particular bit to 1
-// to set a bit, we need to use bitwise OR operator 
+// then asks user which bit needs to be clear? 
+// the clearing that particular bit to 0
+// to clear a bit, we need to use bitwise AND operator with 0
 
 void printBin(int x){
     int i;
@@ -17,12 +17,12 @@ void printBin(int x){
     }
 }
 
-void setBit(int a, int b){
+void clearBit(int a, int b){
 
-    int set=0;
-    set=1<<(b-1);
-    a = a | set;
-    printf("Value after setting %d th position (%d th bit) \n", b, b-1);
+    int clr=0;
+    clr=~ (1<<(b-1));
+    a = a & clr;
+    printf("Value after clearing %d th bit (%d th position) \n", b, b-1);
     printBin(a);
 
 }
@@ -35,8 +35,8 @@ int main(){
     printf("\nThe binary numnber for %d is\n", n);
     printBin(n);
     
-    printf("\nInput which bit needs to be set?\n");
+    printf("\nInput which bit needs to be clear?\n");
     scanf("%d", &k);
-    setBit(n, k);
+    clearBit(n, k);
 
 }
