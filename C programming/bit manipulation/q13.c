@@ -1,4 +1,8 @@
-/*Convert Uppercase to LowerCase
+/*
+This code is written by Anees Kokadan
+
+Program to Convert Uppercase to LowerCase and vice versa 
+
 ASCII in Binary
 'A' = 65 = 0100 0001 (binary)
 'a' = 97 = 0110 0001 (binary)
@@ -18,17 +22,16 @@ lowercase → uppercase = clear the 5th bit.
 
 #include<stdio.h>
 
-
-// function to convert upperCase to lowerCase
+// function to convert upperCase to LowerCase
 void toLowerCase(char ch){
     int mask=0;
     mask=(1<<5);
-
     ch = ch | mask;
     printf("The lowerCase is is: %c", ch);
     
 }
 
+// Function to convert LowerCase to UpperCase
 void toUpperCase(char ch){
     int mask=0;
     mask=(1<<5);
