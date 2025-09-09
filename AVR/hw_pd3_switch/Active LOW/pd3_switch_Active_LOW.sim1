@@ -1,0 +1,23 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Switch" CircId="Switch-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-80,-72" rotation="0" hflip="-1" vflip="1" label="Switch-1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-52,-24" rotation="0" hflip="1" vflip="1" label="Ground-2" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="mega328-3" mainComp="false" Show_id="true" Show_Val="false" Pos="-164,-120" rotation="0" hflip="1" vflip="1" label="mega328-3" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../../../EmbeddedSystemsProjectsEntri/AVR/hw_pd3_switch/Active LOW/pd3_switch_ActiveLOW/pd3_switch_ActiveLOW/Debug/pd3_switch_ActiveLOW.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Ground" CircId="Ground-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-224,-12" rotation="0" hflip="1" vflip="1" label="Ground-4" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Led" CircId="Led-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-224,-60" rotation="90" hflip="1" vflip="1" label="Led-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="TextComponent" CircId="TextComponent-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-200,-184" rotation="0" hflip="1" vflip="1" label="TextComponent-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="ACTIVE LOW&#xa;(INTERNAL PULL UP USED)" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Switch-1-pinP0" endpinid="Ground-2-Gnd" pointList="-64,-72,-52,-72,-52,-40" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Led-5-rPin" endpinid="Ground-4-Gnd" pointList="-224,-44,-224,-28" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="mega328-3-PORTD3" endpinid="Led-5-lPin" pointList="-172,-80,-224,-80,-224,-76" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="mega328-3-PORTC0" endpinid="Switch-1-switch0pinN" pointList="-124,-72,-96,-72" />
+
+</circuit>
