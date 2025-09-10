@@ -12,7 +12,7 @@
 
 <item itemtype="Ground" CircId="Ground-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-144,36" rotation="0" hflip="1" vflip="1" label="Ground-6" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
-<item itemtype="TextComponent" CircId="TextComponent-8" mainComp="false" Show_id="false" Show_Val="false" Pos="-60,-108" rotation="0" hflip="1" vflip="1" label="TextComponent-8" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="OR LOGIC" />
+<item itemtype="TextComponent" CircId="TextComponent-8" mainComp="false" Show_id="false" Show_Val="false" Pos="-40,-108" rotation="0" hflip="1" vflip="1" label="TextComponent-8" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="OR LOGIC" />
 
 <item itemtype="Node" CircId="Node-7" mainComp="false" Pos="-144,-12" />
 
