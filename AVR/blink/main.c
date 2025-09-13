@@ -20,7 +20,7 @@ int main(void)
 			PORTB=0b00100000;
 			_delay_ms(1000);
 			PORTB=0b0000000;
-			_delay_ms(1000);
+			_delay_ms(50);
 			
 
     }

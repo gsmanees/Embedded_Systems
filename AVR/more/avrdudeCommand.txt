@@ -1,0 +1,10 @@
+avrdude -v -patmega328p -c arduino -P COM10 -b 115200 -D -U flash:w:"C:\EmbeddedSystemsProjectsEntri\AVR\twoLEDs_blink_breadboard\twoLEDs_blink_breadboard\Debug\twoLEDs_blink_breadboard.hex":i
+
+🔹 avrdude → AVR Downloader/UploaDEr tool
+🔹 -v → Verbose mode (detailed output)
+🔹 -p atmega328p → Target microcontroller (Arduino Uno’s MCU)
+🔹 -c arduino → Programmer type (Arduino bootloader protocol)
+🔹 -P COM10 → Communication port (Arduino connected on COM10)
+🔹 -b 115200 → Baud rate (115200 bps for Uno bootloader)
+🔹 -D → Don’t erase flash before writing (faster uploads)
+🔹 -U flash:w:<file.hex>:i → Write compiled program (.hex file) into flash memory in Intel Hex format
