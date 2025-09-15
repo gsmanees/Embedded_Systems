@@ -1,0 +1,510 @@
+
+decimalToBinary_LED.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000302  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000002ae  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000302  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000334  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000020  00000000  00000000  00000374  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000067c  00000000  00000000  00000394  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000005f8  00000000  00000000  00000a10  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003f7  00000000  00000000  00001008  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000024  00000000  00000000  00001400  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000036a  00000000  00000000  00001424  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000010  00000000  00000000  0000178e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 40 00 	call	0x80	; 0x80 <main>
+  78:	0c 94 55 01 	jmp	0x2aa	; 0x2aa <_exit>
+
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000080 <main>:
+
+
+int main(void)
+{
+	
+    DDRC|=(1<<DDC0);
+  80:	87 b1       	in	r24, 0x07	; 7
+  82:	81 60       	ori	r24, 0x01	; 1
+  84:	87 b9       	out	0x07, r24	; 7
+	DDRC|=(1<<DDC1);
+  86:	87 b1       	in	r24, 0x07	; 7
+  88:	82 60       	ori	r24, 0x02	; 2
+  8a:	87 b9       	out	0x07, r24	; 7
+	DDRC|=(1<<DDC2);
+  8c:	87 b1       	in	r24, 0x07	; 7
+  8e:	84 60       	ori	r24, 0x04	; 4
+  90:	87 b9       	out	0x07, r24	; 7
+	DDRC|=(1<<DDC3);
+  92:	87 b1       	in	r24, 0x07	; 7
+  94:	88 60       	ori	r24, 0x08	; 8
+  96:	87 b9       	out	0x07, r24	; 7
+	
+	DDRC&=~(1<<DDC6);
+  98:	87 b1       	in	r24, 0x07	; 7
+  9a:	8f 7b       	andi	r24, 0xBF	; 191
+  9c:	87 b9       	out	0x07, r24	; 7
+	PORTC|=(1<<PORTC6);
+  9e:	88 b1       	in	r24, 0x08	; 8
+  a0:	80 64       	ori	r24, 0x40	; 64
+  a2:	88 b9       	out	0x08, r24	; 8
+	
+	DDRD&=~(1<<DDD0);
+  a4:	8a b1       	in	r24, 0x0a	; 10
+  a6:	8e 7f       	andi	r24, 0xFE	; 254
+  a8:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD0);
+  aa:	8b b1       	in	r24, 0x0b	; 11
+  ac:	81 60       	ori	r24, 0x01	; 1
+  ae:	8b b9       	out	0x0b, r24	; 11
+	DDRD&=~(1<<DDD1);
+  b0:	8a b1       	in	r24, 0x0a	; 10
+  b2:	8d 7f       	andi	r24, 0xFD	; 253
+  b4:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD1);
+  b6:	8b b1       	in	r24, 0x0b	; 11
+  b8:	82 60       	ori	r24, 0x02	; 2
+  ba:	8b b9       	out	0x0b, r24	; 11
+	DDRD&=~(1<<DDD2);
+  bc:	8a b1       	in	r24, 0x0a	; 10
+  be:	8b 7f       	andi	r24, 0xFB	; 251
+  c0:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD2);
+  c2:	8b b1       	in	r24, 0x0b	; 11
+  c4:	84 60       	ori	r24, 0x04	; 4
+  c6:	8b b9       	out	0x0b, r24	; 11
+	DDRD&=~(1<<DDD3);
+  c8:	8a b1       	in	r24, 0x0a	; 10
+  ca:	87 7f       	andi	r24, 0xF7	; 247
+  cc:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD3);
+  ce:	8b b1       	in	r24, 0x0b	; 11
+  d0:	88 60       	ori	r24, 0x08	; 8
+  d2:	8b b9       	out	0x0b, r24	; 11
+	DDRD&=~(1<<DDD4);
+  d4:	8a b1       	in	r24, 0x0a	; 10
+  d6:	8f 7e       	andi	r24, 0xEF	; 239
+  d8:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD4);
+  da:	8b b1       	in	r24, 0x0b	; 11
+  dc:	80 61       	ori	r24, 0x10	; 16
+  de:	8b b9       	out	0x0b, r24	; 11
+	
+	DDRB&=~(1<<DDB6);
+  e0:	84 b1       	in	r24, 0x04	; 4
+  e2:	8f 7b       	andi	r24, 0xBF	; 191
+  e4:	84 b9       	out	0x04, r24	; 4
+	PORTB|=(1<<PORTB6);
+  e6:	85 b1       	in	r24, 0x05	; 5
+  e8:	80 64       	ori	r24, 0x40	; 64
+  ea:	85 b9       	out	0x05, r24	; 5
+	DDRB&=~(1<<DDB7);
+  ec:	84 b1       	in	r24, 0x04	; 4
+  ee:	8f 77       	andi	r24, 0x7F	; 127
+  f0:	84 b9       	out	0x04, r24	; 4
+	PORTB|=(1<<PORTB7);
+  f2:	85 b1       	in	r24, 0x05	; 5
+  f4:	80 68       	ori	r24, 0x80	; 128
+  f6:	85 b9       	out	0x05, r24	; 5
+	
+	DDRD&=~(1<<DDD5);
+  f8:	8a b1       	in	r24, 0x0a	; 10
+  fa:	8f 7d       	andi	r24, 0xDF	; 223
+  fc:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD5);
+  fe:	8b b1       	in	r24, 0x0b	; 11
+ 100:	80 62       	ori	r24, 0x20	; 32
+ 102:	8b b9       	out	0x0b, r24	; 11
+	DDRD&=~(1<<DDD6);
+ 104:	8a b1       	in	r24, 0x0a	; 10
+ 106:	8f 7b       	andi	r24, 0xBF	; 191
+ 108:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD6);
+ 10a:	8b b1       	in	r24, 0x0b	; 11
+ 10c:	80 64       	ori	r24, 0x40	; 64
+ 10e:	8b b9       	out	0x0b, r24	; 11
+	DDRD&=~(1<<DDD7);
+ 110:	8a b1       	in	r24, 0x0a	; 10
+ 112:	8f 77       	andi	r24, 0x7F	; 127
+ 114:	8a b9       	out	0x0a, r24	; 10
+	PORTD|=(1<<PORTD7);
+ 116:	8b b1       	in	r24, 0x0b	; 11
+ 118:	80 68       	ori	r24, 0x80	; 128
+ 11a:	8b b9       	out	0x0b, r24	; 11
+	
+	DDRB&=~(1<<DDB0);
+ 11c:	84 b1       	in	r24, 0x04	; 4
+ 11e:	8e 7f       	andi	r24, 0xFE	; 254
+ 120:	84 b9       	out	0x04, r24	; 4
+	PORTB|=(1<<PORTB0);
+ 122:	85 b1       	in	r24, 0x05	; 5
+ 124:	81 60       	ori	r24, 0x01	; 1
+ 126:	85 b9       	out	0x05, r24	; 5
+	
+    while (1) 
+    {
+			
+		
+		if ((PINC & (1<<PINC6))==0)
+ 128:	36 99       	sbic	0x06, 6	; 6
+ 12a:	0d c0       	rjmp	.+26     	; 0x146 <main+0xc6>
+		{
+			
+			PORTC&=~(1<<PORTC0);
+ 12c:	88 b1       	in	r24, 0x08	; 8
+ 12e:	8e 7f       	andi	r24, 0xFE	; 254
+ 130:	88 b9       	out	0x08, r24	; 8
+			PORTC&=~(1<<PORTC1);
+ 132:	88 b1       	in	r24, 0x08	; 8
+ 134:	8d 7f       	andi	r24, 0xFD	; 253
+ 136:	88 b9       	out	0x08, r24	; 8
+			PORTC&=~(1<<PORTC2);
+ 138:	88 b1       	in	r24, 0x08	; 8
+ 13a:	8b 7f       	andi	r24, 0xFB	; 251
+ 13c:	88 b9       	out	0x08, r24	; 8
+			PORTC&=~(1<<PORTC3);
+ 13e:	88 b1       	in	r24, 0x08	; 8
+ 140:	87 7f       	andi	r24, 0xF7	; 247
+ 142:	88 b9       	out	0x08, r24	; 8
+ 144:	f1 cf       	rjmp	.-30     	; 0x128 <main+0xa8>
+			
+			
+		}
+		else if ((PIND&(1<<PIND0))==0)
+ 146:	48 99       	sbic	0x09, 0	; 9
+ 148:	0d c0       	rjmp	.+26     	; 0x164 <main+0xe4>
+		{
+			
+			PORTC&=~(1<<PORTC0);
+ 14a:	88 b1       	in	r24, 0x08	; 8
+ 14c:	8e 7f       	andi	r24, 0xFE	; 254
+ 14e:	88 b9       	out	0x08, r24	; 8
+			PORTC&=~(1<<PORTC1);
+ 150:	88 b1       	in	r24, 0x08	; 8
+ 152:	8d 7f       	andi	r24, 0xFD	; 253
+ 154:	88 b9       	out	0x08, r24	; 8
+			PORTC&=~(1<<PORTC2);
+ 156:	88 b1       	in	r24, 0x08	; 8
+ 158:	8b 7f       	andi	r24, 0xFB	; 251
+ 15a:	88 b9       	out	0x08, r24	; 8
+			PORTC|=(1<<PORTC3);
+ 15c:	88 b1       	in	r24, 0x08	; 8
+ 15e:	88 60       	ori	r24, 0x08	; 8
+ 160:	88 b9       	out	0x08, r24	; 8
+ 162:	e2 cf       	rjmp	.-60     	; 0x128 <main+0xa8>
+		}
+		else if ((PIND&(1<<PIND1))==0)
+ 164:	49 99       	sbic	0x09, 1	; 9
+ 166:	0d c0       	rjmp	.+26     	; 0x182 <main+0x102>
+		{
+			
+			PORTC&=~(1<<PORTC0);
+ 168:	88 b1       	in	r24, 0x08	; 8
+ 16a:	8e 7f       	andi	r24, 0xFE	; 254
+ 16c:	88 b9       	out	0x08, r24	; 8
+			PORTC&=~(1<<PORTC1);
+ 16e:	88 b1       	in	r24, 0x08	; 8
+ 170:	8d 7f       	andi	r24, 0xFD	; 253
+ 172:	88 b9       	out	0x08, r24	; 8
+			PORTC|=(1<<PORTC2);
+ 174:	88 b1       	in	r24, 0x08	; 8
+ 176:	84 60       	ori	r24, 0x04	; 4
+ 178:	88 b9       	out	0x08, r24	; 8
+			PORTC&=~(1<<PORTC3);
+ 17a:	88 b1       	in	r24, 0x08	; 8
+ 17c:	87 7f       	andi	r24, 0xF7	; 247
+ 17e:	88 b9       	out	0x08, r24	; 8
+ 180:	d3 cf       	rjmp	.-90     	; 0x128 <main+0xa8>
+		}
+		
+			else if ((PIND&(1<<PIND2))==0)
+ 182:	4a 99       	sbic	0x09, 2	; 9
+ 184:	0d c0       	rjmp	.+26     	; 0x1a0 <main+0x120>
+			{
+				
+				PORTC&=~(1<<PORTC0);
+ 186:	88 b1       	in	r24, 0x08	; 8
+ 188:	8e 7f       	andi	r24, 0xFE	; 254
+ 18a:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC1);
+ 18c:	88 b1       	in	r24, 0x08	; 8
+ 18e:	8d 7f       	andi	r24, 0xFD	; 253
+ 190:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC2);
+ 192:	88 b1       	in	r24, 0x08	; 8
+ 194:	84 60       	ori	r24, 0x04	; 4
+ 196:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC3);
+ 198:	88 b1       	in	r24, 0x08	; 8
+ 19a:	88 60       	ori	r24, 0x08	; 8
+ 19c:	88 b9       	out	0x08, r24	; 8
+ 19e:	c4 cf       	rjmp	.-120    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PIND&(1<<PIND3))==0)
+ 1a0:	4b 99       	sbic	0x09, 3	; 9
+ 1a2:	0d c0       	rjmp	.+26     	; 0x1be <main+0x13e>
+			{
+				
+				PORTC&=~(1<<PORTC0);
+ 1a4:	88 b1       	in	r24, 0x08	; 8
+ 1a6:	8e 7f       	andi	r24, 0xFE	; 254
+ 1a8:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC1);
+ 1aa:	88 b1       	in	r24, 0x08	; 8
+ 1ac:	82 60       	ori	r24, 0x02	; 2
+ 1ae:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC2);
+ 1b0:	88 b1       	in	r24, 0x08	; 8
+ 1b2:	8b 7f       	andi	r24, 0xFB	; 251
+ 1b4:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC3);
+ 1b6:	88 b1       	in	r24, 0x08	; 8
+ 1b8:	87 7f       	andi	r24, 0xF7	; 247
+ 1ba:	88 b9       	out	0x08, r24	; 8
+ 1bc:	b5 cf       	rjmp	.-150    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PIND&(1<<PIND4))==0)
+ 1be:	4c 99       	sbic	0x09, 4	; 9
+ 1c0:	0d c0       	rjmp	.+26     	; 0x1dc <main+0x15c>
+			{
+				PORTC&=~(1<<PORTC0);
+ 1c2:	88 b1       	in	r24, 0x08	; 8
+ 1c4:	8e 7f       	andi	r24, 0xFE	; 254
+ 1c6:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC1);
+ 1c8:	88 b1       	in	r24, 0x08	; 8
+ 1ca:	82 60       	ori	r24, 0x02	; 2
+ 1cc:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC2);
+ 1ce:	88 b1       	in	r24, 0x08	; 8
+ 1d0:	8b 7f       	andi	r24, 0xFB	; 251
+ 1d2:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC3);
+ 1d4:	88 b1       	in	r24, 0x08	; 8
+ 1d6:	88 60       	ori	r24, 0x08	; 8
+ 1d8:	88 b9       	out	0x08, r24	; 8
+ 1da:	a6 cf       	rjmp	.-180    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PINB&(1<<PINB6))==0)
+ 1dc:	1e 99       	sbic	0x03, 6	; 3
+ 1de:	0d c0       	rjmp	.+26     	; 0x1fa <main+0x17a>
+			{
+				
+				PORTC&=~(1<<PORTC0);
+ 1e0:	88 b1       	in	r24, 0x08	; 8
+ 1e2:	8e 7f       	andi	r24, 0xFE	; 254
+ 1e4:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC1);
+ 1e6:	88 b1       	in	r24, 0x08	; 8
+ 1e8:	82 60       	ori	r24, 0x02	; 2
+ 1ea:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC2);
+ 1ec:	88 b1       	in	r24, 0x08	; 8
+ 1ee:	84 60       	ori	r24, 0x04	; 4
+ 1f0:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC3);
+ 1f2:	88 b1       	in	r24, 0x08	; 8
+ 1f4:	87 7f       	andi	r24, 0xF7	; 247
+ 1f6:	88 b9       	out	0x08, r24	; 8
+ 1f8:	97 cf       	rjmp	.-210    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PINB&(1<<PINB7))==0)
+ 1fa:	1f 99       	sbic	0x03, 7	; 3
+ 1fc:	0d c0       	rjmp	.+26     	; 0x218 <main+0x198>
+			{
+				
+				PORTC&=~(1<<PORTC0);
+ 1fe:	88 b1       	in	r24, 0x08	; 8
+ 200:	8e 7f       	andi	r24, 0xFE	; 254
+ 202:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC1);
+ 204:	88 b1       	in	r24, 0x08	; 8
+ 206:	82 60       	ori	r24, 0x02	; 2
+ 208:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC2);
+ 20a:	88 b1       	in	r24, 0x08	; 8
+ 20c:	84 60       	ori	r24, 0x04	; 4
+ 20e:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC3);
+ 210:	88 b1       	in	r24, 0x08	; 8
+ 212:	88 60       	ori	r24, 0x08	; 8
+ 214:	88 b9       	out	0x08, r24	; 8
+ 216:	88 cf       	rjmp	.-240    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PIND&(1<<PIND5))==0)
+ 218:	4d 99       	sbic	0x09, 5	; 9
+ 21a:	0d c0       	rjmp	.+26     	; 0x236 <main+0x1b6>
+			{
+				
+				PORTC|=(1<<PORTC0);
+ 21c:	88 b1       	in	r24, 0x08	; 8
+ 21e:	81 60       	ori	r24, 0x01	; 1
+ 220:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC1);
+ 222:	88 b1       	in	r24, 0x08	; 8
+ 224:	8d 7f       	andi	r24, 0xFD	; 253
+ 226:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC2);
+ 228:	88 b1       	in	r24, 0x08	; 8
+ 22a:	8b 7f       	andi	r24, 0xFB	; 251
+ 22c:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC3);
+ 22e:	88 b1       	in	r24, 0x08	; 8
+ 230:	87 7f       	andi	r24, 0xF7	; 247
+ 232:	88 b9       	out	0x08, r24	; 8
+ 234:	79 cf       	rjmp	.-270    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PIND&(1<<PIND6))==0)
+ 236:	4e 99       	sbic	0x09, 6	; 9
+ 238:	0d c0       	rjmp	.+26     	; 0x254 <main+0x1d4>
+			{
+				
+				PORTC|=(1<<PORTC0);
+ 23a:	88 b1       	in	r24, 0x08	; 8
+ 23c:	81 60       	ori	r24, 0x01	; 1
+ 23e:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC1);
+ 240:	88 b1       	in	r24, 0x08	; 8
+ 242:	8d 7f       	andi	r24, 0xFD	; 253
+ 244:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC2);
+ 246:	88 b1       	in	r24, 0x08	; 8
+ 248:	8b 7f       	andi	r24, 0xFB	; 251
+ 24a:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC3);
+ 24c:	88 b1       	in	r24, 0x08	; 8
+ 24e:	88 60       	ori	r24, 0x08	; 8
+ 250:	88 b9       	out	0x08, r24	; 8
+ 252:	6a cf       	rjmp	.-300    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PIND&(1<<PIND7))==0)
+ 254:	4f 99       	sbic	0x09, 7	; 9
+ 256:	0d c0       	rjmp	.+26     	; 0x272 <main+0x1f2>
+			{
+				
+				PORTC|=(1<<PORTC0);
+ 258:	88 b1       	in	r24, 0x08	; 8
+ 25a:	81 60       	ori	r24, 0x01	; 1
+ 25c:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC1);
+ 25e:	88 b1       	in	r24, 0x08	; 8
+ 260:	8d 7f       	andi	r24, 0xFD	; 253
+ 262:	88 b9       	out	0x08, r24	; 8
+				PORTC|=(1<<PORTC2);
+ 264:	88 b1       	in	r24, 0x08	; 8
+ 266:	84 60       	ori	r24, 0x04	; 4
+ 268:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC3);
+ 26a:	88 b1       	in	r24, 0x08	; 8
+ 26c:	87 7f       	andi	r24, 0xF7	; 247
+ 26e:	88 b9       	out	0x08, r24	; 8
+ 270:	5b cf       	rjmp	.-330    	; 0x128 <main+0xa8>
+			}
+			
+			else if ((PINB&(1<<PINB0))==0)
+ 272:	18 99       	sbic	0x03, 0	; 3
+ 274:	0d c0       	rjmp	.+26     	; 0x290 <main+0x210>
+			{
+				PORTC&=~(1<<PORTC0);
+ 276:	88 b1       	in	r24, 0x08	; 8
+ 278:	8e 7f       	andi	r24, 0xFE	; 254
+ 27a:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC1);
+ 27c:	88 b1       	in	r24, 0x08	; 8
+ 27e:	8d 7f       	andi	r24, 0xFD	; 253
+ 280:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC2);
+ 282:	88 b1       	in	r24, 0x08	; 8
+ 284:	8b 7f       	andi	r24, 0xFB	; 251
+ 286:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC3);
+ 288:	88 b1       	in	r24, 0x08	; 8
+ 28a:	87 7f       	andi	r24, 0xF7	; 247
+ 28c:	88 b9       	out	0x08, r24	; 8
+ 28e:	4c cf       	rjmp	.-360    	; 0x128 <main+0xa8>
+			}
+			
+			else
+			{	
+				PORTC&=~(1<<PORTC0);
+ 290:	88 b1       	in	r24, 0x08	; 8
+ 292:	8e 7f       	andi	r24, 0xFE	; 254
+ 294:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC1);
+ 296:	88 b1       	in	r24, 0x08	; 8
+ 298:	8d 7f       	andi	r24, 0xFD	; 253
+ 29a:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC2);
+ 29c:	88 b1       	in	r24, 0x08	; 8
+ 29e:	8b 7f       	andi	r24, 0xFB	; 251
+ 2a0:	88 b9       	out	0x08, r24	; 8
+				PORTC&=~(1<<PORTC3);
+ 2a2:	88 b1       	in	r24, 0x08	; 8
+ 2a4:	87 7f       	andi	r24, 0xF7	; 247
+ 2a6:	88 b9       	out	0x08, r24	; 8
+ 2a8:	3f cf       	rjmp	.-386    	; 0x128 <main+0xa8>
+
+000002aa <_exit>:
+ 2aa:	f8 94       	cli
+
+000002ac <__stop_program>:
+ 2ac:	ff cf       	rjmp	.-2      	; 0x2ac <__stop_program>
