@@ -133,9 +133,9 @@ void delay_normal()
 	{
 		TCNT0=0;
   b2:	16 bc       	out	0x26, r1	; 38
-		TCCR0A|=(1<<WGM00); // ctc used
+		TCCR0A|=(1<<WGM01); // ctc used
   b4:	84 b5       	in	r24, 0x24	; 36
-  b6:	81 60       	ori	r24, 0x01	; 1
+  b6:	82 60       	ori	r24, 0x02	; 2
   b8:	84 bd       	out	0x24, r24	; 36
 		TCCR0B|=(1<<CS00);
   ba:	85 b5       	in	r24, 0x25	; 37

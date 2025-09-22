@@ -1,0 +1,23 @@
+🔧 Project Idea: Motor Direction & LED Toggle Using AVR Timer0
+
+Hardware:
+
+ATmega328P (or any AVR with Timer0)
+
+2 LEDs (Left, Right)
+
+1 DC motor (H-bridge driver like L293D/L298N or simple transistor-based driver)
+
+1 push button
+
+Logic:
+
+On reset, motor is at center (stopped). Both LEDs OFF.
+
+When button is pressed the first time → rotate motor right, right LED toggles fast.
+
+When button is pressed the second time → rotate motor left, left LED toggles fast.
+
+Each press toggles between right and left direction.
+
+When button is not pressed, motor stops, LEDs stop toggling.

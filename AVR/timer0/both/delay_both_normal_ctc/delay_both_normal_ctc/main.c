@@ -34,7 +34,7 @@ void delay_ctc()
 	for (i=0; i<count; i++)
 	{
 		TCNT0=0;
-		TCCR0A|=(1<<WGM00); // ctc used
+		TCCR0A|=(1<<WGM01); // ctc used
 		TCCR0B|=(1<<CS00);
 		TCCR0B|=(1<<CS02); // prescalar 1024 used
 		TIFR0|=(1<<OCF0A); // flag reset

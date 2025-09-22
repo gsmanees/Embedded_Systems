@@ -1,0 +1,9 @@
+3.  Write a C program to print a pyramid of stars for a given number n.  
+If n = 5, the output should be: 
+    * 
+   *** 
+  ***** 
+ ******* 
+********* 
+ 
+ 
