@@ -1,0 +1,29 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-432,-112" rotation="0" hflip="1" vflip="1" label="mega328-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../../../EmbeddedSystemsProjectsEntri/AVR/more/pwm_motor/pwm_motor/Debug/pwm_motor.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="DcMotor" CircId="DcMotor-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-228,-88" rotation="0" hflip="1" vflip="1" label="DcMotor-3" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Subcircuit" CircId="L293-4" mainComp="false" Show_id="true" Show_Val="false" Pos="-336,-56" rotation="0" hflip="1" vflip="1" label="L293-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" Logic_Symbol="true" />
+
+<item itemtype="Push" CircId="Push-8" mainComp="false" Show_id="false" Show_Val="false" Pos="-488,-96" rotation="0" hflip="1" vflip="1" label="Push-8" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-516,-40" rotation="0" hflip="1" vflip="1" label="Ground-9" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="TextComponent" CircId="TextComponent-10" mainComp="false" Show_id="false" Show_Val="false" Pos="-464,-152" rotation="0" hflip="1" vflip="1" label="TextComponent-10" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="false" Text="PWM based motor speed control system" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="L293-4-1Y" endpinid="DcMotor-3-lPin" pointList="-296,-48,-296,-88,-268,-88" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="DcMotor-3-rPin" endpinid="L293-4-2Y" pointList="-188,-88,-176,-88,-176,-40,-296,-40" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="mega328-2-PORTC0" endpinid="L293-4-2A" pointList="-392,-64,-372,-64,-372,-40,-344,-40" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="L293-4-1A" endpinid="mega328-2-PORTC1" pointList="-344,-48,-364,-48,-364,-72,-392,-72" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="mega328-2-PORTD6" endpinid="L293-4-12EN" pointList="-440,-16,-484,-16,-484,32,-360,32,-360,-32,-344,-32" />
+
+<item itemtype="Connector" uid="Connector-19" startpinid="Ground-9-Gnd" endpinid="Push-8-pinP0" pointList="-516,-56,-516,-96,-504,-96" />
+
+<item itemtype="Connector" uid="Connector-20" startpinid="Push-8-switch0pinN" endpinid="mega328-2-PORTD0" pointList="-472,-96,-440,-96" />
+
+</circuit>
