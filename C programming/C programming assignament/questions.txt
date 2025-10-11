@@ -1,0 +1,15 @@
+C programming assessment
+1. Write a function in C that takes an array of integers and its size, 
+   and returns the second largest element. Constraints: ● Do not sort the array. 
+   ● Assume the array has at least two distinct elements.
+2. You are given an 8-bit register represented as an unsigned char. 
+    Write a function to: ● Set the 3rd bit (bit index 2). ● Clear the 6th bit (bit index 5). 
+    ● Toggle the 1st bit (bit index 0). Return the modified register value. 
+    Note: Use bitwise operators only. Avoid loops or conditionals.
+3. Write a C program to print a pyramid of stars for a given number n. 
+If n = 5, the output should be:
+              *
+            ***
+          *****
+         *******
+       *********
