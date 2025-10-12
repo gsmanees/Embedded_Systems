@@ -13,14 +13,23 @@
 int main(void)
 {
 	lcd_init();
-	lcd_set_cursor(0, 0);
-	lcd_print("Hello LCD");
+	lcd_set_cursor(0, 2);
+	lcd_print("Anees Kokadan");
 
-	lcd_set_cursor(1, 0);
-	lcd_print("It works! ");
+	lcd_set_cursor(1, 6);
+	//lcd_print("3.14");
+	
+	_delay_ms(1000);
+	//lcd_clear();
+	//lcd_set_cursor(0,0);
+	
+	
 
 	// small demo: print a number
-	//lcd_print_uint16(1234);
+	//lcd_print_uint16(1532);
+	lcd_clear();
+	lcd_set_cursor(0,0);
+	lcd_print_float(12.345, 3);
 
 	while (1)
 	{

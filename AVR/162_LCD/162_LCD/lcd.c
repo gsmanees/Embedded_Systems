@@ -144,3 +144,42 @@ void lcd_print_uint16(uint16_t v)
 	}
 	lcd_data('0' + (v % 10));       				// then print the last digit
 }
+
+
+void lcd_print_float(float float_num, uint8_t dec_places)
+{
+	uint16_t int_part = (uint16_t) float_num; // extracts integer part only from the float number 
+	
+	lcd_print_uint16(int_part); // int part printed 
+	// if the user input is 12.345, then now we printed 12
+	lcd_data('.'); // decimal point printed --> now printed 12.
+	
+	// now we need to print the fractional part 
+	/* here i am using this logic:
+	
+	use a loop for detecting fractional number one by one 
+	then multiply them by 10
+	.345 X10 = 3.45
+	then extract the integer part here is is --> 3
+	then print this via uint16 print function we already written now total displayed alue --> 12.3
+	then change value of fractional part like this --> 3.45-3 = .45
+	then repeat this logic until last fractional value reaches 
+	
+	we are not prnting fractional value directly, 
+	instead we are extracting the digits then print it via integer printing function
+	*/
+	
+	float frVal = float_num - int_part;
+	
+	for (uint8_t i=0; i< dec_places; i++)
+	{
+		frVal*=10;
+		uint16_t frToInt = (uint16_t) frVal;
+		lcd_print_uint16(frToInt);
+		frVal -= frToInt;
+	}
+	
+	
+	
+	
+}

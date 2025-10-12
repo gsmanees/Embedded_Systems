@@ -48,7 +48,7 @@ void lcd_clear(void);					// to clear_lcd
 void lcd_home(void);				// to return cursor to origin (row=0. Column =0)
 
 void lcd_print_uint16(uint16_t v);		// to print an integer value
-
+void lcd_print_float(float float_num, uint8_t dec_places);
 
 #endif
 
