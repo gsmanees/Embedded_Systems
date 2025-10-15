@@ -6,7 +6,6 @@ int main(){
     int *p=&a;
     int **q=&p;
 
-
     printf("\nValue of a = %d", a); // address of a
     printf("\nValue of p = %p", p); // address of pointer p
     printf("\nValue of q = %p", q); // address of pointer q
@@ -15,3 +14,8 @@ int main(){
 
     return 0;
 }
+
+
+
+
+

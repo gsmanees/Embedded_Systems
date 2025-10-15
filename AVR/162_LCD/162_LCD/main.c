@@ -29,6 +29,8 @@ int main(void)
 	//lcd_print_uint16(1532);
 	lcd_clear();
 	lcd_set_cursor(0,0);
+	lcd_print("Float: ");
+	lcd_set_cursor(1,0);
 	lcd_print_float(12.345, 3);
 
 	while (1)
