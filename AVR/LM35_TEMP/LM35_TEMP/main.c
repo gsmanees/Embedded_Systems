@@ -32,7 +32,7 @@ int main(void)
 	float temp;
 	uint16_t adc_value;
 	lcd_init();
-	ADC_Init();   // call ADC initialisation function
+	ADC_Init();   // call ADC initialization function
 	while (1)
 	{
 		lcd_clear();

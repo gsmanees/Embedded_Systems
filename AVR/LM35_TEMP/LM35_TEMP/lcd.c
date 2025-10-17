@@ -27,7 +27,7 @@ static void lcd_send_nibble(uint8_t nib)
 	if (nib & 0x8) LCD_D_PORT |= (1<<LCD_D7_PIN);
 	if (nib & 0x4) LCD_D_PORT |= (1<<LCD_D6_PIN);
 	if (nib & 0x2) LCD_D_PORT |= (1<<LCD_D5_PIN);
-	if (nib & 0x1) LCD_D_PORT |= (1<<LCD_D4_PIN);
+	if (nib & 0x1) LCD_D_PORT |= (1<<LCD_D4_PIN); 
 	lcd_enable_pulse();
 }
 
