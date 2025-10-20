@@ -6,7 +6,7 @@
 void printBin(int n){
 
     int i, mask = 0;
-    int count=0;
+    
     for (i=31; i>=0; i--){
         mask = 1<<i;
         if(n & mask)
