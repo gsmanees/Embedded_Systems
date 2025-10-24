@@ -66,7 +66,7 @@ void lcd_data(uint8_t d)
 void lcd_set_cursor(uint8_t row, uint8_t col)		// receives row and column value
 {
 	uint8_t addr = (row ? 0x40 : 0x00) + (col & 0x0F);	// this is a ternary operator.
-	lcd_cmd(0x80 | addr);                                                       // send (80 + addr) as a command.
+	lcd_cmd(0x80 | addr);      // send (80 + addr) as a command. its from data sheet
 }
 
 //This function allows us to print a string
