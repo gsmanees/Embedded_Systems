@@ -62,7 +62,9 @@ int main(void)
 	// ===== Transmit Over UART =====
 	while (1)
 	{
-		UART_TxNumber(temp);
+		UART_TxNumber(msb);
+		_delay_ms(500);
+		//UART_TxNumber(temp);
 		UART_TxChar('\n');
 		_delay_ms(500);
 	}
