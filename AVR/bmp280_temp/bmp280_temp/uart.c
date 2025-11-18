@@ -49,3 +49,26 @@ void UART_TxNumber(uint32_t num)
 	ltoa(num, buffer, 10);   // convert to string (long to ASCII)
 	UART_TxString(buffer);
 }
+
+void UART_TxFloat(float value, uint8_t decimalPlaces)
+{
+	int intPart = (int)value;   // integer part
+	float fraction = value - intPart;
+
+	// send integer part
+	UART_TxNumber(intPart);
+	UART_TxChar('.');
+
+	// convert fraction to positive (for negative numbers)
+	if(fraction < 0)
+	fraction = -fraction;
+
+	// print decimal digits
+	for(uint8_t i = 0; i < decimalPlaces; i++)
+	{
+		fraction *= 10;
+		int digit = (int)fraction;
+		UART_TxChar('0' + digit);
+		fraction -= digit;
+	}
+}

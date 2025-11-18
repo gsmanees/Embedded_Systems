@@ -14,6 +14,11 @@ void getMSB(void);
 void getLSB(void);
 void getxLSB(void);
 void getRawTemp(void);
+void get_dig_T1(void);
+void get_dig_T2(void);
+void get_dig_T3(void);
+void ctrl_meas(void);
+void realTemp(void);
 
 
 

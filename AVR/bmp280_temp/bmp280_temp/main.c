@@ -33,6 +33,12 @@ int main(void)
 		getLSB();
 		getxLSB();
 		getRawTemp();
+		ctrl_meas();
+		get_dig_T1();
+		get_dig_T2();
+		get_dig_T3();
+		realTemp();
+		
 		_delay_ms(1000);
     }
 }
