@@ -11,6 +11,7 @@
 #include <avr/io.h>
 #include "uart.h"
 #include "spi.h"
+#include "lcd.h"
 
 uint32_t MSB;
 uint32_t LSB;
@@ -271,6 +272,14 @@ void realTemp(void)
 	 UART_TxFloat(T, 2);
 	 UART_TxString(" C");
 	 UART_TxString("\r\n");
+	 lcd_clear();
+	 lcd_set_cursor(0,0);
+	 lcd_print("Room Temperature:");
+	 lcd_set_cursor(1,0);
+	 lcd_print_float(T, 2);
+	 lcd_data(0xDF); // for degree symbol
+	 lcd_print("C"); // for C
+	 _delay_ms(500);
 	 
 	
 }

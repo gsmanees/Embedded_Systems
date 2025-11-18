@@ -4,6 +4,8 @@
 
 bmp280.c
 
+lcd.c
+
 main.c
 
 spi.c

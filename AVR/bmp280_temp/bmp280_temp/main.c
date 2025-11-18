@@ -19,12 +19,14 @@
 #include "spi.h" // to communicate with bmp280, SPI protocol
 #include "uart.h" // to print the value on serial monitor, UART protocol
 #include "bmp280.h" // bmp codes are added here
-
+#include "lcd.h"
 
 int main(void)
 {
 	SPI_init();
 	UART_Init();
+	lcd_init();
+	
     
     while (1) 
     {
@@ -38,6 +40,7 @@ int main(void)
 		get_dig_T2();
 		get_dig_T3();
 		realTemp();
+		
 		
 		_delay_ms(1000);
     }
