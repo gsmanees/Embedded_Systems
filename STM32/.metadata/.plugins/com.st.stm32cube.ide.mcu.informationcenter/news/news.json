@@ -1,0 +1,12 @@
+data='[ \
+	{ \
+		"image": "news/Visual-1_eclipse.png", \
+		"link": "", \
+		"caption": "" \
+	}, \
+	{ \
+		"image": "news/Visual-2_GCC13.png", \
+		"link": "", \
+		"caption": "" \
+	} \
+]';

@@ -1,132 +1,35 @@
-20:37:23 **** Build of configuration Debug for project first ****
+21:33:29 **** Incremental Build of configuration Debug for project LED_blink ****
 make -j12 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "first.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\first\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="first.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: first.elf
- 
-arm-none-eabi-size  first.elf 
-arm-none-eabi-objdump -h -S first.elf  > "first.list"
+arm-none-eabi-size  LED_blink.elf 
    text	   data	    bss	    dec	    hex	filename
-   3444	     92	   1900	   5436	   153c	first.elf
+    712	      0	   1568	   2280	    8e8	LED_blink.elf
 Finished building: default.size.stdout
  
-Finished building: first.list
- 
-20:40:47 **** Incremental Build of configuration Debug for project first ****
+21:33:57 **** Incremental Build of configuration Debug for project LED_blink ****
 make -j12 all 
-arm-none-eabi-size  first.elf 
+arm-none-eabi-size  LED_blink.elf 
    text	   data	    bss	    dec	    hex	filename
-   3444	     92	   1900	   5436	   153c	first.elf
+    712	      0	   1568	   2280	    8e8	LED_blink.elf
 Finished building: default.size.stdout
  
-20:48:23 **** Incremental Build of configuration Debug for project first ****
+21:34:42 **** Incremental Build of configuration Debug for project LED_blink ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "first.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\first\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="first.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: first.elf
- 
-arm-none-eabi-size  first.elf 
-arm-none-eabi-objdump -h -S first.elf  > "first.list"
+arm-none-eabi-size  LED_blink.elf 
    text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
+    712	      0	   1568	   2280	    8e8	LED_blink.elf
 Finished building: default.size.stdout
  
-Finished building: first.list
- 
-20:49:40 **** Incremental Build of configuration Debug for project first ****
+21:35:32 **** Incremental Build of configuration Debug for project LED_blink ****
 make -j12 all 
-arm-none-eabi-size  first.elf 
+arm-none-eabi-size  LED_blink.elf 
    text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
+    712	      0	   1568	   2280	    8e8	LED_blink.elf
 Finished building: default.size.stdout
  
-20:52:02 **** Incremental Build of configuration Debug for project first ****
+21:35:54 **** Incremental Build of configuration Debug for project LED_blink ****
 make -j12 all 
-arm-none-eabi-size  first.elf 
+arm-none-eabi-size  LED_blink.elf 
    text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
+    712	      0	   1568	   2280	    8e8	LED_blink.elf
 Finished building: default.size.stdout
- 
-20:52:51 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-size  first.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-20:54:07 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-size  first.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-20:55:09 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-size  first.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-20:57:32 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-size  first.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-21:02:05 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "first.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\first\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="first.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: first.elf
- 
-arm-none-eabi-size  first.elf 
-arm-none-eabi-objdump -h -S first.elf  > "first.list"
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-Finished building: first.list
- 
-21:02:34 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-size  first.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-21:29:46 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-size  first.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-21:30:25 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-size  first.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-22:37:03 **** Incremental Build of configuration Debug for project first ****
-make -j12 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "first.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\first\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="first.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: first.elf
- 
-arm-none-eabi-size  first.elf 
-arm-none-eabi-objdump -h -S first.elf  > "first.list"
-   text	   data	    bss	    dec	    hex	filename
-   3468	     92	   1900	   5460	   1554	first.elf
-Finished building: default.size.stdout
- 
-Finished building: first.list
  
