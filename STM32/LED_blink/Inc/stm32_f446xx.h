@@ -8,6 +8,8 @@
 #ifndef STM32_F446XX_H_
 #define STM32_F446XX_H_
 
+// GPIO base addresses {AHB1 bus}
+
 #define GPIOA_BASEADDR 0X40020000U
 #define GPIOB_BASEADDR 0x40020400U
 #define GPIOC_BASEADDR 0x40020800U
@@ -17,6 +19,7 @@
 #define GPIOG_BASEADDR 0x40021800U
 #define GPIOH_BASEADDR 0x40021C00U
 
+// GPIO Register structure
 
 typedef struct
 {
@@ -33,6 +36,7 @@ typedef struct
 } GPIO_RegDef_t;
 
 
+// GPIO pointers
 
 #define GPIOA   ((GPIO_RegDef_t*)GPIOA_BASEADDR)
 #define GPIOB   ((GPIO_RegDef_t*)GPIOB_BASEADDR)
@@ -47,6 +51,7 @@ typedef struct
 // RCC BASE ADDRESS
 #define RCC_BASEADDR 0X40023800U
 
+// RCC register structure
 
 typedef struct
 {
@@ -86,16 +91,51 @@ typedef struct
     volatile uint32_t DCKCFGR2;      // RCC Dedicated Clocks configuration register 2 (0x94)
 } RCC_RegDef_t;
 
+// RCC pointer
+#define RCC ((RCC_RegDef_t*)RCC_BASEADDR)
+
+// clock enable for GPIO
+#define GPIOA_CLK_EN() (RCC->AHB1ENR)|=(1<<0)
+#define GPIOB_CLK_EN() (RCC->AHB1ENR)|=(1<<1)
+#define GPIOC_CLK_EN() (RCC->AHB1ENR)|=(1<<2)
+#define GPIOD_CLK_EN() (RCC->AHB1ENR)|=(1<<3)
+#define GPIOE_CLK_EN() (RCC->AHB1ENR)|=(1<<4)
+#define GPIOF_CLK_EN() (RCC->AHB1ENR)|=(1<<5)
+#define GPIOG_CLK_EN() (RCC->AHB1ENR)|=(1<<6)
+#define GPIOH_CLK_EN() (RCC->AHB1ENR)|=(1<<7)
 
 
-// clock enable
-#define GPIOA_CLK_EN() (RCC->AHB1ENR)|=(1<<0);
-#define GPIOB_CLK_EN() (RCC->AHB1ENR)|=(1<<1);
-#define GPIOC_CLK_EN() (RCC->AHB1ENR)|=(1<<2);
-#define GPIOD_CLK_EN() (RCC->AHB1ENR)|=(1<<3);
-#define GPIOE_CLK_EN() (RCC->AHB1ENR)|=(1<<4);
-#define GPIOF_CLK_EN() (RCC->AHB1ENR)|=(1<<5);
-#define GPIOG_CLK_EN() (RCC->AHB1ENR)|=(1<<6);
-#define GPIOH_CLK_EN() (RCC->AHB1ENR)|=(1<<7);
+// I2C base addresses
+#define I2C1_BASEADDR 0x40005400U
+#define I2C2_BASEADDR 0x40005800U
+#define I2C3_BASEADDR 0x40005C00U
+
+// I2C Register Structure
+typedef struct
+{
+	volatile uint32_t CR1;
+	volatile uint32_t CR2;
+	volatile uint32_t OAR1;
+	volatile uint32_t OAR2;
+	volatile uint32_t DR;
+	volatile uint32_t SR1;
+	volatile uint32_t SR2;
+	volatile uint32_t CCR;
+	volatile uint32_t TRISE;
+	volatile uint32_t FLTR;
+
+}I2C_RegDef_t;
+
+// I2C Pointers
+#define I2C1 ((I2C_RegDef_t*)I2C1_BASEADDR)
+#define I2C2 ((I2C_RegDef_t*)I2C2_BASEADDR)
+#define I2C3 ((I2C_RegDef_t*)I2C3_BASEADDR)
+
+// I2C peripherals enabling
+#define I2C1_EN() (I2C1->CR1|=(1<<0))
+#define I2C2_EN() (I2C2->CR1|=(1<<0))
+#define I2C3_EN() (I2C3->CR1|=(1<<0))
+
+
 
 #endif /* STM32_F446XX_H_ */
