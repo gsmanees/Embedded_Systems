@@ -236,56 +236,11 @@ typedef struct
 // CAN register structure
 typedef struct
 {
-	volatile uint32_t MCR;
-	volatile uint32_t MSR;
-	volatile uint32_t TSR;
-	volatile uint32_t RF0R;
-	volatile uint32_t RF1R;
-	volatile uint32_t IER;
-	volatile uint32_t ESR;
-	volatile uint32_t BTR;
-	volatile uint32_t TI0R;
-	volatile uint32_t TDT0R;
-	volatile uint32_t TDL0R;
-	volatile uint32_t TDH0R;
-	volatile uint32_t TI1R;
-	volatile uint32_t TDT1R;
-	volatile uint32_t TDL1R;
-	volatile uint32_t TDH1R;
-	volatile uint32_t TI2R;
-	volatile uint32_t TDT2R;
-	volatile uint32_t TDL2R;
-	volatile uint32_t TDH2R;
-	volatile uint32_t RI0R;
-	volatile uint32_t RDT0R;
-	volatile uint32_t RDL0R;
-	volatile uint32_t RDH0R;
-	volatile uint32_t RI1R;
-	volatile uint32_t RDT1R;
-	volatile uint32_t RDL1R;
-	volatile uint32_t RDH1R;
-	volatile uint32_t RESERVED1;
-	volatile uint32_t RESERVED2;
-	volatile uint32_t FS1R;
-	volatile uint32_t RESERVED3;
-	volatile uint32_t FFA1R;
-	volatile uint32_t FA1R;
-	volatile uint32_t F0R1;
-	volatile uint32_t F0R2;
-	volatile uint32_t F1R1;
-	volatile uint32_t F1R2;
-	volatile uint32_t F27R1;
-	volatile uint32_t F27R2;
+
+
 }CAN_RegDef_t;
 
-// CAN Pointer
-#define CAN1 ((CAN_RegDef_t*)CAN1_BASEADDR)
-#define CAN2 ((CAN_RegDef_t*)CAN2_BASEADDR)
 
-// CAN Enable
-
-#define CAN1_EN() (RCC->APB1ENR|=(1<<25))
-#define CAN2_EN() (RCC->APB1ENR|=(1<<26))
 
 
 
