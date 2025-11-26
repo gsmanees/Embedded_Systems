@@ -1,35 +1,24 @@
-21:33:29 **** Incremental Build of configuration Debug for project LED_blink ****
+21:48:50 **** Build of configuration Debug for project LED_button_activeLow ****
 make -j12 all 
-arm-none-eabi-size  LED_blink.elf 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "LED_button_activeLow.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\LED_button_activeLow\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_button_activeLow.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED_button_activeLow.elf
+ 
+arm-none-eabi-size  LED_button_activeLow.elf 
+arm-none-eabi-objdump -h -S LED_button_activeLow.elf  > "LED_button_activeLow.list"
    text	   data	    bss	    dec	    hex	filename
-    712	      0	   1568	   2280	    8e8	LED_blink.elf
+    944	      0	   1568	   2512	    9d0	LED_button_activeLow.elf
 Finished building: default.size.stdout
  
-21:33:57 **** Incremental Build of configuration Debug for project LED_blink ****
-make -j12 all 
-arm-none-eabi-size  LED_blink.elf 
-   text	   data	    bss	    dec	    hex	filename
-    712	      0	   1568	   2280	    8e8	LED_blink.elf
-Finished building: default.size.stdout
+Finished building: LED_button_activeLow.list
  
-21:34:42 **** Incremental Build of configuration Debug for project LED_blink ****
+21:48:58 **** Incremental Build of configuration Debug for project LED_button_activeLow ****
 make -j12 all 
-arm-none-eabi-size  LED_blink.elf 
+arm-none-eabi-size  LED_button_activeLow.elf 
    text	   data	    bss	    dec	    hex	filename
-    712	      0	   1568	   2280	    8e8	LED_blink.elf
-Finished building: default.size.stdout
- 
-21:35:32 **** Incremental Build of configuration Debug for project LED_blink ****
-make -j12 all 
-arm-none-eabi-size  LED_blink.elf 
-   text	   data	    bss	    dec	    hex	filename
-    712	      0	   1568	   2280	    8e8	LED_blink.elf
-Finished building: default.size.stdout
- 
-21:35:54 **** Incremental Build of configuration Debug for project LED_blink ****
-make -j12 all 
-arm-none-eabi-size  LED_blink.elf 
-   text	   data	    bss	    dec	    hex	filename
-    712	      0	   1568	   2280	    8e8	LED_blink.elf
+    944	      0	   1568	   2512	    9d0	LED_button_activeLow.elf
 Finished building: default.size.stdout
  

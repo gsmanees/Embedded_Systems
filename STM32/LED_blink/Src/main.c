@@ -17,13 +17,41 @@
  */
 
 #include <stdint.h>
+#include "stm32_f446xx.h"
 
-#if !defined(__SOFT_FP__) && defined(__ARM_FP)
-  #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-#endif
+#define LED_PIN         5
+
+void delay_ms(uint32_t ms) // delay function
+{
+    volatile uint32_t count;
+
+    while(ms--)
+    {
+
+        for(count = 0; count < 4000; count++)
+        {
+        		// empty loop, just for delay
+        }
+    }
+
+}
+
 
 int main(void)
 {
-    /* Loop forever */
-	for(;;);
+	GPIOA_CLK_EN(); // Enable GPIOA clock
+	GPIOA->MODER &= ~(0x3 << (LED_PIN*2)); // PA5 set to 00
+	GPIOA->MODER|= (1<<(LED_PIN*2)); // PA5 set to 01, which is 01: General purpose output mode
+	GPIOA->OTYPER &= ~(1<<LED_PIN); // output type set to push pull state
+	GPIOA->OSPEEDR &=~ (0x3<<(LED_PIN*2)); // 5th bit set to 0
+	GPIOA->OSPEEDR|= (1<<(LED_PIN*2)); // 5th bit set to 01, for medium speed
+	GPIOA->PUPDR &= ~(0x3 << (LED_PIN*2)); // 5th bit set to 00, means no pull up and  pull down
+	GPIOA->ODR&=~(1<<LED_PIN); // to set PA5 to 0
+
+    while(1)
+    {
+       GPIOA->ODR ^= (1 << 5);   // Toggle LED using XOR
+       delay_ms(500);            // 500 ms delay
+    }
 }
+
