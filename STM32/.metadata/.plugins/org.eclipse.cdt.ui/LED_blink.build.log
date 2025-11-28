@@ -1,4 +1,4 @@
-21:47:33 **** Incremental Build of configuration Debug for project LED_blink ****
+22:11:52 **** Incremental Build of configuration Debug for project LED_blink ****
 make -j12 all 
 arm-none-eabi-size  LED_blink.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  LED_blink.elf
 Finished building: default.size.stdout
  
 
-21:47:33 Build Finished. 0 errors, 0 warnings. (took 209ms)
+22:11:52 Build Finished. 0 errors, 0 warnings. (took 149ms)
 
