@@ -1,10 +1,10 @@
-06:54:41 **** Incremental Build of configuration Debug for project ADC_LM35 ****
+23:45:52 **** Incremental Build of configuration Debug for project ADC_LM35 ****
 make -j12 all 
 arm-none-eabi-size  ADC_LM35.elf 
    text	   data	    bss	    dec	    hex	filename
-   5148	     92	   1900	   7140	   1be4	ADC_LM35.elf
+  16540	    456	   1904	  18900	   49d4	ADC_LM35.elf
 Finished building: default.size.stdout
  
 
-06:54:42 Build Finished. 0 errors, 0 warnings. (took 213ms)
+23:45:52 Build Finished. 0 errors, 0 warnings. (took 200ms)
 

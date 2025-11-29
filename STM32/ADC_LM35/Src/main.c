@@ -44,8 +44,6 @@ uint16_t ADC_Read(void)
 }
 
 
-
-
 int main(void)
 {
     uint16_t adc;
@@ -58,10 +56,8 @@ int main(void)
     	adc=ADC_Read();
     	voltage=(adc * 3.3f) / 4095.0f;
     	temperature=voltage * 100.0f;
+    	printf("Room temperature: %.2f C\n", temperature);
     	for(volatile int i=0; i<200000; i++); // small delay
-    	//printf("Room temperature: %.2f C\n", temperature);
-    	printf("haiiiiiiiiiiii");
-
 
     }
 

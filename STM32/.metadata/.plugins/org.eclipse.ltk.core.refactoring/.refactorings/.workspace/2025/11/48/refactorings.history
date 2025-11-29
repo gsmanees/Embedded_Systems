@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;button_activelow_cgpt&apos; to &apos;button_activelow_nv&apos;" description="Rename resource &apos;button_activelow_cgpt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/button_activelow_cgpt" name="button_activelow_nv" stamp="1764435376550" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;button_activelow_nv&apos; to &apos;button_activelow_cgpt&apos;" description="Rename resource &apos;button_activelow_nv&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/button_activelow_nv" name="button_activelow_cgpt" stamp="1764435419397" updateReferences="true"/>
+</session>

@@ -79,9 +79,9 @@ Disassembly of section .text:
  8000200:	08000d60 	.word	0x08000d60
 
 08000204 <main>:
-#if !defined(__SOFT_FP__) && defined(__ARM_FP)
-  #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-#endif
+
+#include <stdint.h>
+#include<stdio.h>
 
 int main(void)
 {

@@ -37,9 +37,14 @@ void delay_ms(uint32_t ms)
     }
 
 }
+
+
+
+
 int main(void)
 {
 	GPIOA_CLK_EN(); // Enable GPIO clock
+	printf("hai");
 	GPIOC_CLK_EN(); // ENABLE GPIO CLOCK C
 	GPIOC->MODER &= ~(0X3<< (BUTTON_PIN*2));
 	GPIOA->MODER &= ~(0x3 << (LED_PIN*2)); // PA5 set to 00
@@ -57,17 +62,18 @@ int main(void)
 
     while(1)
     {
+    	printf("Hai ......");
 
     	if(!(GPIOC->IDR & (1 << BUTTON_PIN)))
     	{
     		GPIOA->ODR|=(1<<LED_PIN);
-    		printf("button pressed");
+    		printf("\nbutton pressed");
     		delay_ms(500);
     	}
     	else
     	{
     		GPIOA->ODR&=~(1<<LED_PIN);
-    		printf("button released");
+    		printf("\nbutton released");
     	}
     }
 }

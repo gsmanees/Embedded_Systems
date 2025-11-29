@@ -1,4 +1,4 @@
-20:34:42 **** Build of configuration Debug for project first ****
+07:17:08 **** Incremental Build of configuration Debug for project first ****
 make -j12 all 
 arm-none-eabi-size  first.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  first.elf
 Finished building: default.size.stdout
  
 
-20:34:42 Build Finished. 0 errors, 0 warnings. (took 367ms)
+07:17:08 Build Finished. 0 errors, 0 warnings. (took 153ms)
 
