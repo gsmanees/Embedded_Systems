@@ -14,6 +14,9 @@
  * If no LICENSE file comes with this software, it is provided AS-IS.
  *
  ******************************************************************************
+
+ this program will read the real time atmospheric temperature
+ written  by Anees Kokadan
  */
 
 #include <stdint.h>
@@ -28,19 +31,45 @@ void ADC_init(void)
 
 	RCC->APB2ENR|=(1<<8);  // ADC1 Clock enable
 
-	// ADC configuration
-	ADC1->CR2=0;
-	ADC1->SQR3=0;
-	ADC1->SMPR2|=(0X3<<0); // SAMPLING
+	/*
+	 * ADC_SR = ADC status register
+	 * OVR STRT JSTRT JEOC EOC AWD
+	 * its all values are set by hardware, we do not need to set it manually
+	 * instead we will check its value during program running
+	 * like, to check if the conversion finished or not (EOC bit )
+	 * if EOC is 0 -> conversion not completed
+	 * if EOC is 1 -> conversion completed
+	 */
 
-	ADC1->CR2|=(1<<0);  // ADC ON
+	// ADC configuration
+	ADC1->CR2=0;	//clearing CR2 register
+	ADC1->SQR3=0;`// clearing SQR3 register
+	ADC1->SMPR2|=(0X3<<0); // SAMPLING 56 cycles for channel 0 --> PA0
+
+	/*
+	 * for LM35, to reduce noise the sampling time need to set to 56
+	 * from reference manual of stm32, I found that for 56 cycles we need to set 0x3 on channel 0
+	 */
+
+	ADC1->CR2|=(1<<0);  // ADC ON, inside CR2 register 0th bit is ADON
+	/*
+	 * Bit 0 ADON: A/D Converter ON / OFF
+	This bit is set and cleared by software.
+	0: Disable ADC conversion and go to power down mode
+	1: Enable ADC -- > here we made it 1 to make ADC ON
+	 */
 }
 
 uint16_t ADC_Read(void)
 {
-	ADC1->CR2|=(1<<30);			// SWSTART
-	while (!(ADC1->SR&(1<<1)));	// wait until analog watchdog timer is set to 1
+	ADC1->CR2|=(1<<30);			// SWSTART --> Start conversion of regular channels
+	while (!(ADC1->SR&(1<<1)));	// wait until EOC is set to 1 (wait until conversion complete)
+	// EOC is the 1st bit of SR register
 	return ADC1->DR;				// take the value from data register
+	/*
+	 * DR --> These bits are read-only. They contain the conversion result from the regular
+	channels.
+	 */
 }
 
 
@@ -58,6 +87,7 @@ int main(void)
     	temperature=voltage * 100.0f;
     	printf("Room temperature: %.2f C\n", temperature);
     	for(volatile int i=0; i<200000; i++); // small delay
+
 
     }
 
