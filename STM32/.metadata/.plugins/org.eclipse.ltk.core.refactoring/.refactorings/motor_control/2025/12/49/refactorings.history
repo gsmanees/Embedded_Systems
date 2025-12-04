@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;motor_control/Src/hcsr04&apos; to &apos;hcsr04.c&apos;" description="Rename resource &apos;hcsr04&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/hcsr04" name="hcsr04.c" stamp="1764784511728" updateReferences="true"/>
+</session>

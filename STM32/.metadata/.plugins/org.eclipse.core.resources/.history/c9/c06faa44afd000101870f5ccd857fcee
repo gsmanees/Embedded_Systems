@@ -1,0 +1,44 @@
+/**
+ ******************************************************************************
+ * @file           : main.c
+ * @author         : Anees Kokadan
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ ******************************************************************************
+ ******************************************************************************
+ ******************************************************************************
+	this program controls a dc motor when the distance from ultrasonic sensor is below 7cm
+
+ */
+
+#include <stdint.h>
+#include "stm32_f446xx.h"
+#include "hcsr04.h"
+#include "dcmotor.h"
+
+
+
+int main(void)
+{
+	GPIOA_CLK_EN();		// GPIOA clock enabled, we are using GPIOA pins here
+	hcsr04_IO_Init();
+	motorPin_init();
+
+
+
+
+
+
+
+	for(;;);
+}
