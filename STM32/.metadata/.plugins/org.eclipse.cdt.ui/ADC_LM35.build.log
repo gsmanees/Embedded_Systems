@@ -1,10 +1,12 @@
-23:45:52 **** Incremental Build of configuration Debug for project ADC_LM35 ****
+07:33:34 **** Build of configuration Debug for project ADC_LM35 ****
 make -j12 all 
-arm-none-eabi-size  ADC_LM35.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16540	    456	   1904	  18900	   49d4	ADC_LM35.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'ADC_init':
+../Src/main.c:46:22: error: stray '`' in program
+   46 |         ADC1->SQR3=0;`// clearing SQR3 register
+      |                      ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-23:45:52 Build Finished. 0 errors, 0 warnings. (took 200ms)
+07:33:34 Build Failed. 2 errors, 0 warnings. (took 427ms)
 

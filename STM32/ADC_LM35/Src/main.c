@@ -43,7 +43,7 @@ void ADC_init(void)
 
 	// ADC configuration
 	ADC1->CR2=0;	//clearing CR2 register
-	ADC1->SQR3=0;`// clearing SQR3 register
+	ADC1->SQR3=0;// clearing SQR3 register
 	ADC1->SMPR2|=(0X3<<0); // SAMPLING 56 cycles for channel 0 --> PA0
 
 	/*
@@ -87,7 +87,6 @@ int main(void)
     	temperature=voltage * 100.0f;
     	printf("Room temperature: %.2f C\n", temperature);
     	for(volatile int i=0; i<200000; i++); // small delay
-
 
     }
 

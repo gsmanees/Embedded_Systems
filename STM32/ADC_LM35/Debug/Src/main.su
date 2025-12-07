@@ -1,3 +1,0 @@
-../Src/main.c:23:6:ADC_init	4	static
-../Src/main.c:39:10:ADC_Read	4	static
-../Src/main.c:47:5:main	24	static

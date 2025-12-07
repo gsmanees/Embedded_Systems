@@ -1,10 +1,10 @@
-07:19:38 **** Incremental Build of configuration Debug for project LED_button_activeLow ****
+12:52:53 **** Incremental Build of configuration Debug for project LED_button_activeLow ****
 make -j12 all 
 arm-none-eabi-size  LED_button_activeLow.elf 
    text	   data	    bss	    dec	    hex	filename
-   5236	     92	   1900	   7228	   1c3c	LED_button_activeLow.elf
+   5176	     92	   1900	   7168	   1c00	LED_button_activeLow.elf
 Finished building: default.size.stdout
  
 
-07:19:38 Build Finished. 0 errors, 0 warnings. (took 154ms)
+12:52:54 Build Finished. 0 errors, 0 warnings. (took 149ms)
 

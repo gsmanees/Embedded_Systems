@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  00002f2b  00000000  00000000  00003145  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000014d8  00000000  00000000  00006070  2**0
+ 18 .debug_line   000014e2  00000000  00000000  00006070  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0000a3c3  00000000  00000000  00007548  2**0
+ 19 .debug_str    0000a3c3  00000000  00000000  00007552  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  0001190b  2**0
+ 20 .comment      00000086  00000000  00000000  00011915  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  000009f8  00000000  00000000  00011950  2**2
+ 21 .debug_frame  000009f8  00000000  00000000  0001199c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 0000005b  00000000  00000000  00012348  2**0
+ 22 .debug_line_str 0000005b  00000000  00000000  00012394  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -142,7 +142,8 @@ int main(void)
  8000270:	4a21      	ldr	r2, [pc, #132]	@ (80002f8 <main+0xb4>)
  8000272:	f443 6380 	orr.w	r3, r3, #1024	@ 0x400
  8000276:	6013      	str	r3, [r2, #0]
- GPIOC->MODER &= ~(0x3 << (BUTTON_PIN*2)); //MAKE 00 MODE
+
+ GPIOC->MODER &= ~(0x3 << (BUTTON_PIN*2)); //MAKE 00 MODE, input mode
  8000278:	4b20      	ldr	r3, [pc, #128]	@ (80002fc <main+0xb8>)
  800027a:	681b      	ldr	r3, [r3, #0]
  800027c:	4a1f      	ldr	r2, [pc, #124]	@ (80002fc <main+0xb8>)
@@ -211,7 +212,8 @@ int main(void)
                delay_5ms();
  80002e4:	f7ff ff98 	bl	8000218 <delay_5ms>
  80002e8:	e7f0      	b.n	80002cc <main+0x88>
-           }  else
+
+   else
            {
                // Button is not pressed (reads 1)
                // Turn OFF LED using BSRR

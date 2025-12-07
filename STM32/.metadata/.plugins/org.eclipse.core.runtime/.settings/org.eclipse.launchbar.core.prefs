@@ -1,11 +1,12 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_button_activeLow Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_button_activeLow Debug (2),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_button_activeLow Debug,org.eclipse.launchbar.core.descriptorType.default\:first Debug (1),org.eclipse.launchbar.core.descriptorType.default\:first Debug (2),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first Debug (3),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_blink,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_button_activeLow,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:buttonAL_nv,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC_LM35
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:first Debug (1),org.eclipse.launchbar.core.descriptorType.default\:first Debug (2),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first Debug (3),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_blink,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:buttonAL_nv,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_button_activeLow,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC_LM35
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC_LM35/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_blink/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_button_activeLow/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:buttonAL_nv/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:buttonAL_nv/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first\ Debug\ (3)/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:first\ Debug/activeLaunchMode=debug

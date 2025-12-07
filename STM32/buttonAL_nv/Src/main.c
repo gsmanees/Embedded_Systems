@@ -35,7 +35,8 @@ int main(void)
 
  GPIOA->MODER &= ~(0x3 << (LED_PIN*2));  // make 10 11 posisiton zero
  GPIOA->MODER |= (0X1<<(LED_PIN*2));  //- 01 → General-purpose outputmode to pin 11 and 10
- GPIOC->MODER &= ~(0x3 << (BUTTON_PIN*2)); //MAKE 00 MODE
+
+ GPIOC->MODER &= ~(0x3 << (BUTTON_PIN*2)); //MAKE 00 MODE, input mode
  GPIOA->OTYPER &= ~(0X1<<LED_PIN);   //- Clearing bit 5 makes pin 5 push-pull (standard LED drive).
 
  GPIOA ->OSPEEDR  &= ~(0x3 << (LED_PIN*2));
@@ -54,10 +55,13 @@ int main(void)
                // Button is pressed (reads 0)
                // Turn ON LED using BSRR (Bit Set/Reset Register)
                GPIOA->BSRR = (1 << LED_PIN);         // Set bit (turn LED ON)
+               delay_5ms();
                printf("button is pressed\n");
                // Simple debounce delay
                delay_5ms();
-           }  else
+           }
+
+   else
            {
                // Button is not pressed (reads 1)
                // Turn OFF LED using BSRR
