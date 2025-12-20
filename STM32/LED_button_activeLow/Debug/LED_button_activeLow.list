@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00002f19  00000000  00000000  0000419d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000014fd  00000000  00000000  000070b6  2**0
+ 17 .debug_line   000014fb  00000000  00000000  000070b6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0000a385  00000000  00000000  000085b3  2**0
+ 18 .debug_str    0000a385  00000000  00000000  000085b1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00012938  2**0
+ 19 .comment      00000043  00000000  00000000  00012936  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00000b30  00000000  00000000  0001297c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -274,10 +274,6 @@ int main(void)
  8000370:	4a0b      	ldr	r2, [pc, #44]	@ (80003a0 <main+0xbc>)
  8000372:	f043 0320 	orr.w	r3, r3, #32
  8000376:	6153      	str	r3, [r2, #20]
-    		// Button is pressed (reads 0)
-    		// Turn ON LED using BSRR (Bit Set/Reset Register)
-    		//GPIOA->BSRR = (1 << LED_PIN);         // Set bit (turn LED ON)
-
     		printf("\nbutton pressed");
  8000378:	480a      	ldr	r0, [pc, #40]	@ (80003a4 <main+0xc0>)
  800037a:	f000 f9c7 	bl	800070c <iprintf>

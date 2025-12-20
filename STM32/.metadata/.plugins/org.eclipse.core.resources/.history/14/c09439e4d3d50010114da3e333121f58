@@ -1,0 +1,37 @@
+//-----------------------------------------------------
+
+// 						SPI Protocol
+
+// SPI base addresses
+#define SPI1_BASEADDR 0x40013000U		// ON BUS APB2
+#define SPI2_BASEADDR 0x40003800U		// ON BUS APB1
+#define SPI3_BASEADDR 0x40003C00U 		// ON BUS APB1
+#define SPI4_BASEADDR 0x40013400U 		// ON BUS APB2
+
+// SPI Register structure
+
+typedef struct
+{
+	volatile uint32_t CR1;
+	volatile uint32_t CR2;
+	volatile uint32_t SR;
+	volatile uint32_t DR;
+	volatile uint32_t CRCPR;
+	volatile uint32_t RXCRCR;
+	volatile uint32_t TXCRCR;
+	volatile uint32_t I2SCFGR;
+	volatile uint32_t I2SPR;
+
+}SPI_RegDef_t;
+
+// SPI pointers
+#define SPI1 ((SPI_RegDef_t*)SPI1_BASEADDR)
+#define SPI2 ((SPI_RegDef_t*)SPI2_BASEADDR)
+#define SPI3 ((SPI_RegDef_t*)SPI3_BASEADDR)
+#define SPI4 ((SPI_RegDef_t*)SPI4_BASEADDR)
+
+// SPI Enable
+#define SPI1_EN() (RCC->APB2ENR|=(1<<12))
+#define SPI2_EN() (RCC->APB1ENR|=(1<<14))
+#define SPI3_EN() (RCC->APB1ENR|=(1<<15))
+#define SPI4_EN() (RCC->APB2ENR|=(1<<13))

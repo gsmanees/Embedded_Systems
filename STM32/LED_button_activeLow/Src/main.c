@@ -56,10 +56,6 @@ int main(void)
 
 	GPIOA->PUPDR &= ~(0x3 << (LED_PIN*2)); // 5th bit set to 00, means no pull up and  pull down
 	GPIOA->ODR&=~(1<<LED_PIN); // to set PA5 to 0
-	//GPIOA->ODR|=(1<<5); // to set PA5 to 1
-	//for(;;);
-
-
 
 
     while(1)
@@ -68,10 +64,6 @@ int main(void)
     	if(!(GPIOC->IDR & (1 << BUTTON_PIN)))
     	{
     		GPIOA->ODR|=(1<<LED_PIN);
-    		// Button is pressed (reads 0)
-    		// Turn ON LED using BSRR (Bit Set/Reset Register)
-    		//GPIOA->BSRR = (1 << LED_PIN);         // Set bit (turn LED ON)
-
     		printf("\nbutton pressed");
     		delay_ms(500);
 
@@ -79,11 +71,6 @@ int main(void)
     	else
     	{
     		GPIOA->ODR&=~(1<<LED_PIN);
-    		// Button is not pressed (reads 1)
-    		// Turn OFF LED using BSRR
-    	//GPIOA->BSRR = (1 << (LED_PIN + 16));  // Reset bit (turn LED OFF)
-    		//printf("\nbutton released");
-    		//delay_ms(500);
     	}
     }
 }

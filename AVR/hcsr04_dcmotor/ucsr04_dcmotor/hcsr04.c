@@ -38,7 +38,6 @@ float measure_distance(void)
 		count++;
 	}
 	return count/58.0;
-	
 }
 
 

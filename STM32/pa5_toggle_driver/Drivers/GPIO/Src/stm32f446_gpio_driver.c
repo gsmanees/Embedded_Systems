@@ -1,0 +1,32 @@
+
+
+
+#include "stm32f446_gpio_driver.h"
+
+/* Enable or Disable GPIO Peripheral Clock */
+void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnOrDi)
+{
+    if (EnOrDi == ENABLE)
+    {
+        if (pGPIOx == GPIOA)
+        {
+            RCC->AHB1ENR |= (1 << 0);  // GPIOA clock enable
+        }
+    }
+}
+
+/* Configure GPIO pin as Output */
+void GPIO_Init_Output(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
+{
+    // Clear mode bits
+    pGPIOx->MODER &= ~(0x3 << (2 * PinNumber));
+
+    // Set output mode (01)
+    pGPIOx->MODER |= (0x1 << (2 * PinNumber));
+}
+
+/* Toggle GPIO pin */
+void GPIO_TogglePin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
+{
+    pGPIOx->ODR ^= (1 << PinNumber);
+}

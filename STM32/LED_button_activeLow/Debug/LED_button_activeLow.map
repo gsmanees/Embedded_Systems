@@ -1055,11 +1055,11 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x00002bcb      0x112 ./Src/sysmem.o
  .debug_macro   0x00002cdd      0x23c ./Src/sysmem.o
 
-.debug_line     0x00000000     0x14fd
- .debug_line    0x00000000      0x605 ./Src/main.o
- .debug_line    0x00000605      0x8f0 ./Src/syscalls.o
- .debug_line    0x00000ef5      0x58d ./Src/sysmem.o
- .debug_line    0x00001482       0x7b ./Startup/startup_stm32f446retx.o
+.debug_line     0x00000000     0x14fb
+ .debug_line    0x00000000      0x603 ./Src/main.o
+ .debug_line    0x00000603      0x8f0 ./Src/syscalls.o
+ .debug_line    0x00000ef3      0x58d ./Src/sysmem.o
+ .debug_line    0x00001480       0x7b ./Startup/startup_stm32f446retx.o
 
 .debug_str      0x00000000     0xa385
  .debug_str     0x00000000     0xa385 ./Src/main.o

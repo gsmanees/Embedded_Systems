@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;PA5_toggle_driver/Driver/inc&apos; to &apos;Inc&apos;" description="Rename resource &apos;inc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Driver/inc" name="Inc" stamp="1765846675657" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;PA5_toggle_driver/Driver/src&apos; to &apos;Src&apos;" description="Rename resource &apos;src&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Driver/src" name="Src" stamp="1765846688335" updateReferences="true"/>
+</session>

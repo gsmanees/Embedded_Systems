@@ -1,0 +1,10 @@
+06:32:18 **** Incremental Build of configuration Debug for project pa5_toggle_driver ****
+make -j12 all 
+arm-none-eabi-size  pa5_toggle_driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    956	      0	   1568	   2524	    9dc	pa5_toggle_driver.elf
+Finished building: default.size.stdout
+ 
+
+06:32:18 Build Finished. 0 errors, 0 warnings. (took 154ms)
+
