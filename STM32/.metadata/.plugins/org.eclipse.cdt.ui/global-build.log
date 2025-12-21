@@ -1,14 +1,28 @@
-07:05:25 **** Build of configuration Debug for project ADC_LM35 ****
+14:45:20 **** Incremental Build of configuration Debug for project led_button_driver ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "ADC_LM35.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\ADC_LM35\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_LM35.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ADC_LM35.elf
- 
-arm-none-eabi-size  ADC_LM35.elf 
-arm-none-eabi-objdump -h -S ADC_LM35.elf  > "ADC_LM35.list"
+arm-none-eabi-size  led_button_driver.elf 
    text	   data	    bss	    dec	    hex	filename
-  16540	    456	   1904	  18900	   49d4	ADC_LM35.elf
+   6428	     92	   1900	   8420	   20e4	led_button_driver.elf
 Finished building: default.size.stdout
  
-Finished building: ADC_LM35.list
+14:45:26 **** Incremental Build of configuration Debug for project led_button_driver ****
+make -j12 all 
+arm-none-eabi-size  led_button_driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6428	     92	   1900	   8420	   20e4	led_button_driver.elf
+Finished building: default.size.stdout
+ 
+14:53:30 **** Incremental Build of configuration Debug for project led_button_driver ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I../Drivers/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "led_button_driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\led_button_driver\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_button_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led_button_driver.elf
+ 
+arm-none-eabi-size  led_button_driver.elf 
+arm-none-eabi-objdump -h -S led_button_driver.elf  > "led_button_driver.list"
+   text	   data	    bss	    dec	    hex	filename
+   6428	     92	   1900	   8420	   20e4	led_button_driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: led_button_driver.list
  

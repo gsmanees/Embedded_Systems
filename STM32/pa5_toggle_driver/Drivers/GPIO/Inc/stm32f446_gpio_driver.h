@@ -18,6 +18,7 @@ typedef struct
     volatile uint32_t AFRH;
 } GPIO_RegDef_t;
 
+
 // RCC register definitions
 typedef struct
 {
