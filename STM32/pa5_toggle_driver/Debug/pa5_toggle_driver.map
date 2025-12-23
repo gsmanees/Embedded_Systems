@@ -822,15 +822,15 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000      0x467
- .debug_info    0x00000000      0x27e ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
- .debug_info    0x0000027e      0x1b9 ./Src/main.o
- .debug_info    0x00000437       0x30 ./Startup/startup_stm32f446retx.o
+.debug_info     0x00000000      0x457
+ .debug_info    0x00000000      0x278 ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
+ .debug_info    0x00000278      0x1af ./Src/main.o
+ .debug_info    0x00000427       0x30 ./Startup/startup_stm32f446retx.o
 
-.debug_abbrev   0x00000000      0x1fe
- .debug_abbrev  0x00000000       0xdc ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
- .debug_abbrev  0x000000dc       0xfe ./Src/main.o
- .debug_abbrev  0x000001da       0x24 ./Startup/startup_stm32f446retx.o
+.debug_abbrev   0x00000000      0x1eb
+ .debug_abbrev  0x00000000       0xdb ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
+ .debug_abbrev  0x000000db       0xec ./Src/main.o
+ .debug_abbrev  0x000001c7       0x24 ./Startup/startup_stm32f446retx.o
 
 .debug_aranges  0x00000000       0x80
  .debug_aranges
@@ -861,17 +861,17 @@ LOAD C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x00000fa3       0x2e ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
  .debug_macro   0x00000fd1       0x72 ./Src/main.o
 
-.debug_line     0x00000000      0x98d
+.debug_line     0x00000000      0x98f
  .debug_line    0x00000000      0x4ac ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
- .debug_line    0x000004ac      0x466 ./Src/main.o
- .debug_line    0x00000912       0x7b ./Startup/startup_stm32f446retx.o
+ .debug_line    0x000004ac      0x468 ./Src/main.o
+ .debug_line    0x00000914       0x7b ./Startup/startup_stm32f446retx.o
 
-.debug_str      0x00000000     0x3e62
- .debug_str     0x00000000     0x3e62 ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
-                               0x3f7b (size before relaxing)
- .debug_str     0x00003e62        0x0 ./Src/main.o
-                               0x3eed (size before relaxing)
- .debug_str     0x00003e62        0x0 ./Startup/startup_stm32f446retx.o
+.debug_str      0x00000000     0x3e6c
+ .debug_str     0x00000000     0x3e6c ./Drivers/GPIO/Src/stm32f446_gpio_driver.o
+                               0x3f85 (size before relaxing)
+ .debug_str     0x00003e6c        0x0 ./Src/main.o
+                               0x3ef7 (size before relaxing)
+ .debug_str     0x00003e6c        0x0 ./Startup/startup_stm32f446retx.o
                                  0x7d (size before relaxing)
 
 .comment        0x00000000       0x43
