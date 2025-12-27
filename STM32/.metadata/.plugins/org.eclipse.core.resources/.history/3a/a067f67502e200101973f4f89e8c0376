@@ -1,0 +1,46 @@
+#include "stm32f446xx.h"
+#include <stdio.h>
+
+/* ITM printf */
+int _write(int file, char *ptr, int len)
+{
+    for (int i = 0; i < len; i++)
+        ITM_SendChar(*ptr++);
+    return len;
+}
+
+int main(void)
+{
+    uint8_t rx;
+
+    /* Enable GPIOA + SPI1 clocks */
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+    RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
+
+    /* PA4-PA7 AF5 */
+    GPIOA->MODER &= ~(0xFF << (4 * 2));
+    GPIOA->MODER |=  (0xAA << (4 * 2));
+
+    GPIOA->AFR[0] &= ~(0xFFFF << (4 * 4));
+    GPIOA->AFR[0] |=  (0x5555 << (4 * 4));   // AF5
+
+    /* SPI1 slave, mode 0 */
+    SPI1->CR1 = 0;
+    SPI1->CR1 &= ~(SPI_CR1_MSTR);   // Slave
+    SPI1->CR1 &= ~(SPI_CR1_CPOL);
+    SPI1->CR1 &= ~(SPI_CR1_CPHA);
+    SPI1->CR1 &= ~(SPI_CR1_SSM);    // Hardware NSS
+
+    SPI1->CR1 |= SPI_CR1_SPE;       // Enable SPI
+
+    printf("STM32 SPI SLAVE READY\r\n");
+
+    while (1)
+    {
+        if (SPI1->SR & SPI_SR_RXNE)
+        {
+            rx = SPI1->DR;
+            printf("RX: %c (0x%02X)\r\n", rx, rx);
+        }
+    }
+}

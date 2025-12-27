@@ -1,0 +1,60 @@
+#include "stm32f446xx.h"
+#include <stdint.h>
+#include <stdio.h>
+
+void SPI1_GPIO_Init(void)
+{
+    RCC->AHB1ENR |= (1 << 0);   // GPIOA clock
+
+    // PA4 NSS, PA5 SCK, PA7 MOSI  → AF5
+    GPIOA->MODER &= ~(0xFF << (4 * 2));
+    GPIOA->MODER |=  (0xAA << (4 * 2));   // Alternate function
+
+    GPIOA->AFR[0] &= ~(0xFFFF << (4 * 4));
+    GPIOA->AFR[0] |=  (0x5555 << (4 * 4)); // AF5
+
+    GPIOA->OSPEEDR |= (0xFF << (4 * 2));  // High speed
+}
+
+void SPI1_Init(void)
+{
+    RCC->APB2ENR |= (1 << 12); // SPI1 clock
+
+    SPI1->CR1 = 0;             // Clear
+    SPI1->CR1 &= ~(1 << 2);    // SLAVE
+    SPI1->CR1 &= ~(1 << 9);    // SSM = 0 (HW NSS)
+    SPI1->CR1 &= ~(1 << 11);   // 8-bit
+    SPI1->CR1 &= ~(1 << 1);    // CPOL = 0
+    SPI1->CR1 &= ~(1 << 0);    // CPHA = 0
+
+    SPI1->CR2 = 0;
+    SPI1->CR2 |= (1 << 6);     // RXNE interrupt disable, but enable RX
+
+    SPI1->CR1 |= (1 << 6);     // SPI ENABLE
+}
+
+uint8_t SPI1_ReceiveByte(void)
+{
+    while (!(SPI1->SR & (1 << 0))); // RXNE
+    return SPI1->DR;
+}
+
+int main(void)
+{
+    uint8_t data;
+
+    SPI1_GPIO_Init();
+    SPI1_Init();
+
+    printf("STM32 SPI1 SLAVE READY\r\n");
+
+    while (1)
+    {
+        while (!(SPI1->SR & (1 << 0)));   // RXNE
+
+        uint8_t data = SPI1->DR;
+
+        printf("RX: %c (0x%02X)\r\n", data, data);
+    }
+
+}

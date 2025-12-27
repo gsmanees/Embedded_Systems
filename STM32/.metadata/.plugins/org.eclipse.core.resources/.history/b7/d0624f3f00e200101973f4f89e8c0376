@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdint.h>
+
+#include "stm32f446xx.h"
+#include "stm32f446xx_gpio_driver.h"
+#include "stm32f446xx_spi_driver.h"
+
+int main(void)
+{
+	uint8_t rxByte;
+
+	/*************** GPIO CLOCK ENABLE ***************/
+	GPIO_PeriClockControl(GPIOA, ENABLE);
+
+	/*************** SPI1 GPIO CONFIG ***************/
+	GPIO_Handle_t SPIPins;
+	SPIPins.pGPIOx = GPIOA;
+	SPIPins.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_ALTFN;
+	SPIPins.GPIO_PinConfig.GPIO_PinAltFunMode = GPIO_AF5; // SPI1
+	SPIPins.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+	SPIPins.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_HIGH;
+	SPIPins.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+
+	/* NSS  -> PA4 */
+	SPIPins.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_4;
+	GPIO_Init(&SPIPins);
+
+	/* SCK  -> PA5 */
+	SPIPins.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_5;
+	GPIO_Init(&SPIPins);
+
+	/* MISO -> PA6 */
+	SPIPins.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_6;
+	GPIO_Init(&SPIPins);
+
+	/* MOSI -> PA7 */
+	SPIPins.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_7;
+	GPIO_Init(&SPIPins);
+
+	/*************** SPI1 CLOCK ENABLE (FIRST!) ***************/
+	SPI_PeriClockControl(SPI1, ENABLE);
+
+	/*************** SPI CONFIG ***************/
+	SPI_Handle_t SPIHandle;
+	SPIHandle.pSPIx = SPI1;
+	SPIHandle.SPIConfig.SPI_DeviceMode = SPI_DEVICE_MODE_SLAVE;
+	SPIHandle.SPIConfig.SPI_BusConfig  = SPI_BUS_CONFIG_FD;
+	SPIHandle.SPIConfig.SPI_DFF        = SPI_DFF_8BITS;
+	SPIHandle.SPIConfig.SPI_CPOL       = SPI_CPOL_LOW;
+	SPIHandle.SPIConfig.SPI_CPHA       = SPI_CPHA_LOW;
+	SPIHandle.SPIConfig.SPI_SSM        = SPI_SSM_DI; // Hardware NSS
+
+	SPI_Init(&SPIHandle);
+
+	/*************** ENABLE SPI ***************/
+	SPI_PeripheralControl(SPI1, ENABLE);
+
+	printf("STM32 SPI1 SLAVE READY\r\n");
+
+	/*************** RECEIVE LOOP ***************/
+	while (1)
+	{
+	    /* Wait for NSS to go LOW (start of frame) */
+	    while (GPIO_ReadFromInputPin(GPIOA, GPIO_PIN_NO_4) == 1);
+
+	    /* Receive bytes while NSS is LOW */
+	    while (GPIO_ReadFromInputPin(GPIOA, GPIO_PIN_NO_4) == 0)
+	    {
+	        if (SPI_GetFlagStatus(SPI1, SPI_RXNE_FLAG))
+	        {
+	            rxByte = SPI1->DR;
+	            printf("RX: %c (0x%02X)\r\n", rxByte, rxByte);
+	        }
+	    }
+	}
+
+}

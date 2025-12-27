@@ -198,7 +198,7 @@ void delay(void)
  80002ac:	b480      	push	{r7}
  80002ae:	b083      	sub	sp, #12
  80002b0:	af00      	add	r7, sp, #0
-    for (uint32_t i = 0; i < 500000; i++);
+      for (uint32_t i = 0; i < 500000; i++);
  80002b2:	2300      	movs	r3, #0
  80002b4:	607b      	str	r3, [r7, #4]
  80002b6:	e002      	b.n	80002be <delay+0x12>

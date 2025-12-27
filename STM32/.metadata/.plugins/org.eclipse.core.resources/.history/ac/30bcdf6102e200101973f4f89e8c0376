@@ -1,0 +1,162 @@
+
+
+
+
+
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f446xx.h"
+#include "stm32f446xx_gpio_driver.h"
+#include "stm32f446xx_spi_driver.h"
+
+/* ITM printf */
+int _write(int file, char *ptr, int len)
+{
+    for (int i = 0; i < len; i++)
+        ITM_SendChar(*ptr++);
+    return len;
+}
+
+static void SPI1_GPIOInit(void)
+{
+    GPIO_Handle_t SPIPins;
+    GPIO_PeriClockControl(GPIOA, ENABLE);
+
+    SPIPins.pGPIOx = GPIOA;
+    SPIPins.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_ALTFN;
+    SPIPins.GPIO_PinConfig.GPIO_PinAltFunMode = GPIO_AF5;
+    SPIPins.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+    SPIPins.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_HIGH;
+    SPIPins.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+
+    uint8_t pins[] = {4,5,6,7};
+    for (int i = 0; i < 4; i++)
+    {
+        SPIPins.GPIO_PinConfig.GPIO_PinNumber = pins[i];
+        GPIO_Init(&SPIPins);
+    }
+}
+
+static void SPI1_SlaveInit(void)
+{
+    SPI_Handle_t SPIHandle;
+
+    SPIHandle.pSPIx = SPI1;
+    SPIHandle.SPIConfig.SPI_DeviceMode = SPI_DEVICE_MODE_SLAVE;
+    SPIHandle.SPIConfig.SPI_BusConfig  = SPI_BUS_CONFIG_FD;
+    SPIHandle.SPIConfig.SPI_DFF        = SPI_DFF_8BITS;
+    SPIHandle.SPIConfig.SPI_CPOL       = SPI_CPOL_LOW;
+    SPIHandle.SPIConfig.SPI_CPHA       = SPI_CPHA_LOW;
+    SPIHandle.SPIConfig.SPI_SSM        = SPI_SSM_DI;
+
+    SPI_PeriClockControl(SPI1, ENABLE);
+    SPI_Init(&SPIHandle);
+    SPI_PeripheralControl(SPI1, ENABLE);
+}
+
+int main(void)
+{
+    uint8_t rx;
+
+    SPI1_GPIOInit();
+    SPI1_SlaveInit();
+
+    printf("STM32 SPI SLAVE READY\r\n");
+
+    while (1)
+    {
+        /* Wait for byte */
+        while (!(SPI1->SR & SPI_SR_RXNE));
+
+        rx = SPI1->DR;
+
+        /* Clear OVR safely */
+        if (SPI1->SR & SPI_SR_OVR)
+        {
+            (void)SPI1->DR;
+            (void)SPI1->SR;
+        }
+
+        /* Print only printable characters */
+        if (rx >= 0x20 && rx <= 0x7E)
+        {
+            printf("%c", rx);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+//#include <stdio.h>
+//#include <stdint.h>
+//#include "stm32f446xx.h"
+//#include "stm32f446xx_spi_driver.h"
+//
+///* ---------- GPIO INIT FOR SPI1 ---------- */
+//void SPI1_GPIO_Init(void)
+//{
+//    // Enable GPIOA clock
+//    RCC->AHB1ENR |= (1 << 0);
+//
+//    // PA4 (NSS), PA5 (SCK), PA6 (MISO), PA7 (MOSI)
+//    // Set Alternate Function mode
+//    GPIOA->MODER &= ~((3 << (4*2)) | (3 << (5*2)) | (3 << (6*2)) | (3 << (7*2)));
+//    GPIOA->MODER |=  ((2 << (4*2)) | (2 << (5*2)) | (2 << (6*2)) | (2 << (7*2)));
+//
+//    // Push-pull
+//    GPIOA->OTYPER &= ~((1 << 4) | (1 << 5) | (1 << 6) | (1 << 7));
+//
+//    // High speed
+//    GPIOA->OSPEEDR |= ((3 << (4*2)) | (3 << (5*2)) | (3 << (6*2)) | (3 << (7*2)));
+//
+//    // No pull-up, no pull-down
+//    GPIOA->PUPDR &= ~((3 << (4*2)) | (3 << (5*2)) | (3 << (6*2)) | (3 << (7*2)));
+//
+//    // AF5 for SPI1
+//    GPIOA->AFR[0] &= ~((0xF << (4*4)) | (0xF << (5*4)) | (0xF << (6*4)) | (0xF << (7*4)));
+//    GPIOA->AFR[0] |=  ((5 << (4*4)) | (5 << (5*4)) | (5 << (6*4)) | (5 << (7*4)));
+//}
+//
+//
+//
+//int main(void)
+//{
+//    uint8_t rxByte;
+//    SPI_Handle_t SPIHandle;
+//
+//
+//
+//    /* GPIO first */
+//    SPI1_GPIO_Init();
+//
+//    /* SPI Handle configuration */
+//    SPIHandle.pSPIx = SPI1;
+//    SPIHandle.SPIConfig.SPI_DeviceMode = SPI_DEVICE_MODE_SLAVE;
+//    SPIHandle.SPIConfig.SPI_BusConfig  = SPI_BUS_CONFIG_FD;
+//    SPIHandle.SPIConfig.SPI_SclkSpeed  = SPI_SCLK_SPEED_DIV2; // ignored in slave
+//    SPIHandle.SPIConfig.SPI_DFF        = SPI_DFF_8BITS;
+//    SPIHandle.SPIConfig.SPI_CPOL       = SPI_CPOL_LOW;
+//    SPIHandle.SPIConfig.SPI_CPHA       = SPI_CPHA_LOW;
+//    SPIHandle.SPIConfig.SPI_SSM        = SPI_SSM_DI; // Hardware NSS
+//
+//    /* Init + Enable SPI */
+//    SPI_Init(&SPIHandle);
+//    SPI_PeripheralControl(SPI1, ENABLE);
+//
+//    printf("STM32 SPI1 SLAVE READY\r\n");
+//
+//    while (1)
+//    {
+//        /* Blocking receive — waits for AVR clock */
+//        SPI_ReceiveData(SPI1, &rxByte, 1);
+//
+//        printf("RX: %c (0x%02X)\r\n", rxByte, rxByte);
+//    }
+//}

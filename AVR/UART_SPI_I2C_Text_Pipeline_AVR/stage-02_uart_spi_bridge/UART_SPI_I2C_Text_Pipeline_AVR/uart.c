@@ -1,0 +1,120 @@
+/*
+ * uart.c
+ *
+ * Created: 15-11-2025 7.00.30 AM
+ *  Author: anees
+ */ 
+
+#define F_CPU 16000000UL
+#include<avr/io.h>
+#include "uart.h"
+
+void UART_Init(void)
+{
+	UBRR0H = (unsigned char)(UBRR_VALUE >> 8);
+	UBRR0L = (unsigned char)UBRR_VALUE;
+	UCSR0B = (1 << TXEN0)|(1<<RXEN0);                      // Enable transmitter & receiver
+	
+	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);     // 8-bit data
+}
+
+void UART_TxChar(char data)
+{
+	while (!(UCSR0A & (1 << UDRE0)));
+	UDR0 = data;
+}
+
+void UART_TxString(const char *str)
+{
+	while (*str)
+	{
+		UART_TxChar(*str++);
+	}
+}
+
+void UART_TxHex(uint8_t value)
+{
+	const char hexChars[] = "0123456789ABCDEF";
+	char hex[5];
+	hex[0] = hexChars[(value >> 4) & 0x0F];
+	hex[1] = hexChars[value & 0x0F];
+	hex[2] = '\r';
+	hex[3] = '\n';
+	hex[4] = '\0';
+	UART_TxString("0x");
+	UART_TxString(hex);
+}
+void UART_TxNumber(uint32_t num)
+{
+	char buffer[12];
+	ltoa(num, buffer, 10);   // convert to string (long to ASCII)
+	UART_TxString(buffer);
+}
+
+void UART_TxFloat(float value, uint8_t decimalPlaces)
+{
+	int intPart = (int)value;   // integer part
+	float fraction = value - intPart;
+
+	// send integer part
+	UART_TxNumber(intPart);
+	UART_TxChar('.');
+
+	// convert fraction to positive (for negative numbers)
+	if(fraction < 0)
+	fraction = -fraction;
+
+	// print decimal digits
+	for(uint8_t i = 0; i < decimalPlaces; i++)
+	{
+		fraction *= 10;
+		int digit = (int)fraction;
+		UART_TxChar('0' + digit);
+		fraction -= digit;
+	}
+}
+
+
+uint8_t UART_RxChar(void)
+{
+		while (!(UCSR0A & (1 << RXC0)));   // Wait for received data
+		return UDR0;
+}
+
+#define RX_BUF_SIZE 64
+
+void UART_RxString(char *buf)
+{
+	uint8_t index = 0;
+	char c;
+
+	while (1)
+	{
+		c = UART_RxChar();       // Receive single char (blocking)
+
+		if (c == '\n' || index >= (RX_BUF_SIZE - 1))
+		{
+			buf[index] = '\0';   // Null-terminate string
+			break;
+		}
+		else
+		{
+			buf[index++] = c;    // Store char
+		}
+	}
+}
+
+
+void UART_Transmit(uint8_t data)
+{
+	while (!(UCSR0A & (1 << UDRE0)));  // Wait for buffer empty
+	UDR0 = data;                       // Send data
+	
+}
+
+uint8_t UART_Receive(void)
+{
+	while (!(UCSR0A & (1 << RXC0)));   // Wait for received data
+	return UDR0;                       // Return received byte
+	
+}

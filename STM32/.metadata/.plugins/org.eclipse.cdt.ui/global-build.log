@@ -1,53 +1,14 @@
-14:45:20 **** Incremental Build of configuration Debug for project led_button_driver ****
+06:52:33 **** Incremental Build of configuration Debug for project STM32_SPI_Slave_SWV ****
 make -j12 all 
-arm-none-eabi-size  led_button_driver.elf 
+arm-none-eabi-size  STM32_SPI_Slave_SWV.elf 
    text	   data	    bss	    dec	    hex	filename
-   6428	     92	   1900	   8420	   20e4	led_button_driver.elf
+   3908	     92	   1900	   5900	   170c	STM32_SPI_Slave_SWV.elf
 Finished building: default.size.stdout
  
-14:45:26 **** Incremental Build of configuration Debug for project led_button_driver ****
+06:52:39 **** Incremental Build of configuration Debug for project STM32_SPI_Slave_SWV ****
 make -j12 all 
-arm-none-eabi-size  led_button_driver.elf 
+arm-none-eabi-size  STM32_SPI_Slave_SWV.elf 
    text	   data	    bss	    dec	    hex	filename
-   6428	     92	   1900	   8420	   20e4	led_button_driver.elf
+   3908	     92	   1900	   5900	   170c	STM32_SPI_Slave_SWV.elf
 Finished building: default.size.stdout
- 
-14:53:30 **** Incremental Build of configuration Debug for project led_button_driver ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I../Drivers/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "led_button_driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\led_button_driver\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_button_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: led_button_driver.elf
- 
-arm-none-eabi-size  led_button_driver.elf 
-arm-none-eabi-objdump -h -S led_button_driver.elf  > "led_button_driver.list"
-   text	   data	    bss	    dec	    hex	filename
-   6428	     92	   1900	   8420	   20e4	led_button_driver.elf
-Finished building: default.size.stdout
- 
-Finished building: led_button_driver.list
- 
-07:17:15 **** Clean-only build of configuration Debug for project pa5_toggle_driver ****
-make -j12 clean 
-rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
-rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf ./Drivers/GPIO/Src/stm32f446_gpio_driver.cyclo ./Drivers/GPIO/Src/stm32f446_gpio_driver.d ./Drivers/GPIO/Src/stm32f446_gpio_driver.o ./Drivers/GPIO/Src/stm32f446_gpio_driver.su
-rm -rf default.size.stdout pa5_toggle_driver.elf pa5_toggle_driver.list pa5_toggle_driver.map
- 
-07:17:16 **** Incremental Build of configuration Debug for project pa5_toggle_driver ****
-make -j12 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I../Drivers/GPIO/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I../Drivers/GPIO/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I../Drivers/GPIO/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc "../Drivers/GPIO/Src/stm32f446_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I../Drivers/GPIO/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/GPIO/Src/stm32f446_gpio_driver.d" -MT"Drivers/GPIO/Src/stm32f446_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/GPIO/Src/stm32f446_gpio_driver.o"
-arm-none-eabi-gcc -o "pa5_toggle_driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\pa5_toggle_driver\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pa5_toggle_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pa5_toggle_driver.elf
- 
-arm-none-eabi-size  pa5_toggle_driver.elf 
-arm-none-eabi-objdump -h -S pa5_toggle_driver.elf  > "pa5_toggle_driver.list"
-   text	   data	    bss	    dec	    hex	filename
-    956	      0	   1568	   2524	    9dc	pa5_toggle_driver.elf
-Finished building: default.size.stdout
- 
-Finished building: pa5_toggle_driver.list
  

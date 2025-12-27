@@ -1,0 +1,81 @@
+#include "stm32f446xx.h"
+#include <stdint.h>
+#include <stdio.h>
+
+/* ---------- GPIO INIT FOR SPI1 SLAVE ---------- */
+void SPI1_GPIO_Init(void)
+{
+    /* Enable GPIOA clock */
+    RCC->AHB1ENR |= (1 << 0);
+
+    /* PA4 = NSS, PA5 = SCK, PA6 = MISO */
+    /* Set mode = Alternate Function (10) */
+    GPIOA->MODER &= ~(0x3F << (4 * 2));   // Clear PA4,5,6
+    GPIOA->MODER |=  (0x2A << (4 * 2));   // AF mode
+
+    /* Set AF5 for PA4, PA5, PA6 */
+    GPIOA->AFR[0] &= ~((0xF << (4 * 4)) |
+                       (0xF << (5 * 4)) |
+                       (0xF << (6 * 4)));
+
+    GPIOA->AFR[0] |=  ((5 << (4 * 4)) |
+                       (5 << (5 * 4)) |
+                       (5 << (6 * 4)));
+
+    /* High speed */
+    GPIOA->OSPEEDR |= (0x3F << (4 * 2));
+
+    /* No pull-up / pull-down */
+    GPIOA->PUPDR &= ~(0x3F << (4 * 2));
+}
+
+/* ---------- SPI1 SLAVE INIT ---------- */
+void SPI1_Init(void)
+{
+    /* Enable SPI1 clock */
+    RCC->APB2ENR |= (1 << 12);
+
+    SPI1->CR1 = 0;
+
+    /* Slave mode */
+    SPI1->CR1 &= ~(1 << 2);    // MSTR = 0
+
+    /* Hardware NSS */
+    SPI1->CR1 &= ~(1 << 9);    // SSM = 0
+
+    /* 8-bit data */
+    SPI1->CR1 &= ~(1 << 11);   // DFF = 0
+
+    /* SPI Mode 0 */
+    SPI1->CR1 &= ~(1 << 1);    // CPOL = 0
+    SPI1->CR1 &= ~(1 << 0);    // CPHA = 0
+
+    /* Enable SPI */
+    SPI1->CR1 |= (1 << 6);
+}
+
+/* ---------- MAIN ---------- */
+int main(void)
+{
+    uint8_t rx;
+
+    SPI1_GPIO_Init();
+    SPI1_Init();
+
+    /* Clear residual flags */
+    volatile uint8_t temp;
+    temp = SPI1->DR;
+    temp = SPI1->SR;
+
+    printf("STM32 SPI1 SLAVE READY\r\n");
+
+    while (1)
+    {
+        /* Wait for data */
+        while (!(SPI1->SR & (1 << 0)));   // RXNE
+
+        rx = SPI1->DR;
+
+        printf("RX: %c (0x%02X)\r\n", rx, rx);
+    }
+}
