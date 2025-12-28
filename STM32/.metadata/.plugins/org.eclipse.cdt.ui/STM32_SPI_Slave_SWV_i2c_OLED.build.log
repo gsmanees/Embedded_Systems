@@ -1,0 +1,32 @@
+22:25:07 **** Incremental Build of configuration Debug for project STM32_SPI_Slave_SWV_i2c_OLED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32_SPI_Slave_SWV_i2c_OLED/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Drivers/Src/oled.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32_SPI_Slave_SWV_i2c_OLED/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/oled.d" -MT"Drivers/Src/oled.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/oled.o"
+arm-none-eabi-gcc "../Drivers/Src/ssd1306_basic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32_SPI_Slave_SWV_i2c_OLED/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/ssd1306_basic.d" -MT"Drivers/Src/ssd1306_basic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/ssd1306_basic.o"
+../Drivers/Src/oled.c: In function 'OLED_Clear':
+../Drivers/Src/oled.c:19:9: error: too few arguments to function 'SSD1306_WriteData'
+   19 |         SSD1306_WriteData(0x00);
+      |         ^~~~~~~~~~~~~~~~~
+In file included from ../Drivers/Src/oled.c:10:
+C:/EmbeddedSystemsProjectsEntri/STM32/STM32_SPI_Slave_SWV_i2c_OLED/Drivers/Inc/ssd1306_basic.h:26:6: note: declared here
+   26 | void SSD1306_WriteData(uint8_t* data, uint16_t size);
+      |      ^~~~~~~~~~~~~~~~~
+../Drivers/Src/ssd1306_basic.c: In function 'SSD1306_WriteCommand':
+../Drivers/Src/ssd1306_basic.c:25:5: warning: implicit declaration of function 'I2C_Master_Transmit' [-Wimplicit-function-declaration]
+   25 |     I2C_Master_Transmit(&hi2c1, SSD1306_ADDRESS, buf, 2);
+      |     ^~~~~~~~~~~~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:81:25: error: 'I2C_Config_t' has no member named 'ClockSpeed'
+   81 |         hi2c1.I2C_Config.ClockSpeed = 100000;
+      |                         ^
+../Src/main.c:82:26: error: 'I2C_Config_t' has no member named 'ACKControl'; did you mean 'I2C_AckControl'?
+   82 |         hi2c1.I2C_Config.ACKControl = 1;
+      |                          ^~~~~~~~~~
+      |                          I2C_AckControl
+make: *** [Drivers/Src/subdir.mk:34: Drivers/Src/oled.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+22:25:08 Build Failed. 6 errors, 1 warnings. (took 1s.86ms)
+

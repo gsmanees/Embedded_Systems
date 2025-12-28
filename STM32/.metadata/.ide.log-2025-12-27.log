@@ -1,0 +1,20 @@
+2025-12-27 06:53:47,894 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Exception in thread "SWV client thread" java.lang.NullPointerException: Cannot invoke "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.isDebugging()" because "com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.plugin" is null
+2025-12-27 06:53:47,925 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVPlugin.debugTrace(SWVPlugin.java:85)
+2025-12-27 06:53:47,926 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.TRACE(SWVClient.java:768)
+2025-12-27 06:53:47,927 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.readByte(SWVClient.java:296)
+2025-12-27 06:53:47,928 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.getNextByte(SWVClient.java:277)
+2025-12-27 06:53:47,929 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.debug.swv.core.SWVClient.run(SWVClient.java:313)
+2025-12-27 07:00:23,006 [INFO] Activator:176 - 
+
+
+2025-12-27 07:00:23,012 [INFO] Activator:177 - !SESSION log4j initialized
+2025-12-27 07:00:37,576 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-12-27 20:18:02,794 [INFO] Activator:176 - 
+
+
+2025-12-27 20:18:02,797 [INFO] Activator:177 - !SESSION log4j initialized
+2025-12-27 20:18:09,580 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-12-27 20:22:55,208 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2025-12-27 20:26:13,025 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2025-12-27 20:26:15,819 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2025-12-27 20:28:28,212 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true

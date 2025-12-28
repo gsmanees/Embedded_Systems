@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;oled_i2c_driver/Drivers/Inc/ssd1306_oled.h&apos; to &apos;oled.h&apos;" description="Rename resource &apos;ssd1306_oled.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/Inc/ssd1306_oled.h" name="oled.h" stamp="1766885612362" updateReferences="true"/>
+</session>

@@ -1,4 +1,4 @@
-06:52:39 **** Incremental Build of configuration Debug for project STM32_SPI_Slave_SWV ****
+20:19:07 **** Incremental Build of configuration Debug for project STM32_SPI_Slave_SWV ****
 make -j12 all 
 arm-none-eabi-size  STM32_SPI_Slave_SWV.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  STM32_SPI_Slave_SWV.elf
 Finished building: default.size.stdout
  
 
-06:52:39 Build Finished. 0 errors, 0 warnings. (took 280ms)
+20:19:07 Build Finished. 0 errors, 0 warnings. (took 224ms)
 

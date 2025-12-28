@@ -1,0 +1,2 @@
+../Drivers/Src/lm35.c:11:6:ADC_init	1
+../Drivers/Src/lm35.c:51:10:ADC_Read	2
