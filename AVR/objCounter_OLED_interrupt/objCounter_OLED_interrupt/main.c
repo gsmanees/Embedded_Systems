@@ -3,6 +3,15 @@
  *
  * Created: 31-12-2025 9.24.05 PM
  * Author : anees
+ 
+ hcsr04 connections
+ TRIG--> PB0
+ ECHO --> PB1
+ VCC --> 5V
+ 
+ buttons connections
+ STRT/STOP --> PD2
+ RESET --> PD3
  */ 
 
 #define F_CPU 16000000UL
