@@ -2,5 +2,11 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+cmd.c
+
+led.c
+
 main.c
+
+uart.c
 
