@@ -19,33 +19,33 @@
 #define GPIOG_BASEADDR 0x40021800U
 #define GPIOH_BASEADDR 0x40021C00U
 
-// GPIO Register structure
+	// GPIO Register structure
 
-typedef struct
-{
-    volatile uint32_t MODER;    // GPIO port mode register              (0x00)
-    volatile uint32_t OTYPER;   // GPIO port output type register       (0x04)
-    volatile uint32_t OSPEEDR;  // GPIO port output speed register      (0x08)
-    volatile uint32_t PUPDR;    // GPIO port pull-up/pull-down register (0x0C)
-    volatile uint32_t IDR;      // GPIO port input data register        (0x10)
-    volatile uint32_t ODR;      // GPIO port output data register       (0x14)
-    volatile uint32_t BSRR;     // GPIO port bit set/reset register     (0x18)
-    volatile uint32_t LCKR;     // GPIO port configuration lock register(0x1C)
-    volatile uint32_t AFRL;     // GPIO alternate function low register (0x20)
-    volatile uint32_t AFRH;     // GPIO alternate function high register(0x24)
-} GPIO_RegDef_t;
+	typedef struct
+	{
+		volatile uint32_t MODER;    // GPIO port mode register              (0x00)
+		volatile uint32_t OTYPER;   // GPIO port output type register       (0x04)
+		volatile uint32_t OSPEEDR;  // GPIO port output speed register      (0x08)
+		volatile uint32_t PUPDR;    // GPIO port pull-up/pull-down register (0x0C)
+		volatile uint32_t IDR;      // GPIO port input data register        (0x10)
+		volatile uint32_t ODR;      // GPIO port output data register       (0x14)
+		volatile uint32_t BSRR;     // GPIO port bit set/reset register     (0x18)
+		volatile uint32_t LCKR;     // GPIO port configuration lock register(0x1C)
+		volatile uint32_t AFRL;     // GPIO alternate function low register (0x20)
+		volatile uint32_t AFRH;     // GPIO alternate function high register(0x24)
+	} GPIO_RegDef_t;
 
 
-// GPIO pointers
+	// GPIO pointers
 
-#define GPIOA   ((GPIO_RegDef_t*)GPIOA_BASEADDR)
-#define GPIOB   ((GPIO_RegDef_t*)GPIOB_BASEADDR)
-#define GPIOC   ((GPIO_RegDef_t*)GPIOC_BASEADDR)
-#define GPIOD   ((GPIO_RegDef_t*)GPIOD_BASEADDR)
-#define GPIOE   ((GPIO_RegDef_t*)GPIOE_BASEADDR)
-#define GPIOF   ((GPIO_RegDef_t*)GPIOF_BASEADDR)
-#define GPIOG   ((GPIO_RegDef_t*)GPIOG_BASEADDR)
-#define GPIOH   ((GPIO_RegDef_t*)GPIOH_BASEADDR)
+	#define GPIOA   ((GPIO_RegDef_t*)GPIOA_BASEADDR)
+	#define GPIOB   ((GPIO_RegDef_t*)GPIOB_BASEADDR)
+	#define GPIOC   ((GPIO_RegDef_t*)GPIOC_BASEADDR)
+	#define GPIOD   ((GPIO_RegDef_t*)GPIOD_BASEADDR)
+	#define GPIOE   ((GPIO_RegDef_t*)GPIOE_BASEADDR)
+	#define GPIOF   ((GPIO_RegDef_t*)GPIOF_BASEADDR)
+	#define GPIOG   ((GPIO_RegDef_t*)GPIOG_BASEADDR)
+	#define GPIOH   ((GPIO_RegDef_t*)GPIOH_BASEADDR)
 
 //-----------------------------------------------------------------------
 
