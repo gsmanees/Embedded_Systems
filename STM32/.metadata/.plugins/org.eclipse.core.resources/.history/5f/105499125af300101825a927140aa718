@@ -1,0 +1,69 @@
+/*
+ * stm32f446xx.h
+ *
+ *  Created on: 16-Jan-2026
+ *      Author: anees
+ */
+
+#ifndef INC_STM32F446XX_H_
+#define INC_STM32F446XX_H_
+
+
+
+/*
+ * steps to create board specific MCU header file
+ * 		write macros for the following
+ * 1. System memory/ flash memory base address
+ * 2. SRAM 1 base address
+ * 3. SRAM 2 base address
+ * 4. SRAM base address 			- Same as that of SRAM1 base address
+ * 5. Bus Peripheral base address 	- All buses starts here
+ * 6. APB1 peripheral base address
+ * 7. APB2 peripheral base address
+ * 8. AHB1 peripheral base address
+ * 9. AHB2 peripheral base address
+ * 10.AHB3 peripheral base address
+ *
+ *
+ *
+ *
+ */
+
+
+// 1. System memory/ flash memory base address
+	#define FLASH_BASEADDR	0x1FFF0000U
+	#define SRAM1_BASEADDR	0x20000000U
+	#define SRAM2_BASEADDR	0x2001C000U
+	#define SRAM_BASEADDR	SRAM1_BASEADDR
+
+// All peripheral buses main base addresses
+
+	#define PERIPH_BASEADDR		0x40000000U
+
+	#define APB1_BASEADDR	0x40000000U
+	#define APB2_BASEADDR	0x40010000U
+	#define AHB1_BASEADDR	0x40020000U
+	#define AHB2_BASEADDR	0x50000000U
+	#define AHB3_BASEADDR	0x60000000U
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_STM32F446XX_H_ */

@@ -1,0 +1,19 @@
+2026-01-15 21:01:27,867 [INFO] Activator:176 - 
+
+
+2026-01-15 21:01:27,875 [INFO] Activator:177 - !SESSION log4j initialized
+2026-01-15 21:01:32,786 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-01-15 21:21:36,685 [INFO] Activator:176 - 
+
+
+2026-01-15 21:21:36,688 [INFO] Activator:177 - !SESSION log4j initialized
+2026-01-15 21:21:43,352 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-01-15 21:22:27,967 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2026-01-15 21:22:27,967 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2026-01-15 21:22:27,969 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2026-01-15 21:22:28,998 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jan 15, 2026 9:22:28 PM org.apache.jasper.servlet.TldScanner scanJars
+2026-01-15 21:22:29,001 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-01-15 21:22:29,001 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-01-15 21:22:29,542 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jan 15, 2026 9:22:29 PM org.apache.jasper.servlet.TldScanner scanJars
+2026-01-15 21:22:29,545 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-01-15 21:22:29,545 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

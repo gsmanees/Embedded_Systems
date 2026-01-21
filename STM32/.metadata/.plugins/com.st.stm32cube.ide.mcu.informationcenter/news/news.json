@@ -1,12 +1,17 @@
 data='[ \
 	{ \
-		"image": "news/Visual-1_eclipse.png", \
+		"image": "news/CubeIDE_MX_split.png", \
 		"link": "", \
 		"caption": "" \
 	}, \
 	{ \
-		"image": "news/Visual-2_GCC13.png", \
+		"image": "news/LLVMinToolchain.png", \
 		"link": "", \
+		"caption": "" \
+	}, \
+	{ \
+		"image": "news/VS_Code.png", \
+		"link": "https://www.st.com/content/st_com/en/stm32-mcu-developer-zone/software-development-tools/stm32cubevscode.html", \
 		"caption": "" \
 	} \
 ]';

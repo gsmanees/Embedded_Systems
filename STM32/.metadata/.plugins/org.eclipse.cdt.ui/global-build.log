@@ -1,66 +1,14 @@
-08:16:53 **** Incremental Build of configuration Debug for project oled_i2c_driver ****
+20:46:20 **** Incremental Build of configuration Debug for project driverDev ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc "../Drivers/Src/fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/fonts.d" -MT"Drivers/Src/fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/fonts.o"
-arm-none-eabi-gcc "../Drivers/Src/lm35.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/lm35.d" -MT"Drivers/Src/lm35.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/lm35.o"
-arm-none-eabi-gcc "../Drivers/Src/oled.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/oled.d" -MT"Drivers/Src/oled.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/oled.o"
-arm-none-eabi-gcc "../Drivers/Src/ssd1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/ssd1306.d" -MT"Drivers/Src/ssd1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/ssd1306.o"
-arm-none-eabi-gcc "../Drivers/Src/stm32f446xx_i2c_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f446xx_i2c_driver.d" -MT"Drivers/Src/stm32f446xx_i2c_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f446xx_i2c_driver.o"
-arm-none-eabi-gcc "../Drivers/Src/stm32f446xx_rcc_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f446xx_rcc_driver.d" -MT"Drivers/Src/stm32f446xx_rcc_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f446xx_rcc_driver.o"
-arm-none-eabi-gcc "../Drivers/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f4xx_hal_msp.d" -MT"Drivers/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f4xx_hal_msp.o"
-arm-none-eabi-gcc "../Drivers/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f4xx_it.d" -MT"Drivers/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/stm32f4xx_it.o"
-arm-none-eabi-gcc "../Drivers/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc" -I"C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/syscalls.d" -MT"Drivers/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/Src/syscalls.o"
-In file included from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/stm32f4xx_hal_conf.h:275,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/fonts.h:41,
-                 from ../Drivers/Src/fonts.c:26:
-C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29:10: fatal error: stm32f4xx.h: No such file or directory
-   29 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-In file included from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/stm32f4xx_hal_conf.h:275,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/main.h:30,
-                 from ../Src/main.c:20:
-C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29:10: fatal error: stm32f4xx.h: No such file or directory
-   29 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-compilation terminated.
-In file included from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/stm32f4xx_hal_conf.h:275,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/ssd1306.h:48,
-                 from ../Drivers/Src/ssd1306.c:31:
-C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29:10: fatal error: stm32f4xx.h: No such file or directory
-   29 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-In file included from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/stm32f4xx_hal_conf.h:275,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/main.h:30,
-                 from ../Drivers/Src/stm32f4xx_it.c:21:
-C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29:10: fatal error: stm32f4xx.h: No such file or directory
-   29 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Src/subdir.mk:25: Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-make: *** [Drivers/Src/subdir.mk:49: Drivers/Src/fonts.o] Error 1
-In file included from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/stm32f4xx_hal_conf.h:275,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/Inc/main.h:30,
-                 from ../Drivers/Src/stm32f4xx_hal_msp.c:22:
-C:/EmbeddedSystemsProjectsEntri/STM32/oled_i2c_driver/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29:10: fatal error: stm32f4xx.h: No such file or directory
-   29 | #include "stm32f4xx.h"
-      |          ^~~~~~~~~~~~~
-compilation terminated.
-make: *** [Drivers/Src/subdir.mk:49: Drivers/Src/ssd1306.o] Error 1
-make: *** [Drivers/Src/subdir.mk:49: Drivers/Src/stm32f4xx_it.o] Error 1
-make: *** [Drivers/Src/subdir.mk:49: Drivers/Src/stm32f4xx_hal_msp.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "driverDev.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\driverDev\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="driverDev.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: driverDev.elf
+ 
+arm-none-eabi-size  driverDev.elf 
+arm-none-eabi-objdump -h -S driverDev.elf  > "driverDev.list"
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	driverDev.elf
+Finished building: default.size.stdout
+ 
+Finished building: driverDev.list
+ 

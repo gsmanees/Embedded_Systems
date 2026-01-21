@@ -1,10 +1,17 @@
-22:11:52 **** Incremental Build of configuration Debug for project LED_blink ****
+21:02:06 **** Build of configuration Debug for project LED_blink ****
 make -j12 all 
-arm-none-eabi-size  LED_blink.elf 
-   text	   data	    bss	    dec	    hex	filename
-    892	      0	   1568	   2460	    99c	LED_blink.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+../Src/syscalls.c:60:15: error: expected declaration specifiers or '...' before '*' token
+   60 |  ITM_SendChar(*ptr++)
+      |               ^
+../Src/syscalls.c: In function '_write':
+../Src/syscalls.c:117:5: warning: implicit declaration of function '__io_putchar'; did you mean '__io_getchar'? [-Wimplicit-function-declaration]
+  117 |     __io_putchar(*ptr++);
+      |     ^~~~~~~~~~~~
+      |     __io_getchar
+make: *** [Src/subdir.mk:25: Src/syscalls.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-22:11:52 Build Finished. 0 errors, 0 warnings. (took 149ms)
+21:02:08 Build Failed. 2 errors, 1 warnings. (took 2s.65ms)
 
