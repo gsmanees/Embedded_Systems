@@ -1,0 +1,15 @@
+  RTC connections
+  VCC	5V
+  SDA	ARDUINO SDA
+  SCL	ARDUINO SCL
+  
+  OLED Connections
+  VCC	3.3V
+  SCK	ARDUINO SCK
+  SCL	ARDUINO SCL
+
+  bmp 280 connections
+  PB2 --> SS
+  PB3 --> MOSI  SDA
+  PB4 --> MISO  SDO
+  PB5 --> SCK
