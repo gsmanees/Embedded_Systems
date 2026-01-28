@@ -9,6 +9,8 @@
 #ifndef GLOBAL_H_
 #define GLOBAL_H_
 uint8_t hh, mm, ss, dd, mon, yy;
+uint8_t hour12;
+char ampm;
 
 
 

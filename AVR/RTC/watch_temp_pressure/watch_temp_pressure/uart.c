@@ -40,26 +40,42 @@ void UART_TxNumber(uint8_t num)
 
 void UART_TxFloat(float value, uint8_t decimalPlaces)
 {
-	int intPart = (int)value;   // integer part
-	float fraction = value - intPart;
+	int intPart;
+	int fracInt;
+	float scale = 1.0f;
 
-	// send integer part
+	// handle sign
+	if (value < 0)
+	{
+		UART_TxChar('-');
+		value = -value;
+	}
+
+	// scale for decimals
+	for (uint8_t i = 0; i < decimalPlaces; i++)
+	scale *= 10.0f;
+
+	// rounding
+	value += 0.5f / scale;
+
+	intPart = (int)value;
+	fracInt = (int)((value - intPart) * scale);
+
+	// print integer part
 	UART_TxNumber(intPart);
 	UART_TxChar('.');
 
-	// convert fraction to positive (for negative numbers)
-	if(fraction < 0)
-	fraction = -fraction;
-
-	// print decimal digits
-	for(uint8_t i = 0; i < decimalPlaces; i++)
+	// print fractional part with leading zeros
+	for (int i = decimalPlaces - 1; i >= 0; i--)
 	{
-		fraction *= 10;
-		int digit = (int)fraction;
-		UART_TxChar('0' + digit);
-		fraction -= digit;
+		int divisor = 1;
+		for (int j = 0; j < i; j++)
+		divisor *= 10;
+
+		UART_TxChar((fracInt / divisor) % 10 + '0');
 	}
 }
+
 
 void UART_printTime(void)
 {

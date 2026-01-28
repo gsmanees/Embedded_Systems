@@ -5,6 +5,7 @@
  *  Author: anees
  */ 
 
+#include "bmp280.h"
 
 void printTimeDate(void)
 {

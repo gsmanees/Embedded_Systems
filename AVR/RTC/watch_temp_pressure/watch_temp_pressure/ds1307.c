@@ -150,3 +150,28 @@ void DS1307_SetDate(uint8_t dd, uint8_t mm, uint8_t yy)
 
 	TWI_Stop();
 }
+
+
+void ConvertToAMPM(uint8_t hour24, uint8_t *hour12, char *ampm)
+{
+	if (hour24 == 0)
+	{
+		*hour12 = 12;
+		*ampm = 'A';
+	}
+	else if (hour24 < 12)
+	{
+		*hour12 = hour24;
+		*ampm = 'A';
+	}
+	else if (hour24 == 12)
+	{
+		*hour12 = 12;
+		*ampm = 'P';
+	}
+	else
+	{
+		*hour12 = hour24 - 12;
+		*ampm = 'P';
+	}
+}

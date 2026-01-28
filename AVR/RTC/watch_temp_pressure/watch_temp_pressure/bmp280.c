@@ -308,7 +308,7 @@ void realTemp(void)
 	 UART_TxString(" C\n");
 	
 	 
-	 OLED_SetCursor(6,33);
+	 OLED_SetCursor(5,31);
 
 	 OLED_PrintFloat_2Decimal(T);
 
@@ -561,14 +561,20 @@ void realPressure(void)
 	var2=p*((double)dig_P8)/32768.0;
 	p=p+(var1+var2+((double)dig_P7))/16.0;
 	p=p/100;
-// 	UART_TxString("\nAtm. Pressure: ");
-// 	UART_TxFloat(p, 2);UART_TxString(" hPa");
+	UART_TxString("\nAtm. Pressure: ");
+	UART_TxFloat(p, 2);UART_TxString(" hPa");
+	UART_TxString("\n");
 	
 /*	OLED_SetCursor(7, 35);*/
 	//OLED_String(" Atm. Pressure:");
-	/*OLED_SetCursor(7, 0);*/
-	/*sprintf(buffer2, " %.2f", p);*/
-// 	OLED_String(buffer2);
-// 	OLED_String(" hPa");
+// 	OLED_SetCursor(7, 0);
+// 	sprintf(buffer2, " %.2f", p);
+//  	OLED_String(buffer2);
+//  	OLED_String(" hPa");
+
+	OLED_SetCursor(7,20);
+	OLED_PrintFloat_2Decimal(p);
+	OLED_String(" hPa");
+
 	
 }

@@ -9,6 +9,7 @@
 #include "oled.h"
 #include "i2c.h"
 #include "global.h"
+#include "ds1307.h"
 #include <util/delay.h>
 
 	uint8_t oled_x = 0;
@@ -501,11 +502,16 @@ void OLED_Print2Digit(uint8_t num)
 
 void OLED_PrintTime(uint8_t hh, uint8_t mm, uint8_t ss)
 {
-	OLED_Print2Digit(hh);
+	ConvertToAMPM(hh, &hour12, &ampm);
+
+	OLED_Print2Digit(hour12);
 	OLED_PrintChar(':');
 	OLED_Print2Digit(mm);
 	OLED_PrintChar(':');
 	OLED_Print2Digit(ss);
+	OLED_Char(' ');
+	OLED_Char(ampm);
+	OLED_Char('M');
 }
 
 void OLED_PrintDate(uint8_t dd, uint8_t mm, uint8_t yy)
@@ -727,18 +733,28 @@ void OLED_PrintFloat_2Decimal(float value)
 	}
 
 	int_part  = (int)value;
-	frac_part = (int)((value - int_part) * 100 + 0.5f); // rounding
+	frac_part = (int)((value - int_part) * 100 + 0.5f);
 
-	// Print integer part digit-by-digit
+	// Handle rounding overflow (e.g., 99.995 ? 100.00)
+	if (frac_part >= 100)
+	{
+		frac_part = 0;
+		int_part++;
+	}
+
+	/* ---- print integer part ---- */
+	if (int_part >= 1000)
+	OLED_PrintChar((int_part / 1000) + '0');
+
 	if (int_part >= 100)
-	OLED_PrintChar((int_part / 100) + '0');
+	OLED_PrintChar((int_part / 100 % 10) + '0');
 
 	if (int_part >= 10)
-	OLED_PrintChar(((int_part / 10) % 10) + '0');
+	OLED_PrintChar((int_part / 10 % 10) + '0');
 
 	OLED_PrintChar((int_part % 10) + '0');
 
-	// Print decimal part
+	/* ---- decimal part ---- */
 	OLED_PrintChar('.');
 	OLED_PrintChar((frac_part / 10) + '0');
 	OLED_PrintChar((frac_part % 10) + '0');
@@ -746,18 +762,20 @@ void OLED_PrintFloat_2Decimal(float value)
 
 
 
+
 // printing 
 void OLED_printTime(void)
 {
 		// OLED printing
-			OLED_SetCursor(2, 26);
+			OLED_SetCursor(1, 22);
 			OLED_PrintTime(hh, mm, ss); // SSD1306, address: 0x3c
+		
 }
 
 
 void OLED_printDate(void)
 {
 	// date printing
-	OLED_SetCursor(4, 26);
+	OLED_SetCursor(3, 26);
 	OLED_PrintDate(dd, mon, yy);
 }
