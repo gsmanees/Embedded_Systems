@@ -1,3 +1,8 @@
+watch_temp_pressure.c
+ *
+ * Created: 25-01-2026 10.44.23 PM
+ * Author : anees
+ 
   RTC connections
   VCC	5V
   SDA	ARDUINO SDA
@@ -7,9 +12,14 @@
   VCC	3.3V
   SCK	ARDUINO SCK
   SCL	ARDUINO SCL
-
-  bmp 280 connections
-  PB2 --> SS
-  PB3 --> MOSI  SDA
-  PB4 --> MISO  SDO
-  PB5 --> SCK
+  
+  BMP280 Connections
+   PB2 --> SS
+   PB3 --> MOSI  SDA
+   PB4 --> MISO  SDO
+   PB5 --> SCK
+   VCC --> 3.3v
+ 
+ this watch shows time, date, atmospheric temperature and atmospheric pressure
+ 
+ */ 
