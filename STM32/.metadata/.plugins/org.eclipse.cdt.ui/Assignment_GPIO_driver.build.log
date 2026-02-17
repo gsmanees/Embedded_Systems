@@ -1,4 +1,4 @@
-07:55:22 **** Incremental Build of configuration Debug for project Assignment_GPIO_driver ****
+07:59:58 **** Incremental Build of configuration Debug for project Assignment_GPIO_driver ****
 make -j12 all 
 arm-none-eabi-size  Assignment_GPIO_driver.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  Assignment_GPIO_driver.elf
 Finished building: default.size.stdout
  
 
-07:55:22 Build Finished. 0 errors, 0 warnings. (took 294ms)
+07:59:58 Build Finished. 0 errors, 0 warnings. (took 301ms)
 
