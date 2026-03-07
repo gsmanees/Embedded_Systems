@@ -1,0 +1,2 @@
+source C:/ESP 32 PROJECTS/switch/build/bootloader/gdbinit/symbols
+source C:/ESP 32 PROJECTS/switch/build/bootloader/gdbinit/connect
