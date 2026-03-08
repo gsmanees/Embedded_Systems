@@ -1,0 +1,8 @@
+Drivers/Src/stm32f446xx_gpio_driver.o: \
+ ../Drivers/Src/stm32f446xx_gpio_driver.c \
+ C:/EmbeddedSystemsProjectsEntri/STM32/GPIO_driver_assignment_2/Drivers/Inc/stm32f446xx_gpio_driver.h \
+ C:/EmbeddedSystemsProjectsEntri/STM32/GPIO_driver_assignment_2/Drivers/Inc/stm32f446xx.h \
+ C:/EmbeddedSystemsProjectsEntri/STM32/GPIO_driver_assignment_2/Drivers/Inc/stm32f446xx.h
+C:/EmbeddedSystemsProjectsEntri/STM32/GPIO_driver_assignment_2/Drivers/Inc/stm32f446xx_gpio_driver.h:
+C:/EmbeddedSystemsProjectsEntri/STM32/GPIO_driver_assignment_2/Drivers/Inc/stm32f446xx.h:
+C:/EmbeddedSystemsProjectsEntri/STM32/GPIO_driver_assignment_2/Drivers/Inc/stm32f446xx.h:

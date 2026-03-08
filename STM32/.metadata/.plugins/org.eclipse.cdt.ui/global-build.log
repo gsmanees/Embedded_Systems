@@ -1,21 +1,21 @@
-07:09:35 **** Incremental Build of configuration Debug for project interrupt_btn ****
+00:44:49 **** Incremental Build of configuration Debug for project GPIO_driver_assignment_2 ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/interrupt_btn/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "interrupt_btn.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\interrupt_btn\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="interrupt_btn.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: interrupt_btn.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/GPIO_driver_assignment_2/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "GPIO_driver_assignment_2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\GPIO_driver_assignment_2\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_driver_assignment_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_driver_assignment_2.elf
  
-arm-none-eabi-size  interrupt_btn.elf 
-arm-none-eabi-objdump -h -S interrupt_btn.elf  > "interrupt_btn.list"
+arm-none-eabi-size  GPIO_driver_assignment_2.elf 
+arm-none-eabi-objdump -h -S GPIO_driver_assignment_2.elf  > "GPIO_driver_assignment_2.list"
    text	   data	    bss	    dec	    hex	filename
-   2768	      0	   1568	   4336	   10f0	interrupt_btn.elf
+   2384	      0	   1568	   3952	    f70	GPIO_driver_assignment_2.elf
 Finished building: default.size.stdout
  
-Finished building: interrupt_btn.list
+Finished building: GPIO_driver_assignment_2.list
  
-07:09:44 **** Incremental Build of configuration Debug for project interrupt_btn ****
+00:44:55 **** Incremental Build of configuration Debug for project GPIO_driver_assignment_2 ****
 make -j12 all 
-arm-none-eabi-size  interrupt_btn.elf 
+arm-none-eabi-size  GPIO_driver_assignment_2.elf 
    text	   data	    bss	    dec	    hex	filename
-   2768	      0	   1568	   4336	   10f0	interrupt_btn.elf
+   2384	      0	   1568	   3952	    f70	GPIO_driver_assignment_2.elf
 Finished building: default.size.stdout
  
