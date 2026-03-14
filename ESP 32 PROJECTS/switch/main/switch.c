@@ -19,7 +19,6 @@ void app_main(void)
     // internal pullup activated for active low button concept
 
     // configure led pin
-    gpio_reset_pin(LED_PIN);
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
 
     // button state

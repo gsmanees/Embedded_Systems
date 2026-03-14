@@ -1,4 +1,4 @@
-# Install script for directory: C:/ESP 32 PROJECTS/switch
+# Install script for directory: C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/ESP 32 PROJECTS/switch/build/esp-idf/cmake_install.cmake")
+  include("C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/esp-idf/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/ESP 32 PROJECTS/switch/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

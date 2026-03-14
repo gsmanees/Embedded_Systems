@@ -22,4 +22,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file C:/ESP 32 PROJECTS/switch/build/bootloader/bootloader.elf
+file C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader/bootloader.elf

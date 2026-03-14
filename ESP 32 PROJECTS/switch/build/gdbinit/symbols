@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file C:/ESP 32 PROJECTS/switch/build/bootloader/bootloader.elf
+    add-symbol-file C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file C:/ESP 32 PROJECTS/switch/build/switch.elf
+file C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/switch.elf

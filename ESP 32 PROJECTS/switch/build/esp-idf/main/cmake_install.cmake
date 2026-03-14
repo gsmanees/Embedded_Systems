@@ -1,4 +1,4 @@
-# Install script for directory: C:/ESP 32 PROJECTS/switch/main
+# Install script for directory: C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

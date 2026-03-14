@@ -3,6 +3,10 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="GPIO_BASEADDR_TO_CODE"/>
+		<item value="exti"/>
+		<item value="syscfg"/>
+		<item value="enable"/>
 		<item value="GPIO_AF5"/>
 	</list>
 </section>

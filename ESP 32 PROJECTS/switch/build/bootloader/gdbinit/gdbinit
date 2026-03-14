@@ -1,2 +1,2 @@
-source C:/ESP 32 PROJECTS/switch/build/bootloader/gdbinit/symbols
-source C:/ESP 32 PROJECTS/switch/build/bootloader/gdbinit/connect
+source C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader/gdbinit/symbols
+source C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader/gdbinit/connect

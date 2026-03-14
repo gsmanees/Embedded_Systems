@@ -1847,7 +1847,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\anees\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -S"C:\ESP 32 PROJECTS\switch" -B"C:\ESP 32 PROJECTS\switch\build"
+  command = C:\Users\anees\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -S"C:\EmbeddedSystemsProjectsEntri\ESP 32 PROJECTS\switch" -B"C:\EmbeddedSystemsProjectsEntri\ESP 32 PROJECTS\switch\build"
   description = Re-running CMake...
   generator = 1
 

@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/anees/esp/v5.5.2/esp-idf/components/bootloader/subprojec
   file(MAKE_DIRECTORY "C:/Users/anees/esp/v5.5.2/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/ESP 32 PROJECTS/switch/build/bootloader"
-  "C:/ESP 32 PROJECTS/switch/build/bootloader-prefix"
-  "C:/ESP 32 PROJECTS/switch/build/bootloader-prefix/tmp"
-  "C:/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/ESP 32 PROJECTS/switch/build/bootloader-prefix/src"
-  "C:/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader"
+  "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader-prefix"
+  "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader-prefix/tmp"
+  "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader-prefix/src"
+  "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/switch/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
