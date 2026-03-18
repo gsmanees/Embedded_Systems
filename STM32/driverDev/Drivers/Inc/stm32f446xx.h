@@ -244,7 +244,7 @@ typedef struct
 	vo uint32_t CKGATENR;
 	vo uint32_t DCKCFGR2;
 
-}RCC_Regdef_t;
+}RCC_RegDef_t;
 
 
 // Peripheral register definition structure for EXTI
