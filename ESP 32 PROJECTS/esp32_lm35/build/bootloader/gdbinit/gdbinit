@@ -1,0 +1,2 @@
+source C:/ESP 32 PROJECTS/esp32_lm35/build/bootloader/gdbinit/symbols
+source C:/ESP 32 PROJECTS/esp32_lm35/build/bootloader/gdbinit/connect

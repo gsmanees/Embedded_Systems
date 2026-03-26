@@ -1,0 +1,849 @@
+Command: C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\anees\esp\v5.5.2\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\ESP 32 PROJECTS\esp32_lm35\build\esp32_lm35.elf C:\ESP 32 PROJECTS\esp32_lm35\build\bootloader\bootloader.elf --force-color -m 'C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\anees\esp\v5.5.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 26 2026 06:41:53[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ffb4h (196532) map[0m
+[0;32mI (153) esp_image: segment 1: paddr=0003ffdc vaddr=3ffb0000 size=0003ch (    60) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=a2cf8h (666872) map[0m
+[0;32mI (385) esp_image: segment 3: paddr=000e2d20 vaddr=3ffb003c size=03ef8h ( 16120) load[0m
+[0;32mI (391) esp_image: segment 4: paddr=000e6c20 vaddr=40080000 size=17f9ch ( 98204) load[0m
+[0;32mI (430) esp_image: segment 5: paddr=000febc4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (442) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (442) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (463) app_init: Application information:[0m
+[0;32mI (466) app_init: Project name:     esp32_lm35[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (474) app_init: Compile time:     Mar 26 2026 06:40:40[0m
+[0;32mI (479) app_init: ELF file SHA256:  98014e84d...[0m
+[0;32mI (483) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (487) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (491) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (495) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (499) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (505) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFB8858 len 000277A8 (157 KiB): DRAM[0m
+[0;32mI (515) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 40097F9C len 00008064 (32 KiB): IRAM[0m
+[0;33mW (533) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;33mW (551) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (564) main_task: Started on CPU0[0m
+[0;32mI (574) main_task: Calling app_main()[0m
+[0;32mI (604) wifi:wifi driver task: 3ffc08a0, prio:23, stack:6656, core=0[0m
+[0;32mI (614) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (614) wifi:wifi certification version: v7.0[0m
+[0;32mI (614) wifi:config NVS flash: enabled[0m
+[0;32mI (614) wifi:config nano formatting: disabled[0m
+[0;32mI (624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (624) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (634) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (644) wifi:Init static rx buffer num: 10[0m
+[0;32mI (644) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (654) wifi_init: tcpip mbox: 32[0m
+[0;32mI (654) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp tx win: 5760[0m
+[0;32mI (664) wifi_init: tcp rx win: 5760[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (674) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (674) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (684) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (694) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (784) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (804) wifi:mode : sta (f0:24:f9:0c:b0:b8)[0m
+[0;32mI (804) wifi:enable tsf[0m
+[0;32mI (804) IOT_APP: Wi-Fi Init Finished.[0m
+[0;32mI (804) IOT_APP: WiFi Started. Connecting...[0m
+[0;32mI (814) IOT_APP: GPIO33 initialized for LM35 control[0m
+[0;32mI (814) IOT_APP: LM35 Power: ON[0m
+[0;32mI (814) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (824) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (824) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (824) IOT_APP: Preparing JSON...[0m
+[0;32mI (834) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":0,"status":"active"}[0m
+[0;32mI (844) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (844) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (854) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (864) esp-tls: Failed to open new connection[0m
+[1;31mE (864) transport_base: Failed to open a new connection[0m
+[1;31mE (874) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (874) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (884) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (894) wifi:connected with KOKADANS, aid = 2, channel 1, BW20, bssid = ae:a5:f5:d0:85:96[0m
+[0;32mI (894) wifi:security: WPA2-PSK, phy: bgn, rssi: -41[0m
+[0;32mI (904) wifi:pm start, type: 1[0m
+
+[0;32mI (904) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (994) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (994) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1934) esp_netif_handlers: sta ip: 10.45.247.129, mask: 255.255.255.0, gw: 10.45.247.241[0m
+[0;32mI (1934) IOT_APP: ✅ Got IP: 10.45.247.129[0m
+[0;32mI (5884) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (5884) IOT_APP: Preparing JSON...[0m
+[0;32mI (5884) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":5,"status":"active"}[0m
+[0;32mI (5884) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (5904) wifi:<ba-add>idx:0 (ifx:0, ae:a5:f5:d0:85:96), tid:0, ssn:4, winSize:64[0m
+[0;32mI (7744) wifi:<ba-add>idx:1 (ifx:0, ae:a5:f5:d0:85:96), tid:4, ssn:6, winSize:64[0m
+[0;32mI (7884) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10114) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (10114) IOT_APP: Response Length: 65[0m
+[0;32mI (10114) IOT_APP: ✅ Data uploaded successfully[0m
+����������������������������������������������������������������(15124) LM35: Raw: 0, Temp: 9.50 °C
+[0;32mI (15124) IOT_APP: Preparing JSON...[0m
+[0;32mI (15124) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":14,"status":"active"}[0m
+[0;32mI (15124) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (15464) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (16234) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (16234) IOT_APP: Response Length: 66[0m
+[0;32mI (16234) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (21244) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (21244) IOT_APP: Preparing JSON...[0m
+[0;32mI (21244) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":20,"status":"active"}[0m
+[0;32mI (21244) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (21814) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (22694) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (22694) IOT_APP: Response Length: 66[0m
+[0;32mI (22694) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (27704) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (27704) IOT_APP: Preparing JSON...[0m
+[0;32mI (27704) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":27,"status":"active"}[0m
+[0;32mI (27704) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (28164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (28854) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (28854) IOT_APP: Response Length: 66[0m
+[0;32mI (28854) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (33864) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (33864) IOT_APP: Preparing JSON...[0m
+[0;32mI (33864) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":33,"status":"active"}[0m
+[0;32mI (33864) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (34304) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (35484) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (35484) IOT_APP: Response Length: 66[0m
+[0;32mI (35484) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (40494) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (40494) IOT_APP: Preparing JSON...[0m
+[0;32mI (40494) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":40,"status":"active"}[0m
+[0;32mI (40494) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (40864) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (41744) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (41744) IOT_APP: Response Length: 66[0m
+[0;32mI (41744) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (46744) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (46744) IOT_APP: Preparing JSON...[0m
+[0;32mI (46744) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":46,"status":"active"}[0m
+[0;32mI (46744) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (47204) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (48504) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (48504) IOT_APP: Response Length: 66[0m
+[0;32mI (48504) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (53504) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (53504) IOT_APP: Preparing JSON...[0m
+[0;32mI (53504) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":53,"status":"active"}[0m
+[0;32mI (53504) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (54004) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (55054) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (55054) IOT_APP: Response Length: 66[0m
+[0;32mI (55054) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (60064) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (60064) IOT_APP: Preparing JSON...[0m
+[0;32mI (60064) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":59,"status":"active"}[0m
+[0;32mI (60064) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (60364) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (61114) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (61114) IOT_APP: Response Length: 66[0m
+[0;32mI (61114) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (66124) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (66124) IOT_APP: Preparing JSON...[0m
+[0;32mI (66124) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":65,"status":"active"}[0m
+[0;32mI (66124) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (66664) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (67954) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (67954) IOT_APP: Response Length: 66[0m
+[0;32mI (67954) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (72964) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (72964) IOT_APP: Preparing JSON...[0m
+[0;32mI (72964) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":72,"status":"active"}[0m
+[0;32mI (72964) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (73424) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (74124) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (74124) IOT_APP: Response Length: 66[0m
+[0;32mI (74124) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (79134) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (79134) IOT_APP: Preparing JSON...[0m
+[0;32mI (79134) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":78,"status":"active"}[0m
+[0;32mI (79134) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (79774) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (81064) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (81064) IOT_APP: Response Length: 66[0m
+[0;32mI (81064) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (86064) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (86064) IOT_APP: Preparing JSON...[0m
+[0;32mI (86064) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":85,"status":"active"}[0m
+[0;32mI (86064) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (86734) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (87824) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (87824) IOT_APP: Response Length: 66[0m
+[0;32mI (87824) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (92824) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (92824) IOT_APP: Preparing JSON...[0m
+[0;32mI (92824) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":92,"status":"active"}[0m
+[0;32mI (92824) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (93214) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (94174) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (94174) IOT_APP: Response Length: 66[0m
+[0;32mI (94174) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (99174) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (99174) IOT_APP: Preparing JSON...[0m
+[0;32mI (99174) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":98,"status":"active"}[0m
+[0;32mI (99174) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (99634) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (100604) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (100604) IOT_APP: Response Length: 66[0m
+[0;32mI (100604) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (105614) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (105614) IOT_APP: Preparing JSON...[0m
+[0;32mI (105614) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":105,"status":"active"}[0m
+[0;32mI (105614) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (105924) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (106584) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (106584) IOT_APP: Response Length: 67[0m
+[0;32mI (106584) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (111594) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (111594) IOT_APP: Preparing JSON...[0m
+[0;32mI (111594) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":111,"status":"active"}[0m
+[0;32mI (111594) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (112024) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (113014) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (113014) IOT_APP: Response Length: 67[0m
+[0;32mI (113014) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (118014) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (118014) IOT_APP: Preparing JSON...[0m
+[0;32mI (118014) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":117,"status":"active"}[0m
+[0;32mI (118014) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (118364) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (119484) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (119484) IOT_APP: Response Length: 67[0m
+[0;32mI (119484) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (124494) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (124494) IOT_APP: Preparing JSON...[0m
+[0;32mI (124494) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":124,"status":"active"}[0m
+[0;32mI (124494) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (124824) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (125474) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (125474) IOT_APP: Response Length: 67[0m
+[0;32mI (125474) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (130474) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (130474) IOT_APP: Preparing JSON...[0m
+[0;32mI (130474) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":130,"status":"active"}[0m
+[0;32mI (130474) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (130774) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (131784) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (131784) IOT_APP: Response Length: 67[0m
+[0;32mI (131784) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (136784) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (136784) IOT_APP: Preparing JSON...[0m
+[0;32mI (136784) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":136,"status":"active"}[0m
+[0;32mI (136784) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (137114) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (138404) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (138404) IOT_APP: Response Length: 67[0m
+[0;32mI (138404) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (143414) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (143414) IOT_APP: Preparing JSON...[0m
+[0;32mI (143414) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":142,"status":"active"}[0m
+[0;32mI (143414) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (144084) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (145164) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (145164) IOT_APP: Response Length: 67[0m
+[0;32mI (145164) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (150174) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (150174) IOT_APP: Preparing JSON...[0m
+[0;32mI (150174) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":149,"status":"active"}[0m
+[0;32mI (150174) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (150564) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (151514) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (151514) IOT_APP: Response Length: 67[0m
+[0;32mI (151514) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (156524) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (156524) IOT_APP: Preparing JSON...[0m
+[0;32mI (156524) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":156,"status":"active"}[0m
+[0;32mI (156524) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (156984) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (158064) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (158064) IOT_APP: Response Length: 67[0m
+[0;32mI (158064) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (163074) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (163074) IOT_APP: Preparing JSON...[0m
+[0;32mI (163074) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":162,"status":"active"}[0m
+[0;32mI (163074) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (163534) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (164304) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (164304) IOT_APP: Response Length: 67[0m
+[0;32mI (164304) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (169304) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (169304) IOT_APP: Preparing JSON...[0m
+[0;32mI (169304) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":168,"status":"active"}[0m
+[0;32mI (169304) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (169684) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (170444) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (170444) IOT_APP: Response Length: 67[0m
+[0;32mI (170444) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (175444) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (175444) IOT_APP: Preparing JSON...[0m
+[0;32mI (175444) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":174,"status":"active"}[0m
+[0;32mI (175444) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (175764) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (176584) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (176584) IOT_APP: Response Length: 67[0m
+[0;32mI (176584) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (181594) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (181594) IOT_APP: Preparing JSON...[0m
+[0;32mI (181594) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":181,"status":"active"}[0m
+[0;32mI (181594) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (182174) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (182934) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (182934) IOT_APP: Response Length: 67[0m
+[0;32mI (182934) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (187944) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (187944) IOT_APP: Preparing JSON...[0m
+[0;32mI (187944) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":187,"status":"active"}[0m
+[0;32mI (187944) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (188524) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (189284) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (189284) IOT_APP: Response Length: 67[0m
+[0;32mI (189284) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (194294) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (194294) IOT_APP: Preparing JSON...[0m
+[0;32mI (194294) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":193,"status":"active"}[0m
+[0;32mI (194294) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (194864) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (196164) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (196164) IOT_APP: Response Length: 67[0m
+[0;32mI (196164) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (201164) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (201164) IOT_APP: Preparing JSON...[0m
+[0;32mI (201164) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":200,"status":"active"}[0m
+[0;32mI (201164) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (201834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (203124) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (203124) IOT_APP: Response Length: 67[0m
+[0;32mI (203124) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (208134) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (208134) IOT_APP: Preparing JSON...[0m
+[0;32mI (208134) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":207,"status":"active"}[0m
+[0;32mI (208134) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (208624) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (209474) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (209474) IOT_APP: Response Length: 67[0m
+[0;32mI (209474) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (214474) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (214474) IOT_APP: Preparing JSON...[0m
+[0;32mI (214474) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":214,"status":"active"}[0m
+[0;32mI (214474) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (214944) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (216074) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (216074) IOT_APP: Response Length: 67[0m
+[0;32mI (216074) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (221074) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (221074) IOT_APP: Preparing JSON...[0m
+[0;32mI (221074) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":220,"status":"active"}[0m
+[0;32mI (221074) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (221694) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (222764) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (222764) IOT_APP: Response Length: 67[0m
+[0;32mI (222764) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (227764) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (227764) IOT_APP: Preparing JSON...[0m
+[0;32mI (227764) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":227,"status":"active"}[0m
+[0;32mI (227764) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (228084) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (229134) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (229134) IOT_APP: Response Length: 67[0m
+[0;32mI (229134) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (234144) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (234144) IOT_APP: Preparing JSON...[0m
+[0;32mI (234144) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":233,"status":"active"}[0m
+[0;32mI (234144) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (234604) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (235684) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (235684) IOT_APP: Response Length: 67[0m
+[0;32mI (235684) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (240694) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (240694) IOT_APP: Preparing JSON...[0m
+[0;32mI (240694) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":240,"status":"active"}[0m
+[0;32mI (240694) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (241154) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (242244) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (242244) IOT_APP: Response Length: 67[0m
+[0;32mI (242244) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (247244) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (247244) IOT_APP: Preparing JSON...[0m
+[0;32mI (247244) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":246,"status":"active"}[0m
+[0;32mI (247244) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (247704) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (248794) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (248794) IOT_APP: Response Length: 67[0m
+[0;32mI (248794) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (253804) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (253804) IOT_APP: Preparing JSON...[0m
+[0;32mI (253804) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":253,"status":"active"}[0m
+[0;32mI (253804) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (254264) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (255554) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (255554) IOT_APP: Response Length: 67[0m
+[0;32mI (255554) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (260554) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (260554) IOT_APP: Preparing JSON...[0m
+[0;32mI (260554) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":260,"status":"active"}[0m
+[0;32mI (260554) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (261014) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (262104) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (262104) IOT_APP: Response Length: 67[0m
+[0;32mI (262104) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (267114) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (267114) IOT_APP: Preparing JSON...[0m
+[0;32mI (267114) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":266,"status":"active"}[0m
+[0;32mI (267114) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (267574) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (268654) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (268664) IOT_APP: Response Length: 67[0m
+[0;32mI (268664) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (273664) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (273664) IOT_APP: Preparing JSON...[0m
+[0;32mI (273664) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":273,"status":"active"}[0m
+[0;32mI (273664) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (274114) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (275134) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (275134) IOT_APP: Response Length: 67[0m
+[0;32mI (275134) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (280144) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (280144) IOT_APP: Preparing JSON...[0m
+[0;32mI (280144) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":279,"status":"active"}[0m
+[0;32mI (280144) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (280474) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (281234) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (281234) IOT_APP: Response Length: 67[0m
+[0;32mI (281234) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (286244) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (286244) IOT_APP: Preparing JSON...[0m
+[0;32mI (286244) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":285,"status":"active"}[0m
+[0;32mI (286244) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (286834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (288124) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (288124) IOT_APP: Response Length: 67[0m
+[0;32mI (288124) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (293124) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (293124) IOT_APP: Preparing JSON...[0m
+[0;32mI (293124) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":292,"status":"active"}[0m
+[0;32mI (293124) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (293584) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (294534) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (294534) IOT_APP: Response Length: 67[0m
+[0;32mI (294534) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (299544) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (299544) IOT_APP: Preparing JSON...[0m
+[0;32mI (299544) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":299,"status":"active"}[0m
+[0;32mI (299544) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (299844) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (301014) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (301014) IOT_APP: Response Length: 67[0m
+[0;32mI (301014) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (306024) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (306024) IOT_APP: Preparing JSON...[0m
+[0;32mI (306024) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":305,"status":"active"}[0m
+[0;32mI (306024) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (306484) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (307364) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (307364) IOT_APP: Response Length: 67[0m
+[0;32mI (307364) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (312374) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (312374) IOT_APP: Preparing JSON...[0m
+[0;32mI (312374) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":311,"status":"active"}[0m
+[0;32mI (312374) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (313064) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (314154) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (314164) IOT_APP: Response Length: 67[0m
+[0;32mI (314164) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (319164) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (319164) IOT_APP: Preparing JSON...[0m
+[0;32mI (319164) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":318,"status":"active"}[0m
+[0;32mI (319164) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (319594) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (320884) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (320884) IOT_APP: Response Length: 67[0m
+[0;32mI (320884) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (325894) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (325894) IOT_APP: Preparing JSON...[0m
+[0;32mI (325894) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":325,"status":"active"}[0m
+[0;32mI (325894) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (326344) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (327114) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (327114) IOT_APP: Response Length: 67[0m
+[0;32mI (327114) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (332124) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (332124) IOT_APP: Preparing JSON...[0m
+[0;32mI (332124) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":331,"status":"active"}[0m
+[0;32mI (332124) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (332494) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (333584) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (333584) IOT_APP: Response Length: 67[0m
+[0;32mI (333584) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (338584) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (338584) IOT_APP: Preparing JSON...[0m
+[0;32mI (338584) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":338,"status":"active"}[0m
+[0;32mI (338584) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (339044) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (339934) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (339934) IOT_APP: Response Length: 67[0m
+[0;32mI (339934) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (344934) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (344934) IOT_APP: Preparing JSON...[0m
+[0;32mI (344934) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":344,"status":"active"}[0m
+[0;32mI (344934) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (345394) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (346684) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (346684) IOT_APP: Response Length: 67[0m
+[0;32mI (346684) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (351694) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (351694) IOT_APP: Preparing JSON...[0m
+[0;32mI (351694) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":351,"status":"active"}[0m
+[0;32mI (351694) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (352054) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (353034) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (353034) IOT_APP: Response Length: 67[0m
+[0;32mI (353034) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (358044) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (358044) IOT_APP: Preparing JSON...[0m
+[0;32mI (358044) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":357,"status":"active"}[0m
+[0;32mI (358044) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (358504) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (359704) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (359704) IOT_APP: Response Length: 67[0m
+[0;32mI (359704) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (364714) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (364714) IOT_APP: Preparing JSON...[0m
+[0;32mI (364714) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":364,"status":"active"}[0m
+[0;32mI (364714) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (365264) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (366434) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (366434) IOT_APP: Response Length: 67[0m
+[0;32mI (366434) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (371444) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (371444) IOT_APP: Preparing JSON...[0m
+[0;32mI (371444) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":370,"status":"active"}[0m
+[0;32mI (371444) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (371924) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (372694) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (372694) IOT_APP: Response Length: 67[0m
+[0;32mI (372694) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (377704) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (377704) IOT_APP: Preparing JSON...[0m
+[0;32mI (377704) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":377,"status":"active"}[0m
+[0;32mI (377704) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (378164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (379174) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (379174) IOT_APP: Response Length: 67[0m
+[0;32mI (379174) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (384184) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (384184) IOT_APP: Preparing JSON...[0m
+[0;32mI (384184) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":383,"status":"active"}[0m
+[0;32mI (384184) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (384714) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (385434) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (385434) IOT_APP: Response Length: 67[0m
+[0;32mI (385434) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (390444) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (390444) IOT_APP: Preparing JSON...[0m
+[0;32mI (390444) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":389,"status":"active"}[0m
+[0;32mI (390444) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (390864) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (391624) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (391624) IOT_APP: Response Length: 67[0m
+[0;32mI (391624) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (396634) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (396634) IOT_APP: Preparing JSON...[0m
+[0;32mI (396634) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":396,"status":"active"}[0m
+[0;32mI (396634) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (397214) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (397974) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (397974) IOT_APP: Response Length: 67[0m
+[0;32mI (397974) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (402984) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (402984) IOT_APP: Preparing JSON...[0m
+[0;32mI (402984) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":402,"status":"active"}[0m
+[0;32mI (402984) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (403354) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (404644) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (404644) IOT_APP: Response Length: 67[0m
+[0;32mI (404644) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (409654) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (409654) IOT_APP: Preparing JSON...[0m
+[0;32mI (409654) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":409,"status":"active"}[0m
+[0;32mI (409654) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (410244) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (411204) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (411204) IOT_APP: Response Length: 67[0m
+[0;32mI (411204) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (416204) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (416204) IOT_APP: Preparing JSON...[0m
+[0;32mI (416204) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":415,"status":"active"}[0m
+[0;32mI (416204) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (416524) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (417764) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (417764) IOT_APP: Response Length: 67[0m
+[0;32mI (417764) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (422764) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (422764) IOT_APP: Preparing JSON...[0m
+[0;32mI (422764) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":422,"status":"active"}[0m
+[0;32mI (422764) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (423124) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (424104) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (424104) IOT_APP: Response Length: 67[0m
+[0;32mI (424104) IOT_APP: ✅ Data uploaded successfully[0m
+���������������������������������������������������������������� (429104) LM35: Raw: 0, Temp: 9.50 °C
+[0;32mI (429104) IOT_APP: Preparing JSON...[0m
+[0;32mI (429104) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":428,"status":"active"}[0m
+[0;32mI (429104) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (429474) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (430454) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (430454) IOT_APP: Response Length: 67[0m
+[0;32mI (430454) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (435454) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (435454) IOT_APP: Preparing JSON...[0m
+[0;32mI (435454) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":434,"status":"active"}[0m
+[0;32mI (435454) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (435914) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (437004) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (437004) IOT_APP: Response Length: 67[0m
+[0;32mI (437004) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (442014) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (442014) IOT_APP: Preparing JSON...[0m
+[0;32mI (442014) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":441,"status":"active"}[0m
+[0;32mI (442014) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (442474) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (443184) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (443184) IOT_APP: Response Length: 67[0m
+[0;32mI (443184) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (448194) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (448194) IOT_APP: Preparing JSON...[0m
+[0;32mI (448194) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":447,"status":"active"}[0m
+[0;32mI (448194) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (448864) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (450114) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (450114) IOT_APP: Response Length: 67[0m
+[0;32mI (450114) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (455114) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (455114) IOT_APP: Preparing JSON...[0m
+[0;32mI (455114) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":454,"status":"active"}[0m
+[0;32mI (455114) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (455574) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (456874) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (456874) IOT_APP: Response Length: 67[0m
+[0;32mI (456874) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (461874) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (461874) IOT_APP: Preparing JSON...[0m
+[0;32mI (461874) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":461,"status":"active"}[0m
+[0;32mI (461874) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (462544) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (463514) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (463514) IOT_APP: Response Length: 67[0m
+[0;32mI (463514) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (468514) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (468514) IOT_APP: Preparing JSON...[0m
+[0;32mI (468514) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":468,"status":"active"}[0m
+[0;32mI (468514) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (469094) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (469854) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (469854) IOT_APP: Response Length: 67[0m
+[0;32mI (469864) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (474864) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (474864) IOT_APP: Preparing JSON...[0m
+[0;32mI (474864) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":474,"status":"active"}[0m
+[0;32mI (474864) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (475444) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (476774) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (476774) IOT_APP: Response Length: 67[0m
+[0;32mI (476774) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (481774) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (481774) IOT_APP: Preparing JSON...[0m
+[0;32mI (481774) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":481,"status":"active"}[0m
+[0;32mI (481774) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (482204) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (483164) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (483164) IOT_APP: Response Length: 67[0m
+[0;32mI (483164) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (488164) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (488164) IOT_APP: Preparing JSON...[0m
+[0;32mI (488164) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":487,"status":"active"}[0m
+[0;32mI (488164) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (488644) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (489514) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (489514) IOT_APP: Response Length: 67[0m
+[0;32mI (489514) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (494514) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (494514) IOT_APP: Preparing JSON...[0m
+[0;32mI (494514) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":494,"status":"active"}[0m
+[0;32mI (494514) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (494894) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (495984) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (495984) IOT_APP: Response Length: 67[0m
+[0;32mI (495984) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (500994) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (500994) IOT_APP: Preparing JSON...[0m
+[0;32mI (500994) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":500,"status":"active"}[0m
+[0;32mI (500994) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (501454) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (502224) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (502224) IOT_APP: Response Length: 67[0m
+[0;32mI (502224) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (507234) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (507234) IOT_APP: Preparing JSON...[0m
+[0;32mI (507234) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":506,"status":"active"}[0m
+[0;32mI (507234) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (507804) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (508774) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (508774) IOT_APP: Response Length: 67[0m
+[0;32mI (508774) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (513784) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (513784) IOT_APP: Preparing JSON...[0m
+[0;32mI (513784) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":513,"status":"active"}[0m
+[0;32mI (513784) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (514154) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (515044) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (515044) IOT_APP: Response Length: 67[0m
+[0;32mI (515044) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (520054) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (520054) IOT_APP: Preparing JSON...[0m
+[0;32mI (520054) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":519,"status":"active"}[0m
+[0;32mI (520054) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (520404) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (521384) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (521384) IOT_APP: Response Length: 67[0m
+[0;32mI (521384) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (526384) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (526384) IOT_APP: Preparing JSON...[0m
+[0;32mI (526384) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":525,"status":"active"}[0m
+[0;32mI (526384) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (526844) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (527814) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (527814) IOT_APP: Response Length: 67[0m
+[0;32mI (527814) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (532814) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (532814) IOT_APP: Preparing JSON...[0m
+[0;32mI (532814) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":532,"status":"active"}[0m
+[0;32mI (532814) IOT_APP: Connecting to Firebase...[0m
+���������������������������������������������������������������� (533404) esp-x509-crt-bundle: Certificate validated
+[0;32mI (534394) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (534394) IOT_APP: Response Length: 67[0m
+[0;32mI (534394) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (539404) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (539404) IOT_APP: Preparing JSON...[0m
+[0;32mI (539404) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":538,"status":"active"}[0m
+[0;32mI (539404) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (539954) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (541044) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (541044) IOT_APP: Response Length: 67[0m
+[0;32mI (541044) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (546044) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (546044) IOT_APP: Preparing JSON...[0m
+[0;32mI (546044) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":545,"status":"active"}[0m
+[0;32mI (546044) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (546544) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (547804) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (547804) IOT_APP: Response Length: 67[0m
+[0;32mI (547804) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (552804) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (552804) IOT_APP: Preparing JSON...[0m
+[0;32mI (552804) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":552,"status":"active"}[0m
+[0;32mI (552804) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (553264) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (554234) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (554234) IOT_APP: Response Length: 67[0m
+[0;32mI (554234) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (559244) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (559244) IOT_APP: Preparing JSON...[0m
+[0;32mI (559244) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":558,"status":"active"}[0m
+[0;32mI (559244) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (559614) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (560334) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (560334) IOT_APP: Response Length: 67[0m
+[0;32mI (560334) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (565344) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (565344) IOT_APP: Preparing JSON...[0m
+[0;32mI (565344) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":564,"status":"active"}[0m
+[0;32mI (565344) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (565964) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (567054) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (567054) IOT_APP: Response Length: 67[0m
+[0;32mI (567054) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (572054) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (572054) IOT_APP: Preparing JSON...[0m
+[0;32mI (572054) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":571,"status":"active"}[0m
+[0;32mI (572054) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (572534) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (573814) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (573814) IOT_APP: Response Length: 67[0m
+[0;32mI (573814) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (578814) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (578814) IOT_APP: Preparing JSON...[0m
+[0;32mI (578814) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":578,"status":"active"}[0m
+[0;32mI (578814) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (579274) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (580144) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (580144) IOT_APP: Response Length: 67[0m
+[0;32mI (580144) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (585154) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (585154) IOT_APP: Preparing JSON...[0m
+[0;32mI (585154) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":584,"status":"active"}[0m
+[0;32mI (585154) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (585524) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (586504) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (586504) IOT_APP: Response Length: 67[0m
+[0;32mI (586504) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (591514) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (591514) IOT_APP: Preparing JSON...[0m
+[0;32mI (591514) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":591,"status":"active"}[0m
+[0;32mI (591514) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (591844) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (593064) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (593064) IOT_APP: Response Length: 67[0m
+[0;32mI (593064) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (598064) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (598064) IOT_APP: Preparing JSON...[0m
+[0;32mI (598064) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":597,"status":"active"}[0m
+[0;32mI (598064) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (598454) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (599414) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (599414) IOT_APP: Response Length: 67[0m
+[0;32mI (599414) IOT_APP: ✅ Data uploaded successfully[0m

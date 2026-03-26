@@ -1,0 +1,2408 @@
+Command: C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\anees\esp\v5.5.2\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\ESP 32 PROJECTS\esp32_lm35\build\esp32_lm35.elf C:\ESP 32 PROJECTS\esp32_lm35\build\bootloader\bootloader.elf --force-color -m 'C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\anees\esp\v5.5.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 26 2026 06:41:53[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ffb4h (196532) map[0m
+[0;32mI (153) esp_image: segment 1: paddr=0003ffdc vaddr=3ffb0000 size=0003ch (    60) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=a2cf4h (666868) map[0m
+[0;32mI (385) esp_image: segment 3: paddr=000e2d1c vaddr=3ffb003c size=03ef8h ( 16120) load[0m
+[0;32mI (391) esp_image: segment 4: paddr=000e6c1c vaddr=40080000 size=17f9ch ( 98204) load[0m
+[0;32mI (430) esp_image: segment 5: paddr=000febc0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (442) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (442) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (463) app_init: Application information:[0m
+[0;32mI (466) app_init: Project name:     esp32_lm35[0m
+[0;32mI (470) app_init: App version:      1[0m
+[0;32mI (474) app_init: Compile time:     Mar 26 2026 06:40:40[0m
+[0;32mI (479) app_init: ELF file SHA256:  a2b1c6d6f...[0m
+[0;32mI (483) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (487) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (491) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (495) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (499) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (505) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFB8858 len 000277A8 (157 KiB): DRAM[0m
+[0;32mI (515) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 40097F9C len 00008064 (32 KiB): IRAM[0m
+[0;33mW (533) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;33mW (551) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (564) main_task: Started on CPU0[0m
+[0;32mI (574) main_task: Calling app_main()[0m
+[0;32mI (604) wifi:wifi driver task: 3ffc08a0, prio:23, stack:6656, core=0[0m
+[0;32mI (614) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (614) wifi:wifi certification version: v7.0[0m
+[0;32mI (614) wifi:config NVS flash: enabled[0m
+[0;32mI (614) wifi:config nano formatting: disabled[0m
+[0;32mI (624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (624) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (634) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (644) wifi:Init static rx buffer num: 10[0m
+[0;32mI (644) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (654) wifi_init: tcpip mbox: 32[0m
+[0;32mI (654) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp tx win: 5760[0m
+[0;32mI (664) wifi_init: tcp rx win: 5760[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (674) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (674) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (684) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (694) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (774) wifi:mode : sta (f0:24:f9:0c:b0:b8)[0m
+[0;32mI (774) wifi:enable tsf[0m
+[0;32mI (784) IOT_APP: Wi-Fi Init Finished.[0m
+[0;32mI (784) IOT_APP: WiFi Started. Connecting...[0m
+[0;32mI (784) IOT_APP: GPIO33 initialized for LM35 control[0m
+[0;32mI (784) IOT_APP: LM35 Power: ON[0m
+[0;32mI (784) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (794) IOT_APP: Preparing JSON...[0m
+[0;32mI (794) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":0,"status":"active"}[0m
+[0;32mI (804) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (804) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (824) esp-tls: Failed to open new connection[0m
+[1;31mE (824) transport_base: Failed to open a new connection[0m
+[1;31mE (824) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (834) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (1394) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1404) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1424) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (1424) wifi:Set status to INIT[0m
+[0;32mI (1424) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (1424) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (1434) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (3854) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (3864) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3864) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3874) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (3884) wifi:Set status to INIT[0m
+[0;32mI (3884) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (3884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (3884) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (5834) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (5834) IOT_APP: Preparing JSON...[0m
+[0;32mI (5834) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":5,"status":"active"}[0m
+[0;32mI (5834) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (5844) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (5854) esp-tls: Failed to open new connection[0m
+[1;31mE (5854) transport_base: Failed to open a new connection[0m
+[1;31mE (5864) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (5864) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6304) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (6324) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (6324) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (6334) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (6344) wifi:Set status to INIT[0m
+[0;32mI (6344) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (6344) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (6344) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (8764) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (8794) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8804) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (8814) wifi:Set status to INIT[0m
+[0;32mI (8814) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (8834) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (8834) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (10874) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (10874) IOT_APP: Preparing JSON...[0m
+[0;32mI (10874) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":10,"status":"active"}[0m
+[0;32mI (10874) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (10884) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10894) esp-tls: Failed to open new connection[0m
+[1;31mE (10894) transport_base: Failed to open a new connection[0m
+[1;31mE (10904) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10904) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11244) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (11264) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11264) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (11274) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (11284) wifi:Set status to INIT[0m
+[0;32mI (11284) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (11284) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (11284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (13704) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (13724) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (13724) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (13744) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (13744) wifi:Set status to INIT[0m
+[0;32mI (13744) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (13764) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (13764) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (15914) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (15914) IOT_APP: Preparing JSON...[0m
+[0;32mI (15914) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":15,"status":"active"}[0m
+[0;32mI (15914) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (15924) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (15934) esp-tls: Failed to open new connection[0m
+[1;31mE (15934) transport_base: Failed to open a new connection[0m
+[1;31mE (15944) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15944) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (16174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (16194) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (16194) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (16204) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (16214) wifi:Set status to INIT[0m
+[0;32mI (16214) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (16214) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (16214) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (18634) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (18644) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (18644) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (18684) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (18734) wifi:Set status to INIT[0m
+[0;32mI (18744) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (18754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (18754) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (20954) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (20954) IOT_APP: Preparing JSON...[0m
+[0;32mI (20954) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":20,"status":"active"}[0m
+[0;32mI (20954) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (20964) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (20974) esp-tls: Failed to open new connection[0m
+[1;31mE (20974) transport_base: Failed to open a new connection[0m
+[1;31mE (20984) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20984) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (21164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (21184) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (21184) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (21194) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (21204) wifi:Set status to INIT[0m
+[0;32mI (21204) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (21204) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (21204) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (23624) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (23634) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (23634) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (23664) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (23664) wifi:Set status to INIT[0m
+[0;32mI (23664) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (23684) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (23684) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (25994) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (25994) IOT_APP: Preparing JSON...[0m
+[0;32mI (25994) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":25,"status":"active"}[0m
+[0;32mI (25994) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (26004) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (26014) esp-tls: Failed to open new connection[0m
+[1;31mE (26014) transport_base: Failed to open a new connection[0m
+[1;31mE (26024) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (26024) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (26094) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (26114) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (26114) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (26124) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (26134) wifi:Set status to INIT[0m
+[0;32mI (26134) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (26154) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (26154) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (28564) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (28594) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (28594) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (28604) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (28614) wifi:Set status to INIT[0m
+[0;32mI (28614) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (28614) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (28614) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (31034) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (31034) IOT_APP: Preparing JSON...[0m
+[0;32mI (31034) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":30,"status":"active"}[0m
+[0;32mI (31034) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (31034) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (31044) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (31054) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (31064) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (31064) esp-tls: Failed to open new connection[0m
+[1;31mE (31074) transport_base: Failed to open a new connection[0m
+[0;32mI (31074) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (31084) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (31084) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (31084) wifi:Set status to INIT[0m
+[0;32mI (31094) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (31114) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (31114) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (33524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (33544) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33544) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (33554) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (33564) wifi:Set status to INIT[0m
+[0;32mI (33564) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (33564) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (33564) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (35984) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (36004) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (36004) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (36014) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (36024) wifi:Set status to INIT[0m
+[0;32mI (36024) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (36024) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (36024) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (36104) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (36104) IOT_APP: Preparing JSON...[0m
+[0;32mI (36104) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":35,"status":"active"}[0m
+[0;32mI (36104) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (36114) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (36124) esp-tls: Failed to open new connection[0m
+[1;31mE (36124) transport_base: Failed to open a new connection[0m
+[1;31mE (36134) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (36134) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (38444) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (38494) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (38494) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (38504) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (38514) wifi:Set status to INIT[0m
+[0;32mI (38514) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (38514) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (38524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (40934) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (40954) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (40954) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (40974) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (40974) wifi:Set status to INIT[0m
+[0;32mI (40974) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (40994) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (40994) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (41144) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (41144) IOT_APP: Preparing JSON...[0m
+[0;32mI (41144) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":40,"status":"active"}[0m
+[0;32mI (41144) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (41154) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (41164) esp-tls: Failed to open new connection[0m
+[1;31mE (41164) transport_base: Failed to open a new connection[0m
+[1;31mE (41174) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (41174) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (43404) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (43424) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (43424) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (43434) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (43444) wifi:Set status to INIT[0m
+[0;32mI (43444) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (43444) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (43444) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (45864) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (45884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (45884) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (45904) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (45904) wifi:Set status to INIT[0m
+[0;32mI (45904) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (45914) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (45914) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (46184) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (46184) IOT_APP: Preparing JSON...[0m
+[0;32mI (46184) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":45,"status":"active"}[0m
+[0;32mI (46184) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (46194) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (46204) esp-tls: Failed to open new connection[0m
+[1;31mE (46204) transport_base: Failed to open a new connection[0m
+[1;31mE (46214) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (46214) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (48334) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (48344) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (48344) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (48384) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (48394) wifi:Set status to INIT[0m
+[0;32mI (48394) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (48404) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (48404) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (50814) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (50834) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (50834) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (50844) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (50854) wifi:Set status to INIT[0m
+[0;32mI (50854) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (50854) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (50864) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (51224) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (51224) IOT_APP: Preparing JSON...[0m
+[0;32mI (51224) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":50,"status":"active"}[0m
+[0;32mI (51224) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (51234) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (51244) esp-tls: Failed to open new connection[0m
+[1;31mE (51244) transport_base: Failed to open a new connection[0m
+[1;31mE (51254) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (51254) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (53284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (53294) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (53294) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (53304) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (53314) wifi:Set status to INIT[0m
+[0;32mI (53314) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (53324) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (53324) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (55744) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (55754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (55754) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (55764) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (55774) wifi:Set status to INIT[0m
+[0;32mI (55774) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (55774) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (55774) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (56264) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (56264) IOT_APP: Preparing JSON...[0m
+[0;32mI (56264) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":55,"status":"active"}[0m
+[0;32mI (56264) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (56274) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (56284) esp-tls: Failed to open new connection[0m
+[1;31mE (56284) transport_base: Failed to open a new connection[0m
+[1;31mE (56294) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (56294) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (58204) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (58214) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (58214) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (58224) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (58234) wifi:Set status to INIT[0m
+[0;32mI (58234) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (58234) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (58234) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (60654) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (60694) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (60694) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (60704) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (60714) wifi:Set status to INIT[0m
+[0;32mI (60714) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (60714) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (60714) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (61304) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (61304) IOT_APP: Preparing JSON...[0m
+[0;32mI (61304) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":60,"status":"active"}[0m
+[0;32mI (61304) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (61314) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (61324) esp-tls: Failed to open new connection[0m
+[1;31mE (61324) transport_base: Failed to open a new connection[0m
+[1;31mE (61334) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (61334) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (63134) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (63144) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (63154) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (63164) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (63174) wifi:Set status to INIT[0m
+[0;32mI (63174) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (63174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (63174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (65594) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (65604) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (65604) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (65624) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (65634) wifi:Set status to INIT[0m
+[0;32mI (65634) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (65634) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (65644) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (66344) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (66344) IOT_APP: Preparing JSON...[0m
+[0;32mI (66344) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":65,"status":"active"}[0m
+[0;32mI (66344) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (66354) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (66364) esp-tls: Failed to open new connection[0m
+[1;31mE (66364) transport_base: Failed to open a new connection[0m
+[1;31mE (66374) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (66374) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (68064) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (68084) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (68084) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (68124) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (68164) wifi:Set status to INIT[0m
+[0;32mI (68164) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (68174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (68174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (70584) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (70604) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (70604) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (70614) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (70644) wifi:Set status to INIT[0m
+[0;32mI (70644) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (70654) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (70654) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (71384) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (71384) IOT_APP: Preparing JSON...[0m
+[0;32mI (71384) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":70,"status":"active"}[0m
+[0;32mI (71384) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (71394) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (71404) esp-tls: Failed to open new connection[0m
+[1;31mE (71404) transport_base: Failed to open a new connection[0m
+[1;31mE (71414) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (71414) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (73074) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (73084) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (73084) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (73104) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (73104) wifi:Set status to INIT[0m
+[0;32mI (73104) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (73114) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (73114) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (75534) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (75544) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (75544) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (75564) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (75564) wifi:Set status to INIT[0m
+[0;32mI (75564) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (75584) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (75584) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (76424) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (76424) IOT_APP: Preparing JSON...[0m
+[0;32mI (76424) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":75,"status":"active"}[0m
+[0;32mI (76424) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (76434) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (76444) esp-tls: Failed to open new connection[0m
+[1;31mE (76444) transport_base: Failed to open a new connection[0m
+[1;31mE (76454) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (76454) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (77994) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (78024) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (78024) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (78034) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (78044) wifi:Set status to INIT[0m
+[0;32mI (78044) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (78054) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (78054) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (80474) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (80484) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (80484) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (80504) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (80514) wifi:Set status to INIT[0m
+[0;32mI (80514) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (80524) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (80524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (81464) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (81464) IOT_APP: Preparing JSON...[0m
+[0;32mI (81464) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":81,"status":"active"}[0m
+[0;32mI (81464) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (81474) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (81484) esp-tls: Failed to open new connection[0m
+[1;31mE (81484) transport_base: Failed to open a new connection[0m
+[1;31mE (81494) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (81494) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (82934) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (82954) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (82954) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (82964) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (82974) wifi:Set status to INIT[0m
+[0;32mI (82974) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (82974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (82974) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (85394) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (85404) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (85414) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (85424) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (85434) wifi:Set status to INIT[0m
+[0;32mI (85434) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (85434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (85444) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (86504) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (86504) IOT_APP: Preparing JSON...[0m
+[0;32mI (86504) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":86,"status":"active"}[0m
+[0;32mI (86504) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (86514) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (86524) esp-tls: Failed to open new connection[0m
+[1;31mE (86524) transport_base: Failed to open a new connection[0m
+[1;31mE (86534) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (86534) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (87864) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (87874) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (87874) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (87944) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (87944) wifi:Set status to INIT[0m
+[0;32mI (87944) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (87964) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (87964) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (90374) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (90394) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (90394) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (90404) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (90414) wifi:Set status to INIT[0m
+[0;32mI (90414) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (90414) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (90414) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (91544) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (91544) IOT_APP: Preparing JSON...[0m
+[0;32mI (91544) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":91,"status":"active"}[0m
+[0;32mI (91544) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (91554) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (91564) esp-tls: Failed to open new connection[0m
+[1;31mE (91564) transport_base: Failed to open a new connection[0m
+[1;31mE (91574) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (91574) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (92834) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (92854) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (92854) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (92864) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (92874) wifi:Set status to INIT[0m
+[0;32mI (92874) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (92874) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (92874) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (95294) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (95314) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (95314) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (95324) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (95334) wifi:Set status to INIT[0m
+[0;32mI (95334) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (95334) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (95334) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (96584) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (96584) IOT_APP: Preparing JSON...[0m
+[0;32mI (96584) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":96,"status":"active"}[0m
+[0;32mI (96584) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (96594) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (96604) esp-tls: Failed to open new connection[0m
+[1;31mE (96604) transport_base: Failed to open a new connection[0m
+[1;31mE (96614) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (96614) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (97754) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (97774) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (97774) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (97784) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (97824) wifi:Set status to INIT[0m
+[0;32mI (97824) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (97834) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (97834) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (100244) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (100264) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (100264) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (100284) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (100284) wifi:Set status to INIT[0m
+[0;32mI (100284) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (100284) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (100294) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (101624) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (101624) IOT_APP: Preparing JSON...[0m
+[0;32mI (101624) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":101,"status":"active"}[0m
+[0;32mI (101624) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (101634) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (101644) esp-tls: Failed to open new connection[0m
+[1;31mE (101644) transport_base: Failed to open a new connection[0m
+[1;31mE (101654) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (101654) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (102714) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (102724) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (102724) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (102734) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (102744) wifi:Set status to INIT[0m
+[0;32mI (102744) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (102754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (102754) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (105174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (105184) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (105184) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (105204) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (105234) wifi:Set status to INIT[0m
+[0;32mI (105234) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (105244) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (105244) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (106664) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (106664) IOT_APP: Preparing JSON...[0m
+[0;32mI (106664) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":106,"status":"active"}[0m
+[0;32mI (106664) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (106674) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (106684) esp-tls: Failed to open new connection[0m
+[1;31mE (106684) transport_base: Failed to open a new connection[0m
+[1;31mE (106694) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (106694) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (107654) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (107674) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (107674) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (107684) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (107724) wifi:Set status to INIT[0m
+[0;32mI (107724) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (107734) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (107734) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (110144) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (110154) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (110164) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (110174) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (110184) wifi:Set status to INIT[0m
+[0;32mI (110184) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (110184) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (110194) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (111704) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (111704) IOT_APP: Preparing JSON...[0m
+[0;32mI (111704) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":111,"status":"active"}[0m
+[0;32mI (111704) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (111714) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (111724) esp-tls: Failed to open new connection[0m
+[1;31mE (111724) transport_base: Failed to open a new connection[0m
+[1;31mE (111734) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (111734) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (112614) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (112624) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (112624) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (112634) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (112644) wifi:Set status to INIT[0m
+[0;32mI (112644) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (112644) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (112644) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (115064) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (115084) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (115084) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (115094) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (115104) wifi:Set status to INIT[0m
+[0;32mI (115104) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (115104) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (115104) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (116744) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (116744) IOT_APP: Preparing JSON...[0m
+[0;32mI (116744) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":116,"status":"active"}[0m
+[0;32mI (116744) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (116754) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (116764) esp-tls: Failed to open new connection[0m
+[1;31mE (116764) transport_base: Failed to open a new connection[0m
+[1;31mE (116774) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (116774) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (117524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (117544) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (117544) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (117554) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (117564) wifi:Set status to INIT[0m
+[0;32mI (117564) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (117564) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (117564) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (119984) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (120024) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (120024) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (120044) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (120044) wifi:Set status to INIT[0m
+[0;32mI (120044) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (120044) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (120054) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (121784) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (121784) IOT_APP: Preparing JSON...[0m
+[0;32mI (121784) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":121,"status":"active"}[0m
+[0;32mI (121784) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (121794) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (121804) esp-tls: Failed to open new connection[0m
+[1;31mE (121804) transport_base: Failed to open a new connection[0m
+[1;31mE (121814) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (121814) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (122474) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (122484) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (122484) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (122494) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (122504) wifi:Set status to INIT[0m
+[0;32mI (122504) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (122504) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (122504) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (124924) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (124934) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (124944) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (124964) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (124964) wifi:Set status to INIT[0m
+[0;32mI (124964) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (124964) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (124974) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (126824) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (126824) IOT_APP: Preparing JSON...[0m
+[0;32mI (126824) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":126,"status":"active"}[0m
+[0;32mI (126824) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (126834) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (126844) esp-tls: Failed to open new connection[0m
+[1;31mE (126844) transport_base: Failed to open a new connection[0m
+[1;31mE (126854) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (126854) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (127394) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (127404) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (127404) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (127414) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (127424) wifi:Set status to INIT[0m
+[0;32mI (127424) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (127424) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (127424) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (129844) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (129894) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (129894) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (129904) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (129914) wifi:Set status to INIT[0m
+[0;32mI (129914) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (129914) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (129914) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (131864) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (131864) IOT_APP: Preparing JSON...[0m
+[0;32mI (131864) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":131,"status":"active"}[0m
+[0;32mI (131864) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (131874) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (131884) esp-tls: Failed to open new connection[0m
+[1;31mE (131884) transport_base: Failed to open a new connection[0m
+[1;31mE (131894) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (131894) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (132334) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (132344) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (132344) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (132364) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (132374) wifi:Set status to INIT[0m
+[0;32mI (132374) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (132374) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (132374) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (134794) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (134804) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (134814) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (134844) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (134854) wifi:Set status to INIT[0m
+[0;32mI (134854) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (134864) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (134864) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (136904) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (136904) IOT_APP: Preparing JSON...[0m
+[0;32mI (136904) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":136,"status":"active"}[0m
+[0;32mI (136904) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (136914) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (136924) esp-tls: Failed to open new connection[0m
+[1;31mE (136924) transport_base: Failed to open a new connection[0m
+[1;31mE (136934) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (136934) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (137284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (137324) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (137324) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (137334) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (137344) wifi:Set status to INIT[0m
+[0;32mI (137344) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (137344) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (137354) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (139764) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (139784) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (139784) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (139794) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (139804) wifi:Set status to INIT[0m
+[0;32mI (139804) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (139804) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (139804) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (141944) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (141944) IOT_APP: Preparing JSON...[0m
+[0;32mI (141944) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":141,"status":"active"}[0m
+[0;32mI (141944) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (141954) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (141964) esp-tls: Failed to open new connection[0m
+[1;31mE (141964) transport_base: Failed to open a new connection[0m
+[1;31mE (141974) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (141974) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (142224) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (142254) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (142254) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (142264) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (142274) wifi:Set status to INIT[0m
+[0;32mI (142274) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (142274) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (142274) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (144694) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (144704) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (144704) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (144724) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (144734) wifi:Set status to INIT[0m
+[0;32mI (144734) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (144734) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (144744) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (146984) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (146984) IOT_APP: Preparing JSON...[0m
+[0;32mI (146984) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":146,"status":"active"}[0m
+[0;32mI (146984) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (146994) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (147004) esp-tls: Failed to open new connection[0m
+[1;31mE (147004) transport_base: Failed to open a new connection[0m
+[1;31mE (147014) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (147014) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (147164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (147174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (147174) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (147184) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (147194) wifi:Set status to INIT[0m
+[0;32mI (147194) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (147194) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (147194) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (149614) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (149634) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (149634) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (149644) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (149654) wifi:Set status to INIT[0m
+[0;32mI (149654) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (149654) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (149664) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (152024) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (152024) IOT_APP: Preparing JSON...[0m
+[0;32mI (152024) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":151,"status":"active"}[0m
+[0;32mI (152024) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (152034) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (152044) esp-tls: Failed to open new connection[0m
+[1;31mE (152044) transport_base: Failed to open a new connection[0m
+[1;31mE (152054) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (152054) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (152084) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (152094) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (152094) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (152104) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (152114) wifi:Set status to INIT[0m
+[0;32mI (152114) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (152114) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (152114) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (154534) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (154554) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (154554) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (154564) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (154574) wifi:Set status to INIT[0m
+[0;32mI (154574) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (154574) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (154584) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (156994) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (157014) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (157014) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (157034) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (157034) wifi:Set status to INIT[0m
+[0;32mI (157034) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (157054) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (157054) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (157064) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (157064) IOT_APP: Preparing JSON...[0m
+[0;32mI (157064) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":156,"status":"active"}[0m
+[0;32mI (157064) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (157074) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (157084) esp-tls: Failed to open new connection[0m
+[1;31mE (157094) transport_base: Failed to open a new connection[0m
+[1;31mE (157094) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (157104) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (159464) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (159484) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (159484) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (159504) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (159504) wifi:Set status to INIT[0m
+[0;32mI (159504) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (159524) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (159524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (161934) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (161954) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (161954) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (161964) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (161974) wifi:Set status to INIT[0m
+[0;32mI (161974) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (161974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (161984) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (162104) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (162104) IOT_APP: Preparing JSON...[0m
+[0;32mI (162104) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":161,"status":"active"}[0m
+[0;32mI (162104) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (162114) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (162124) esp-tls: Failed to open new connection[0m
+[1;31mE (162124) transport_base: Failed to open a new connection[0m
+[1;31mE (162134) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (162134) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (164404) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (164414) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (164414) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (164444) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (164494) wifi:Set status to INIT[0m
+[0;32mI (164494) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (164504) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (164504) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (166924) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (166934) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (166934) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (166954) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (166964) wifi:Set status to INIT[0m
+[0;32mI (166964) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (166974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (166974) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (167144) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (167144) IOT_APP: Preparing JSON...[0m
+[0;32mI (167144) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":166,"status":"active"}[0m
+[0;32mI (167144) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (167154) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (167164) esp-tls: Failed to open new connection[0m
+[1;31mE (167164) transport_base: Failed to open a new connection[0m
+[1;31mE (167174) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (167174) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (169394) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (169404) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (169404) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (169414) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (169424) wifi:Set status to INIT[0m
+[0;32mI (169424) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (169424) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (169424) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (171844) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (171854) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (171864) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (171874) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (171894) wifi:Set status to INIT[0m
+[0;32mI (171894) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (171904) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (171904) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (172184) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (172184) IOT_APP: Preparing JSON...[0m
+[0;32mI (172184) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":171,"status":"active"}[0m
+[0;32mI (172184) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (172194) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (172204) esp-tls: Failed to open new connection[0m
+[1;31mE (172204) transport_base: Failed to open a new connection[0m
+[1;31mE (172214) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (172214) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (174314) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (174354) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (174364) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (174384) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (174394) wifi:Set status to INIT[0m
+[0;32mI (174394) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (174404) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (174404) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (176814) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (176834) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (176844) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (176884) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (176894) wifi:Set status to INIT[0m
+[0;32mI (176894) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (176914) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (176914) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (177224) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (177224) IOT_APP: Preparing JSON...[0m
+[0;32mI (177224) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":176,"status":"active"}[0m
+[0;32mI (177224) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (177234) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (177244) esp-tls: Failed to open new connection[0m
+[1;31mE (177244) transport_base: Failed to open a new connection[0m
+[1;31mE (177254) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (177254) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (179324) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (179344) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (179344) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (179364) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (179364) wifi:Set status to INIT[0m
+[0;32mI (179364) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (179374) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (179374) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (181794) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (181804) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (181804) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (181844) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (181894) wifi:Set status to INIT[0m
+[0;32mI (181894) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (181904) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (181904) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (182264) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (182264) IOT_APP: Preparing JSON...[0m
+[0;32mI (182264) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":181,"status":"active"}[0m
+[0;32mI (182264) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (182274) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (182284) esp-tls: Failed to open new connection[0m
+[1;31mE (182284) transport_base: Failed to open a new connection[0m
+[1;31mE (182294) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (182294) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (184324) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (184334) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (184334) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (184354) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (184354) wifi:Set status to INIT[0m
+[0;32mI (184354) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (184364) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (184364) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (186784) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (186794) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (186794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (186804) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (186814) wifi:Set status to INIT[0m
+[0;32mI (186814) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (186814) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (186824) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (187304) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (187304) IOT_APP: Preparing JSON...[0m
+[0;32mI (187304) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":186,"status":"active"}[0m
+[0;32mI (187304) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (187314) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (187324) esp-tls: Failed to open new connection[0m
+[1;31mE (187324) transport_base: Failed to open a new connection[0m
+[1;31mE (187334) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (187334) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (189244) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (189254) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (189254) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (189264) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (189274) wifi:Set status to INIT[0m
+[0;32mI (189274) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (189274) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (189274) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (191694) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (191714) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (191714) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (191754) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (191804) wifi:Set status to INIT[0m
+[0;32mI (191804) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (191814) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (191814) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (192344) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (192344) IOT_APP: Preparing JSON...[0m
+[0;32mI (192344) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":191,"status":"active"}[0m
+[0;32mI (192344) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (192354) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (192364) esp-tls: Failed to open new connection[0m
+[1;31mE (192364) transport_base: Failed to open a new connection[0m
+[1;31mE (192374) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (192374) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (194234) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (194244) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (194244) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (194254) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (194264) wifi:Set status to INIT[0m
+[0;32mI (194264) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (194284) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (194284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (196694) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (196714) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (196714) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (196724) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (196744) wifi:Set status to INIT[0m
+[0;32mI (196744) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (196754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (196754) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (197384) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (197384) IOT_APP: Preparing JSON...[0m
+[0;32mI (197384) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":196,"status":"active"}[0m
+[0;32mI (197384) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (197394) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (197404) esp-tls: Failed to open new connection[0m
+[1;31mE (197404) transport_base: Failed to open a new connection[0m
+[1;31mE (197414) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (197414) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (199164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (199184) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (199184) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (199194) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (199204) wifi:Set status to INIT[0m
+[0;32mI (199204) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (199204) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (199214) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (201624) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (201744) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (201744) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (201754) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (201764) wifi:Set status to INIT[0m
+[0;32mI (201764) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (201764) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (201764) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (202424) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (202424) IOT_APP: Preparing JSON...[0m
+[0;32mI (202424) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":201,"status":"active"}[0m
+[0;32mI (202424) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (202434) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (202444) esp-tls: Failed to open new connection[0m
+[1;31mE (202444) transport_base: Failed to open a new connection[0m
+[1;31mE (202454) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (202454) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (204184) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (204194) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (204204) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (204224) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (204224) wifi:Set status to INIT[0m
+[0;32mI (204224) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (204224) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (204234) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (206654) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (206664) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (206664) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (206674) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (206684) wifi:Set status to INIT[0m
+[0;32mI (206684) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (206684) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (206694) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (207464) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (207464) IOT_APP: Preparing JSON...[0m
+[0;32mI (207464) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":207,"status":"active"}[0m
+[0;32mI (207464) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (207474) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (207484) esp-tls: Failed to open new connection[0m
+[1;31mE (207484) transport_base: Failed to open a new connection[0m
+[1;31mE (207494) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (207494) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (209114) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (209154) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (209154) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (209164) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (209174) wifi:Set status to INIT[0m
+[0;32mI (209174) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (209174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (209174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (211594) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (211614) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (211614) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (211624) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (211634) wifi:Set status to INIT[0m
+[0;32mI (211634) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (211634) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (211644) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (212504) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (212504) IOT_APP: Preparing JSON...[0m
+[0;32mI (212504) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":212,"status":"active"}[0m
+[0;32mI (212504) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (212514) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (212524) esp-tls: Failed to open new connection[0m
+[1;31mE (212524) transport_base: Failed to open a new connection[0m
+[1;31mE (212534) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (212534) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (214064) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (214074) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (214074) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (214094) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (214094) wifi:Set status to INIT[0m
+[0;32mI (214104) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (214114) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (214114) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (216524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (216544) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (216544) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (216564) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (216574) wifi:Set status to INIT[0m
+[0;32mI (216574) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (216594) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (216594) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (217544) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (217544) IOT_APP: Preparing JSON...[0m
+[0;32mI (217544) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":217,"status":"active"}[0m
+[0;32mI (217544) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (217554) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (217564) esp-tls: Failed to open new connection[0m
+[1;31mE (217564) transport_base: Failed to open a new connection[0m
+[1;31mE (217574) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (217574) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (219014) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (219054) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (219054) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (219074) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (219074) wifi:Set status to INIT[0m
+[0;32mI (219074) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (219094) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (219094) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (221504) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (221514) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (221524) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (221534) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (221544) wifi:Set status to INIT[0m
+[0;32mI (221544) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (221554) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (221554) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (222584) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (222584) IOT_APP: Preparing JSON...[0m
+[0;32mI (222584) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":222,"status":"active"}[0m
+[0;32mI (222584) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (222594) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (222604) esp-tls: Failed to open new connection[0m
+[1;31mE (222604) transport_base: Failed to open a new connection[0m
+[1;31mE (222614) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (222614) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (223974) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (223984) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (223984) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (223994) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (224004) wifi:Set status to INIT[0m
+[0;32mI (224004) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (224004) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (224004) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (226424) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (226434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (226444) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (226454) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (226464) wifi:Set status to INIT[0m
+[0;32mI (226464) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (226464) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (226474) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (227624) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (227624) IOT_APP: Preparing JSON...[0m
+[0;32mI (227624) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":227,"status":"active"}[0m
+[0;32mI (227624) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (227634) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (227644) esp-tls: Failed to open new connection[0m
+[1;31mE (227644) transport_base: Failed to open a new connection[0m
+[1;31mE (227654) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (227654) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (228894) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (228904) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (228904) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (228944) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (228984) wifi:Set status to INIT[0m
+[0;32mI (228984) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (228994) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (228994) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (231414) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (231424) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (231424) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (231444) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (231444) wifi:Set status to INIT[0m
+[0;32mI (231444) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (231464) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (231464) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (232664) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (232664) IOT_APP: Preparing JSON...[0m
+[0;32mI (232664) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":232,"status":"active"}[0m
+[0;32mI (232664) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (232674) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (232684) esp-tls: Failed to open new connection[0m
+[1;31mE (232684) transport_base: Failed to open a new connection[0m
+[1;31mE (232694) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (232694) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (233874) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (233894) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (233894) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (233904) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (233914) wifi:Set status to INIT[0m
+[0;32mI (233914) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (233914) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (233914) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (236334) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (236354) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (236354) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (236364) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (236374) wifi:Set status to INIT[0m
+[0;32mI (236374) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (236384) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (236384) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (237704) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (237704) IOT_APP: Preparing JSON...[0m
+[0;32mI (237704) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":237,"status":"active"}[0m
+[0;32mI (237704) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (237714) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (237724) esp-tls: Failed to open new connection[0m
+[1;31mE (237724) transport_base: Failed to open a new connection[0m
+[1;31mE (237734) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (237734) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (238804) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (238814) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (238814) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (238844) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (238874) wifi:Set status to INIT[0m
+[0;32mI (238874) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (238884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (238884) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (241294) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (241314) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (241314) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (241324) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (241334) wifi:Set status to INIT[0m
+[0;32mI (241334) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (241334) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (241334) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (242744) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (242744) IOT_APP: Preparing JSON...[0m
+[0;32mI (242744) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":242,"status":"active"}[0m
+[0;32mI (242744) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (242754) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (242764) esp-tls: Failed to open new connection[0m
+[1;31mE (242764) transport_base: Failed to open a new connection[0m
+[1;31mE (242774) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (242774) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (243764) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (243774) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (243774) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (243834) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (243844) wifi:Set status to INIT[0m
+[0;32mI (243844) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (243844) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (243844) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (246264) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (246294) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (246294) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (246304) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (246314) wifi:Set status to INIT[0m
+[0;32mI (246314) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (246314) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (246314) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (247784) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (247784) IOT_APP: Preparing JSON...[0m
+[0;32mI (247784) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":247,"status":"active"}[0m
+[0;32mI (247784) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (247794) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (247804) esp-tls: Failed to open new connection[0m
+[1;31mE (247804) transport_base: Failed to open a new connection[0m
+[1;31mE (247814) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (247814) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (248734) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (248754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (248754) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (248764) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (248774) wifi:Set status to INIT[0m
+[0;32mI (248774) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (248794) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (248794) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (251204) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (251214) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (251214) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (251234) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (251244) wifi:Set status to INIT[0m
+[0;32mI (251244) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (251244) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (251244) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (252824) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (252824) IOT_APP: Preparing JSON...[0m
+[0;32mI (252824) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":252,"status":"active"}[0m
+[0;32mI (252824) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (252834) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (252844) esp-tls: Failed to open new connection[0m
+[1;31mE (252844) transport_base: Failed to open a new connection[0m
+[1;31mE (252854) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (252854) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (253664) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (253684) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (253684) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (253704) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (253714) wifi:Set status to INIT[0m
+[0;32mI (253714) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (253714) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (253714) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (256134) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (256154) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (256154) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (256164) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (256174) wifi:Set status to INIT[0m
+[0;32mI (256174) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (256184) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (256184) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (257864) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (257864) IOT_APP: Preparing JSON...[0m
+[0;32mI (257864) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":257,"status":"active"}[0m
+[0;32mI (257864) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (257874) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (257884) esp-tls: Failed to open new connection[0m
+[1;31mE (257884) transport_base: Failed to open a new connection[0m
+[1;31mE (257894) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (257894) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (258604) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (258614) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (258614) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (258654) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (258694) wifi:Set status to INIT[0m
+[0;32mI (258694) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (258704) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (258704) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (261114) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (261134) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (261134) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (261144) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (261154) wifi:Set status to INIT[0m
+[0;32mI (261154) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (261154) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (261164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (262904) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (262904) IOT_APP: Preparing JSON...[0m
+[0;32mI (262904) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":262,"status":"active"}[0m
+[0;32mI (262904) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (262914) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (262924) esp-tls: Failed to open new connection[0m
+[1;31mE (262924) transport_base: Failed to open a new connection[0m
+[1;31mE (262934) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (262934) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (263574) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (263594) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (263594) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (263604) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (263614) wifi:Set status to INIT[0m
+[0;32mI (263614) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (263614) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (263624) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (266034) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (266044) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (266044) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (266064) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (266074) wifi:Set status to INIT[0m
+[0;32mI (266074) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (266094) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (266094) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (267944) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (267944) IOT_APP: Preparing JSON...[0m
+[0;32mI (267944) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":267,"status":"active"}[0m
+[0;32mI (267944) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (267954) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (267964) esp-tls: Failed to open new connection[0m
+[1;31mE (267964) transport_base: Failed to open a new connection[0m
+[1;31mE (267974) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (267974) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (268504) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (268554) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (268554) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (268574) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (268574) wifi:Set status to INIT[0m
+[0;32mI (268574) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (268584) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (268584) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (271004) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (271014) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (271014) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (271024) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (271034) wifi:Set status to INIT[0m
+[0;32mI (271034) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (271034) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (271034) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (272984) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (272984) IOT_APP: Preparing JSON...[0m
+[0;32mI (272984) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":272,"status":"active"}[0m
+[0;32mI (272984) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (272994) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (273004) esp-tls: Failed to open new connection[0m
+[1;31mE (273004) transport_base: Failed to open a new connection[0m
+[1;31mE (273014) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (273014) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (273454) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (273474) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (273474) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (273484) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (273494) wifi:Set status to INIT[0m
+[0;32mI (273494) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (273494) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (273494) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (275914) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (275924) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (275924) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (275954) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (275954) wifi:Set status to INIT[0m
+[0;32mI (275954) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (275974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (275974) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (278024) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (278024) IOT_APP: Preparing JSON...[0m
+[0;32mI (278024) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":277,"status":"active"}[0m
+[0;32mI (278024) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (278034) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (278044) esp-tls: Failed to open new connection[0m
+[1;31mE (278044) transport_base: Failed to open a new connection[0m
+[1;31mE (278054) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (278054) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (278384) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (278404) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (278404) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (278444) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (278454) wifi:Set status to INIT[0m
+[0;32mI (278454) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (278464) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (278464) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (280884) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (280894) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (280894) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (280904) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (280914) wifi:Set status to INIT[0m
+[0;32mI (280914) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (280914) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (280914) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (283064) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (283064) IOT_APP: Preparing JSON...[0m
+[0;32mI (283064) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":282,"status":"active"}[0m
+[0;32mI (283064) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (283074) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (283084) esp-tls: Failed to open new connection[0m
+[1;31mE (283084) transport_base: Failed to open a new connection[0m
+[1;31mE (283094) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (283094) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (283334) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (283354) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (283354) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (283364) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (283374) wifi:Set status to INIT[0m
+[0;32mI (283374) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (283374) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (283384) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (285794) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (285814) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (285814) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (285824) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (285834) wifi:Set status to INIT[0m
+[0;32mI (285834) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (285834) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (285844) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (288104) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (288104) IOT_APP: Preparing JSON...[0m
+[0;32mI (288104) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":287,"status":"active"}[0m
+[0;32mI (288104) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (288114) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (288124) esp-tls: Failed to open new connection[0m
+[1;31mE (288124) transport_base: Failed to open a new connection[0m
+[1;31mE (288134) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (288134) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (288264) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (288264) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (288274) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (288284) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (288294) wifi:Set status to INIT[0m
+[0;32mI (288294) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (288294) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (288294) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (290714) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (290754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (290754) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (290764) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (290774) wifi:Set status to INIT[0m
+[0;32mI (290774) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (290774) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (290774) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (293144) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (293144) IOT_APP: Preparing JSON...[0m
+[0;32mI (293144) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":292,"status":"active"}[0m
+[0;32mI (293144) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (293154) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (293164) esp-tls: Failed to open new connection[0m
+[1;31mE (293164) transport_base: Failed to open a new connection[0m
+[1;31mE (293174) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (293174) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (293194) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (293214) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (293214) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (293224) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (293234) wifi:Set status to INIT[0m
+[0;32mI (293234) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (293234) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (293234) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (295654) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (295674) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (295674) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (295684) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (295694) wifi:Set status to INIT[0m
+[0;32mI (295694) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (295694) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (295704) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (298114) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (298134) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (298134) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (298144) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (298154) wifi:Set status to INIT[0m
+[0;32mI (298154) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (298164) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (298164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (298184) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (298184) IOT_APP: Preparing JSON...[0m
+[0;32mI (298184) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":297,"status":"active"}[0m
+[0;32mI (298184) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (298194) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (298204) esp-tls: Failed to open new connection[0m
+[1;31mE (298204) transport_base: Failed to open a new connection[0m
+[1;31mE (298214) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (298214) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (300584) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (300594) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (300594) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (300604) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (300614) wifi:Set status to INIT[0m
+[0;32mI (300614) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (300614) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (300614) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (303034) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (303054) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (303054) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (303064) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (303074) wifi:Set status to INIT[0m
+[0;32mI (303074) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (303074) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (303074) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (303224) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (303224) IOT_APP: Preparing JSON...[0m
+[0;32mI (303224) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":302,"status":"active"}[0m
+[0;32mI (303224) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (303234) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (303244) esp-tls: Failed to open new connection[0m
+[1;31mE (303244) transport_base: Failed to open a new connection[0m
+[1;31mE (303254) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (303254) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (305494) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (305504) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (305514) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (305524) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (305534) wifi:Set status to INIT[0m
+[0;32mI (305534) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (305534) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (305544) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (307964) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (307974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (307974) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (307984) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (307994) wifi:Set status to INIT[0m
+[0;32mI (307994) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (308004) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (308004) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (308264) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (308264) IOT_APP: Preparing JSON...[0m
+[0;32mI (308264) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":307,"status":"active"}[0m
+[0;32mI (308264) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (308274) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (308284) esp-tls: Failed to open new connection[0m
+[1;31mE (308284) transport_base: Failed to open a new connection[0m
+[1;31mE (308294) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (308294) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (310424) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (310434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (310434) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (310444) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (310454) wifi:Set status to INIT[0m
+[0;32mI (310454) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (310454) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (310454) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (312874) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (312884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (312894) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (312904) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (312944) wifi:Set status to INIT[0m
+[0;32mI (312944) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (312964) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (312964) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (313304) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (313304) IOT_APP: Preparing JSON...[0m
+[0;32mI (313304) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":312,"status":"active"}[0m
+[0;32mI (313304) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (313314) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (313324) esp-tls: Failed to open new connection[0m
+[1;31mE (313324) transport_base: Failed to open a new connection[0m
+[1;31mE (313334) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (313334) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (315384) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (315394) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (315394) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (315404) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (315414) wifi:Set status to INIT[0m
+[0;32mI (315414) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (315414) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (315424) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (317834) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (317854) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (317854) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (317864) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (317874) wifi:Set status to INIT[0m
+[0;32mI (317874) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (317894) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (317894) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (318344) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (318344) IOT_APP: Preparing JSON...[0m
+[0;32mI (318344) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":317,"status":"active"}[0m
+[0;32mI (318344) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (318354) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (318364) esp-tls: Failed to open new connection[0m
+[1;31mE (318364) transport_base: Failed to open a new connection[0m
+[1;31mE (318374) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (318374) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (320304) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (320324) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (320324) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (320334) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (320344) wifi:Set status to INIT[0m
+[0;32mI (320344) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (320364) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (320364) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (322774) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (322804) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (322814) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (322844) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (322884) wifi:Set status to INIT[0m
+[0;32mI (322884) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (322904) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (322904) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (323384) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (323384) IOT_APP: Preparing JSON...[0m
+[0;32mI (323384) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":322,"status":"active"}[0m
+[0;32mI (323384) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (323394) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (323404) esp-tls: Failed to open new connection[0m
+[1;31mE (323404) transport_base: Failed to open a new connection[0m
+[1;31mE (323414) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (323414) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (325324) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (325334) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (325334) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (325364) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (325424) wifi:Set status to INIT[0m
+[0;32mI (325424) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (325434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (325434) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (327844) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (327864) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (327864) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (327874) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (327884) wifi:Set status to INIT[0m
+[0;32mI (327884) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (327884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (327894) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (328424) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (328424) IOT_APP: Preparing JSON...[0m
+[0;32mI (328424) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":327,"status":"active"}[0m
+[0;32mI (328424) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (328434) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (328444) esp-tls: Failed to open new connection[0m
+[1;31mE (328444) transport_base: Failed to open a new connection[0m
+[1;31mE (328454) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (328454) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (330314) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (330354) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (330354) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (330374) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (330374) wifi:Set status to INIT[0m
+[0;32mI (330374) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (330394) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (330394) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (332804) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (332824) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (332824) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (332844) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (332854) wifi:Set status to INIT[0m
+[0;32mI (332854) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (332854) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (332854) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (333464) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (333464) IOT_APP: Preparing JSON...[0m
+[0;32mI (333464) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":333,"status":"active"}[0m
+[0;32mI (333464) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (333474) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (333484) esp-tls: Failed to open new connection[0m
+[1;31mE (333484) transport_base: Failed to open a new connection[0m
+[1;31mE (333494) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (333494) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (335284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (335294) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (335294) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (335314) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (335314) wifi:Set status to INIT[0m
+[0;32mI (335314) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (335324) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (335324) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (337744) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (337754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (337754) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (337764) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (337774) wifi:Set status to INIT[0m
+[0;32mI (337774) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (337774) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (337784) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (338504) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (338504) IOT_APP: Preparing JSON...[0m
+[0;32mI (338504) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":338,"status":"active"}[0m
+[0;32mI (338504) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (338514) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (338524) esp-tls: Failed to open new connection[0m
+[1;31mE (338524) transport_base: Failed to open a new connection[0m
+[1;31mE (338534) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (338534) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (340204) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (340214) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (340214) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (340244) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (340294) wifi:Set status to INIT[0m
+[0;32mI (340294) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (340314) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (340314) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (342724) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (342744) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (342744) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (342764) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (342764) wifi:Set status to INIT[0m
+[0;32mI (342764) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (342784) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (342784) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (343544) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (343544) IOT_APP: Preparing JSON...[0m
+[0;32mI (343544) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":343,"status":"active"}[0m
+[0;32mI (343544) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (343554) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (343564) esp-tls: Failed to open new connection[0m
+[1;31mE (343564) transport_base: Failed to open a new connection[0m
+[1;31mE (343574) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (343574) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (345194) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (345214) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (345214) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (345224) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (345234) wifi:Set status to INIT[0m
+[0;32mI (345234) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (345234) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (345234) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (347654) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (347674) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (347674) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (347684) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (347694) wifi:Set status to INIT[0m
+[0;32mI (347694) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (347714) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (347714) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (348584) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (348584) IOT_APP: Preparing JSON...[0m
+[0;32mI (348584) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":348,"status":"active"}[0m
+[0;32mI (348584) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (348594) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (348604) esp-tls: Failed to open new connection[0m
+[1;31mE (348604) transport_base: Failed to open a new connection[0m
+[1;31mE (348614) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (348614) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (350124) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (350154) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (350154) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (350164) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (350174) wifi:Set status to INIT[0m
+[0;32mI (350174) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (350174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (350174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (352594) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (352604) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (352614) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (352624) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (352634) wifi:Set status to INIT[0m
+[0;32mI (352634) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (352644) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (352644) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (353624) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (353624) IOT_APP: Preparing JSON...[0m
+[0;32mI (353624) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":353,"status":"active"}[0m
+[0;32mI (353624) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (353634) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (353644) esp-tls: Failed to open new connection[0m
+[1;31mE (353644) transport_base: Failed to open a new connection[0m
+[1;31mE (353654) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (353654) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (355064) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (355074) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (355074) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (355084) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (355094) wifi:Set status to INIT[0m
+[0;32mI (355094) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (355104) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (355104) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (357524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (357534) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (357534) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (357544) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (357554) wifi:Set status to INIT[0m
+[0;32mI (357554) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (357554) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (357554) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (358664) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (358664) IOT_APP: Preparing JSON...[0m
+[0;32mI (358664) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":358,"status":"active"}[0m
+[0;32mI (358664) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (358674) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (358684) esp-tls: Failed to open new connection[0m
+[1;31mE (358684) transport_base: Failed to open a new connection[0m
+[1;31mE (358694) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (358694) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (359984) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (359994) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (359994) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (360004) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (360014) wifi:Set status to INIT[0m
+[0;32mI (360014) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (360014) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (360014) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (362434) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (362494) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (362494) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (362514) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (362514) wifi:Set status to INIT[0m
+[0;32mI (362514) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (362514) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (362524) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (363704) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (363704) IOT_APP: Preparing JSON...[0m
+[0;32mI (363704) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":363,"status":"active"}[0m
+[0;32mI (363704) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (363714) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (363724) esp-tls: Failed to open new connection[0m
+[1;31mE (363724) transport_base: Failed to open a new connection[0m
+[1;31mE (363734) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (363734) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (364944) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (364954) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (364954) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (364964) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (364974) wifi:Set status to INIT[0m
+[0;32mI (364974) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (364974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (364984) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (367404) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (367414) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (367414) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (367424) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (367434) wifi:Set status to INIT[0m
+[0;32mI (367434) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (367454) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (367454) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (368744) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (368744) IOT_APP: Preparing JSON...[0m
+[0;32mI (368744) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":368,"status":"active"}[0m
+[0;32mI (368744) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (368754) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (368764) esp-tls: Failed to open new connection[0m
+[1;31mE (368764) transport_base: Failed to open a new connection[0m
+[1;31mE (368774) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (368774) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (369864) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (369884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (369884) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (369894) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (369904) wifi:Set status to INIT[0m
+[0;32mI (369904) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (369904) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (369904) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (372324) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (372374) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (372374) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (372384) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (372394) wifi:Set status to INIT[0m
+[0;32mI (372394) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (372394) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (372394) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (373784) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (373784) IOT_APP: Preparing JSON...[0m
+[0;32mI (373784) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":373,"status":"active"}[0m
+[0;32mI (373784) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (373794) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (373804) esp-tls: Failed to open new connection[0m
+[1;31mE (373804) transport_base: Failed to open a new connection[0m
+[1;31mE (373814) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (373814) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (374814) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (374834) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (374834) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (374844) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (374854) wifi:Set status to INIT[0m
+[0;32mI (374854) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (374854) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (374854) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (377274) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (377284) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (377284) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (377304) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (377314) wifi:Set status to INIT[0m
+[0;32mI (377314) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (377314) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (377314) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (378824) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (378824) IOT_APP: Preparing JSON...[0m
+[0;32mI (378824) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":378,"status":"active"}[0m
+[0;32mI (378824) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (378834) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (378844) esp-tls: Failed to open new connection[0m
+[1;31mE (378844) transport_base: Failed to open a new connection[0m
+[1;31mE (378854) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (378854) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (379734) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (379754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (379754) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (379764) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (379774) wifi:Set status to INIT[0m
+[0;32mI (379774) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (379784) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (379784) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (382204) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (382214) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (382214) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (382224) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (382274) wifi:Set status to INIT[0m
+[0;32mI (382274) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (382284) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (382284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (383864) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (383864) IOT_APP: Preparing JSON...[0m
+[0;32mI (383864) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":383,"status":"active"}[0m
+[0;32mI (383864) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (383874) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (383884) esp-tls: Failed to open new connection[0m
+[1;31mE (383884) transport_base: Failed to open a new connection[0m
+[1;31mE (383894) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (383894) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (384694) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (384714) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (384714) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (384734) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (384734) wifi:Set status to INIT[0m
+[0;32mI (384734) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (384754) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (384754) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (387164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (387184) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (387184) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (387194) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (387204) wifi:Set status to INIT[0m
+[0;32mI (387204) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (387204) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (387214) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (388904) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (388904) IOT_APP: Preparing JSON...[0m
+[0;32mI (388904) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":388,"status":"active"}[0m
+[0;32mI (388904) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (388914) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (388924) esp-tls: Failed to open new connection[0m
+[1;31mE (388924) transport_base: Failed to open a new connection[0m
+[1;31mE (388934) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (388934) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (389634) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (389644) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (389644) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (389654) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (389674) wifi:Set status to INIT[0m
+[0;32mI (389674) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (389684) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (389684) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (392094) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (392114) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (392114) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (392134) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (392164) wifi:Set status to INIT[0m
+[0;32mI (392164) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (392174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (392174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (393944) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (393944) IOT_APP: Preparing JSON...[0m
+[0;32mI (393944) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":393,"status":"active"}[0m
+[0;32mI (393944) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (393954) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (393964) esp-tls: Failed to open new connection[0m
+[1;31mE (393964) transport_base: Failed to open a new connection[0m
+[1;31mE (393974) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (393974) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (394594) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (394604) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (394604) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (394614) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (394624) wifi:Set status to INIT[0m
+[0;32mI (394624) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (394624) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (394624) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (397044) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (397054) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (397064) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (397084) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (397084) wifi:Set status to INIT[0m
+[0;32mI (397084) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (397104) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (397104) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (398984) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (398984) IOT_APP: Preparing JSON...[0m
+[0;32mI (398984) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":398,"status":"active"}[0m
+[0;32mI (398984) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (398994) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (399004) esp-tls: Failed to open new connection[0m
+[1;31mE (399004) transport_base: Failed to open a new connection[0m
+[1;31mE (399014) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (399014) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (399514) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (399534) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (399534) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (399604) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (399624) wifi:Set status to INIT[0m
+[0;32mI (399624) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (399634) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (399634) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (402044) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (402094) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (402094) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (402114) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (402124) wifi:Set status to INIT[0m
+[0;32mI (402124) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (402134) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (402134) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (404024) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (404024) IOT_APP: Preparing JSON...[0m
+[0;32mI (404024) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":403,"status":"active"}[0m
+[0;32mI (404024) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (404034) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (404044) esp-tls: Failed to open new connection[0m
+[1;31mE (404044) transport_base: Failed to open a new connection[0m
+[1;31mE (404054) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (404054) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (404544) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (404564) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (404564) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (404574) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (404584) wifi:Set status to INIT[0m
+[0;32mI (404584) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (404584) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (404584) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (407004) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (407024) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (407024) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (407034) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (407044) wifi:Set status to INIT[0m
+[0;32mI (407044) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (407044) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (407054) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (409064) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (409064) IOT_APP: Preparing JSON...[0m
+[0;32mI (409064) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":408,"status":"active"}[0m
+[0;32mI (409064) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (409074) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (409084) esp-tls: Failed to open new connection[0m
+[1;31mE (409084) transport_base: Failed to open a new connection[0m
+[1;31mE (409094) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (409094) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (409474) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (409484) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (409484) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (409494) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (409504) wifi:Set status to INIT[0m
+[0;32mI (409504) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (409504) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (409504) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (411924) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (411934) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (411944) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (411954) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (411964) wifi:Set status to INIT[0m
+[0;32mI (411964) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (411984) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (411984) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (414104) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (414104) IOT_APP: Preparing JSON...[0m
+[0;32mI (414104) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":413,"status":"active"}[0m
+[0;32mI (414104) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (414114) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (414124) esp-tls: Failed to open new connection[0m
+[1;31mE (414124) transport_base: Failed to open a new connection[0m
+[1;31mE (414134) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (414134) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (414394) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (414414) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (414414) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (414424) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (414434) wifi:Set status to INIT[0m
+[0;32mI (414434) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (414434) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (414434) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (416854) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (416864) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (416874) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (416884) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (416894) wifi:Set status to INIT[0m
+[0;32mI (416894) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (416894) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (416894) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (419144) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (419144) IOT_APP: Preparing JSON...[0m
+[0;32mI (419144) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":418,"status":"active"}[0m
+[0;32mI (419144) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (419154) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (419164) esp-tls: Failed to open new connection[0m
+[1;31mE (419164) transport_base: Failed to open a new connection[0m
+[1;31mE (419174) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (419174) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (419314) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (419334) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (419334) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (419354) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (419364) wifi:Set status to INIT[0m
+[0;32mI (419364) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (419374) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (419374) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (421794) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (421794) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (421794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (421824) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (421824) wifi:Set status to INIT[0m
+[0;32mI (421824) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (421824) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (421834) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (424184) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (424184) IOT_APP: Preparing JSON...[0m
+[0;32mI (424184) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":423,"status":"active"}[0m
+[0;32mI (424184) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (424194) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (424204) esp-tls: Failed to open new connection[0m
+[1;31mE (424204) transport_base: Failed to open a new connection[0m
+[1;31mE (424214) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (424214) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (424254) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (424264) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (424264) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (424274) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (424284) wifi:Set status to INIT[0m
+[0;32mI (424284) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (424284) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (424284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (426704) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (426724) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (426724) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (426734) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (426744) wifi:Set status to INIT[0m
+[0;32mI (426744) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (426744) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (426754) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (429164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (429184) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (429184) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (429224) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (429224) IOT_APP: Preparing JSON...[0m
+[0;32mI (429224) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":428,"status":"active"}[0m
+[0;32mI (429224) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (429224) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (429234) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (429244) esp-tls: Failed to open new connection[0m
+[1;31mE (429254) transport_base: Failed to open a new connection[0m
+[1;31mE (429254) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (429264) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (429274) wifi:Set status to INIT[0m
+[0;32mI (429274) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (429284) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (429284) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (431704) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (431714) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (431714) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (431724) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (431734) wifi:Set status to INIT[0m
+[0;32mI (431734) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (431744) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (431744) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (434164) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (434174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (434174) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (434184) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (434194) wifi:Set status to INIT[0m
+[0;32mI (434194) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (434194) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (434194) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (434264) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (434264) IOT_APP: Preparing JSON...[0m
+[0;32mI (434264) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":433,"status":"active"}[0m
+[0;32mI (434264) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (434274) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (434284) esp-tls: Failed to open new connection[0m
+[1;31mE (434284) transport_base: Failed to open a new connection[0m
+[1;31mE (434294) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (434294) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (436614) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (436624) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (436634) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (436654) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (436654) wifi:Set status to INIT[0m
+[0;32mI (436654) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (436664) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (436664) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (439084) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (439094) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (439094) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (439124) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (439164) wifi:Set status to INIT[0m
+[0;32mI (439164) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (439174) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (439174) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (439304) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (439304) IOT_APP: Preparing JSON...[0m
+[0;32mI (439304) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":438,"status":"active"}[0m
+[0;32mI (439304) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (439314) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (439324) esp-tls: Failed to open new connection[0m
+[1;31mE (439324) transport_base: Failed to open a new connection[0m
+[1;31mE (439334) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (439334) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (441594) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (441604) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (441604) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (441614) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (441624) wifi:Set status to INIT[0m
+[0;32mI (441624) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (441624) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (441624) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (444044) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (444054) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (444064) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (444074) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (444084) wifi:Set status to INIT[0m
+[0;32mI (444084) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (444084) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (444084) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (444344) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (444344) IOT_APP: Preparing JSON...[0m
+[0;32mI (444344) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":443,"status":"active"}[0m
+[0;32mI (444344) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (444354) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (444364) esp-tls: Failed to open new connection[0m
+[1;31mE (444364) transport_base: Failed to open a new connection[0m
+[1;31mE (444374) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (444374) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (446504) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (446524) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (446524) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (446534) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (446544) wifi:Set status to INIT[0m
+[0;32mI (446544) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (446544) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (446544) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (448964) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (448974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (448984) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (449024) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (449074) wifi:Set status to INIT[0m
+[0;32mI (449074) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (449084) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (449084) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (449384) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (449384) IOT_APP: Preparing JSON...[0m
+[0;32mI (449384) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":448,"status":"active"}[0m
+[0;32mI (449384) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (449394) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (449404) esp-tls: Failed to open new connection[0m
+[1;31mE (449404) transport_base: Failed to open a new connection[0m
+[1;31mE (449414) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (449414) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (451504) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (451514) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (451514) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (451524) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (451534) wifi:Set status to INIT[0m
+[0;32mI (451534) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (451534) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (451544) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[1;31mE (453954) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (453974) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (453974) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (453994) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (453994) wifi:Set status to INIT[0m
+[0;32mI (453994) wifi:state: assoc -> init (0x1110)[0m
+[0;32mI (454014) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (454014) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (454424) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (454424) IOT_APP: Preparing JSON...[0m
+[0;32mI (454424) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":453,"status":"active"}[0m
+[0;32mI (454424) IOT_APP: Connecting to Firebase...[0m
+[1;31mE (454434) esp-tls: couldn't get hostname for :esp32lm35-5122c-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (454444) esp-tls: Failed to open new connection[0m
+[1;31mE (454444) transport_base: Failed to open a new connection[0m
+[1;31mE (454454) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (454454) IOT_APP: ❌ HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (456424) IOT_APP: ❌ Wi-Fi disconnected. Retrying...[0m
+[0;32mI (456444) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (456444) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (456454) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (456464) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (456574) wifi:connected with Anees, aid = 3, channel 6, BW20, bssid = 7a:db:6b:ab:ee:4b[0m
+[0;32mI (456574) wifi:security: WPA2-PSK, phy: bgn, rssi: -35[0m
+[0;32mI (456594) wifi:pm start, type: 1[0m
+
+[0;32mI (456594) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (456614) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (457624) esp_netif_handlers: sta ip: 172.20.10.5, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (457624) IOT_APP: ✅ Got IP: 172.20.10.5[0m
+[0;32mI (459464) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (459464) IOT_APP: Preparing JSON...[0m
+[0;32mI (459464) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":459,"status":"active"}[0m
+[0;32mI (459464) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (459484) wifi:<ba-add>idx:0 (ifx:0, 7a:db:6b:ab:ee:4b), tid:0, ssn:2, winSize:64[0m
+[0;32mI (459874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (460634) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (460644) IOT_APP: Response Length: 67[0m
+[0;32mI (460644) IOT_APP: ✅ Data uploaded successfully[0m
+[0;32mI (465644) LM35: Raw: 0, Temp: 9.50 °C[0m
+[0;32mI (465644) IOT_APP: Preparing JSON...[0m
+[0;32mI (465644) IOT_APP: JSON: {"temperature_c":9.5,"raw_adc":0,"timestamp":465,"status":"active"}[0m
+[0;32mI (465644) IOT_APP: Connecting to Firebase...[0m
+[0;32mI (465944) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (466864) IOT_APP: Firebase Status Code: 200[0m
+[0;32mI (466864) IOT_APP: Response Length: 67[0m
+[0;32mI (466864) IOT
