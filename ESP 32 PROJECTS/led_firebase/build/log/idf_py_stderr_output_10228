@@ -1,0 +1,7 @@
+Command: C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\anees\esp\v5.5.2\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\ESP 32 PROJECTS\led_firebase\build\led_firebase.elf C:\ESP 32 PROJECTS\led_firebase\build\bootloader\bootloader.elf --force-color -m 'C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\anees\esp\v5.5.2\esp-idf\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/anees/esp/v5.5.2/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/anees/esp/v5.5.2/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m

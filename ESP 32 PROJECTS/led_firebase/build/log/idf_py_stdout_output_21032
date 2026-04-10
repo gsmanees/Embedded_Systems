@@ -1,0 +1,255 @@
+Command: C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\anees\esp\v5.5.2\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\ESP 32 PROJECTS\led_firebase\build\led_firebase.elf C:\ESP 32 PROJECTS\led_firebase\build\bootloader\bootloader.elf --force-color -m 'C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\anees\esp\v5.5.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 10 2026 05:51:29[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f7ach (194476) map[0m
+[0;32mI (153) esp_image: segment 1: paddr=0003f7d4 vaddr=3ffb0000 size=00844h (  2116) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=9f158h (651608) map[0m
+[0;32mI (379) esp_image: segment 3: paddr=000df180 vaddr=3ffb0844 size=036f0h ( 14064) load[0m
+[0;32mI (384) esp_image: segment 4: paddr=000e2878 vaddr=40080000 size=17f9ch ( 98204) load[0m
+[0;32mI (423) esp_image: segment 5: paddr=000fa81c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (435) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (435) boot: Disabling RNG early entropy source...[0m
+[0;32mI (445) cpu_start: Multicore app[0m
+[0;32mI (454) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (454) cpu_start: Pro cpu start user code[0m
+[0;32mI (454) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (456) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     led_firebase[0m
+[0;32mI (464) app_init: App version:      1[0m
+[0;32mI (467) app_init: Compile time:     Apr 10 2026 05:50:17[0m
+[0;32mI (472) app_init: ELF file SHA256:  50c097048...[0m
+[0;32mI (477) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (484) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (488) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFB8840 len 000277C0 (157 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 40097F9C len 00008064 (32 KiB): IRAM[0m
+[0;33mW (526) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (538) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;33mW (545) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (558) main_task: Started on CPU0[0m
+[0;32mI (568) main_task: Calling app_main()[0m
+[0;32mI (598) wifi:wifi driver task: 3ffc0888, prio:23, stack:6656, core=0[0m
+[0;32mI (608) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (608) wifi:wifi certification version: v7.0[0m
+[0;32mI (608) wifi:config NVS flash: enabled[0m
+[0;32mI (608) wifi:config nano formatting: disabled[0m
+[0;32mI (618) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (618) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (618) wifi:Init management short buffer num: 32[0m
+[0;32mI (628) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (628) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (638) wifi:Init static rx buffer num: 10[0m
+[0;32mI (638) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: accept mbox: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5760[0m
+[0;32mI (658) wifi_init: tcp rx win: 5760[0m
+[0;32mI (658) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (668) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (678) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (678) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (768) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (788) wifi:mode : sta (f0:24:f9:0c:b0:b8)[0m
+[0;32mI (788) wifi:enable tsf[0m
+[0;32mI (788) LED_FIREBASE: LED GPIO Initialized[0m
+[0;32mI (788) LED_FIREBASE: WiFi Started...[0m
+[1;31mE (798) esp-tls: couldn't get hostname for :led-control-56a68-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (808) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (808) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (818) esp-tls: Failed to open new connection[0m
+[1;31mE (818) transport_base: Failed to open a new connection[0m
+[0;32mI (818) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (828) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (828) LED_FIREBASE: HTTP Request Failed[0m
+[0;32mI (838) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (868) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (878) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (878) LED_FIREBASE: WiFi Disconnected... Retrying[0m
+[1;31mE (2838) esp-tls: couldn't get hostname for :led-control-56a68-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2838) esp-tls: Failed to open new connection[0m
+[1;31mE (2838) transport_base: Failed to open a new connection[0m
+[1;31mE (2848) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (2848) LED_FIREBASE: HTTP Request Failed[0m
+[1;31mE (3298) LED_FIREBASE: WiFi Disconnected... Retrying[0m
+[0;32mI (3308) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3308) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3318) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3328) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3378) wifi:connected with Galaxy A13C800, aid = 1, channel 11, BW20, bssid = 52:88:35:7a:13:53[0m
+[0;32mI (3388) wifi:security: WPA2-PSK, phy: bgn, rssi: -35[0m
+[0;32mI (3388) wifi:pm start, type: 1[0m
+
+[0;32mI (3388) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3398) wifi:<ba-add>idx:0 (ifx:0, 52:88:35:7a:13:53), tid:0, ssn:0, winSize:64[0m
+[0;32mI (3488) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3488) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4428) esp_netif_handlers: sta ip: 10.121.252.129, mask: 255.255.255.0, gw: 10.121.252.27[0m
+[0;32mI (4428) LED_FIREBASE: Got IP: 10.121.252.129[0m
+[0;32mI (5378) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6458) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (6458) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (9058) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10148) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (10148) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (12748) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (13838) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (13838) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (16428) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (18338) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (18338) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (20938) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (22238) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (22238) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (24828) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (25918) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (25918) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (28518) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (29608) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (29608) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (32198) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (33288) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (33288) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (35908) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (37178) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (37178) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (39778) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (40868) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (40868) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (43468) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (44558) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (44558) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (47148) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (48238) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (48238) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (50838) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (51928) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (51928) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (54528) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (55618) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (55618) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (58248) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (59328) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (59328) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (61898) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (62988) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (62988) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (65788) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (66878) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (66878) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (69478) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (70568) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (70568) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (73158) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (74248) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (74248) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (76848) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (77938) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (77938) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (80548) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (81648) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (81648) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (84218) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (85308) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (85308) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (88108) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (89198) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (89198) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (91798) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (92888) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (92888) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (95488) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (96578) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (96578) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (99168) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (100468) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (100468) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (103058) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (104148) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (104148) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (106748) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (107838) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (107838) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (110438) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (111528) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (111528) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (114118) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (115208) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (115208) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (117808) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (118898) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (118898) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (121498) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (122578) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (122588) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (125178) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (126288) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (126288) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (128868) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (129958) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (129958) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (132558) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (133638) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (133638) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (136238) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (137328) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (137328) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (139928) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (141018) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (141018) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (143618) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (144698) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (144698) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (147508) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (148608) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (148608) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (151188) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (152278) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (152278) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (154878) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (155968) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (155968) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (158568) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (159648) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (159648) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (162248) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (163338) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (163338) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (166958) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (168048) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (168048) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (170648) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (171738) LED_FIREBASE: Firebase Clean Response: [0m
+[1;31mE (171738) LED_FIREBASE: JSON Parse Failed[0m
+[0;32mI (174328) esp-x509-crt-bundle: Certificate validated

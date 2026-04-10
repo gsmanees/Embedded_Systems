@@ -1,4 +1,5 @@
 {
     "C_Cpp.errorSquiggles": "enabled",
-    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe"
+    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe",
+    "cmake.sourceDirectory": "C:/EmbeddedSystemsProjectsEntri/ESP 32 PROJECTS/blink"
 }

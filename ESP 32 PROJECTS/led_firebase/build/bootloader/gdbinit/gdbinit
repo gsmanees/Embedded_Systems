@@ -1,0 +1,2 @@
+source C:/ESP 32 PROJECTS/led_firebase/build/bootloader/gdbinit/symbols
+source C:/ESP 32 PROJECTS/led_firebase/build/bootloader/gdbinit/connect

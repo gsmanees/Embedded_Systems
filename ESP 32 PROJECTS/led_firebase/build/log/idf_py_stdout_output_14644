@@ -1,0 +1,962 @@
+Command: C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\anees\esp\v5.5.2\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\ESP 32 PROJECTS\led_firebase\build\led_firebase.elf C:\ESP 32 PROJECTS\led_firebase\build\bootloader\bootloader.elf --force-color -m 'C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\anees\esp\v5.5.2\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 10 2026 05:51:29[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f5ech (194028) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0003f614 vaddr=3ffb0000 size=00a04h (  2564) load[0m
+[0;32mI (154) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=9ebb4h (650164) map[0m
+[0;32mI (378) esp_image: segment 3: paddr=000debdc vaddr=3ffb0a04 size=03530h ( 13616) load[0m
+[0;32mI (384) esp_image: segment 4: paddr=000e2114 vaddr=40080000 size=17f9ch ( 98204) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000fa0b8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (434) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (434) boot: Disabling RNG early entropy source...[0m
+[0;32mI (445) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (453) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (455) app_init: Application information:[0m
+[0;32mI (459) app_init: Project name:     led_firebase[0m
+[0;32mI (463) app_init: App version:      1[0m
+[0;32mI (467) app_init: Compile time:     Apr 10 2026 05:50:17[0m
+[0;32mI (472) app_init: ELF file SHA256:  616ecc26a...[0m
+[0;32mI (476) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (484) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (488) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB8840 len 000277C0 (157 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 40097F9C len 00008064 (32 KiB): IRAM[0m
+[0;33mW (526) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (537) spi_flash: detected chip: generic[0m
+[0;32mI (541) spi_flash: flash io: dio[0m
+[0;33mW (544) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (567) main_task: Calling app_main()[0m
+[0;32mI (597) wifi:wifi driver task: 3ffc0888, prio:23, stack:6656, core=0[0m
+[0;32mI (607) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (607) wifi:wifi certification version: v7.0[0m
+[0;32mI (607) wifi:config NVS flash: enabled[0m
+[0;32mI (607) wifi:config nano formatting: disabled[0m
+[0;32mI (617) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (617) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (617) wifi:Init management short buffer num: 32[0m
+[0;32mI (627) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (627) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (637) wifi:Init static rx buffer num: 10[0m
+[0;32mI (637) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (647) wifi_init: rx ba win: 6[0m
+[0;32mI (647) wifi_init: accept mbox: 6[0m
+[0;32mI (647) wifi_init: tcpip mbox: 32[0m
+[0;32mI (647) wifi_init: udp mbox: 6[0m
+[0;32mI (657) wifi_init: tcp mbox: 6[0m
+[0;32mI (657) wifi_init: tcp tx win: 5760[0m
+[0;32mI (657) wifi_init: tcp rx win: 5760[0m
+[0;32mI (667) wifi_init: tcp mss: 1440[0m
+[0;32mI (667) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (667) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (677) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (687) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (767) wifi:mode : sta (f0:24:f9:0c:b0:b8)[0m
+[0;32mI (767) wifi:enable tsf[0m
+[0;32mI (777) LED_FIREBASE: LED GPIO Initialized[0m
+[0;32mI (777) LED_FIREBASE: WiFi Started...[0m
+[1;31mE (777) esp-tls: couldn't get hostname for :led-control-56a68-default-rtdb.asia-southeast1.firebasedatabase.app: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (787) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (797) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (797) esp-tls: Failed to open new connection[0m
+[1;31mE (797) transport_base: Failed to open a new connection[0m
+[0;32mI (807) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (807) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (817) LED_FIREBASE: Failed to open HTTP connection[0m
+[0;32mI (817) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (837) wifi:connected with Galaxy A13C800, aid = 1, channel 11, BW20, bssid = 52:88:35:7a:13:53[0m
+[0;32mI (837) wifi:security: WPA2-PSK, phy: bgn, rssi: -27[0m
+[0;32mI (847) wifi:pm start, type: 1[0m
+
+[0;32mI (847) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (857) wifi:<ba-add>idx:0 (ifx:0, 52:88:35:7a:13:53), tid:0, ssn:0, winSize:64[0m
+[0;32mI (927) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (927) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1877) esp_netif_handlers: sta ip: 10.121.252.129, mask: 255.255.255.0, gw: 10.121.252.27[0m
+[0;32mI (1877) LED_FIREBASE: Got IP: 10.121.252.129[0m
+[0;32mI (3427) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4517) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (4517) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (4517) LED_FIREBASE: LED ON[0m
+[0;32mI (7117) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8207) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (8207) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (8207) LED_FIREBASE: LED ON[0m
+[0;32mI (10807) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (11687) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (11687) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (11687) LED_FIREBASE: LED ON[0m
+[0;32mI (14287) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (15167) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (15167) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (15167) LED_FIREBASE: LED ON[0m
+[0;32mI (17767) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (18647) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (18647) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (18647) LED_FIREBASE: LED ON[0m
+[0;32mI (21247) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (23567) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (23567) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (23567) LED_FIREBASE: LED ON[0m
+[0;32mI (26167) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (29097) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (29097) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (29097) LED_FIREBASE: LED ON[0m
+[0;32mI (31697) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (32597) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (32597) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (32597) LED_FIREBASE: LED ON[0m
+[0;32mI (35177) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (36057) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (36057) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (36057) LED_FIREBASE: LED OFF[0m
+[0;32mI (38657) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (39537) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (39537) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (39537) LED_FIREBASE: LED OFF[0m
+[0;32mI (42137) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (43027) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (43027) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (43027) LED_FIREBASE: LED OFF[0m
+[0;32mI (45617) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (46707) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (46707) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (46707) LED_FIREBASE: LED ON[0m
+[0;32mI (49307) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (50597) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (50597) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (50597) LED_FIREBASE: LED ON[0m
+[0;32mI (53197) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (54077) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (54077) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (54077) LED_FIREBASE: LED ON[0m
+[0;32mI (56677) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (57567) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (57567) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (57567) LED_FIREBASE: LED ON[0m
+[0;32mI (60157) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (61047) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (61047) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (61047) LED_FIREBASE: LED ON[0m
+[0;32mI (63647) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (64527) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (64527) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (64527) LED_FIREBASE: LED ON[0m
+[0;32mI (67127) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (68017) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (68017) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (68017) LED_FIREBASE: LED ON[0m
+[0;32mI (70607) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (71487) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (71487) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (71487) LED_FIREBASE: LED ON[0m
+[0;32mI (74087) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (74967) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (74967) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (74967) LED_FIREBASE: LED ON[0m
+[0;32mI (77567) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (78477) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (78477) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (78477) LED_FIREBASE: LED ON[0m
+[0;32mI (81047) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (81937) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (81937) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (81937) LED_FIREBASE: LED ON[0m
+[0;32mI (84527) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (85617) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (85617) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (85617) LED_FIREBASE: LED ON[0m
+[0;32mI (88217) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (89097) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (89107) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (89107) LED_FIREBASE: LED ON[0m
+[0;32mI (91697) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (92787) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (92787) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (92787) LED_FIREBASE: LED ON[0m
+[0;32mI (95387) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (97087) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (97087) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (97087) LED_FIREBASE: LED ON[0m
+[0;32mI (99697) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (100567) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (100567) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (100567) LED_FIREBASE: LED ON[0m
+[0;32mI (103377) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (104257) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (104257) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (104257) LED_FIREBASE: LED ON[0m
+[0;32mI (106857) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (107737) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (107737) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (107737) LED_FIREBASE: LED ON[0m
+[0;32mI (114837) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (118587) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (118597) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (118597) LED_FIREBASE: LED ON[0m
+[0;32mI (121187) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (122277) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (122277) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (122277) LED_FIREBASE: LED ON[0m
+[0;32mI (124877) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (125757) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (125757) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (125757) LED_FIREBASE: LED ON[0m
+[0;32mI (128357) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (129247) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (129247) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (129247) LED_FIREBASE: LED ON[0m
+[0;32mI (131837) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (132727) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (132727) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (132727) LED_FIREBASE: LED ON[0m
+[0;32mI (135317) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (136207) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (136207) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (136207) LED_FIREBASE: LED ON[0m
+[0;32mI (138807) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (139687) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (139687) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (139687) LED_FIREBASE: LED ON[0m
+[0;32mI (142287) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (143377) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (143377) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (143377) LED_FIREBASE: LED ON[0m
+[0;32mI (145767) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (146677) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (146677) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (146677) LED_FIREBASE: LED ON[0m
+[0;32mI (149247) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (151567) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (151567) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (151567) LED_FIREBASE: LED ON[0m
+[0;32mI (154167) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (155047) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (155047) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (155047) LED_FIREBASE: LED OFF[0m
+[0;32mI (157647) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (158527) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (158527) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (158527) LED_FIREBASE: LED OFF[0m
+[0;32mI (161127) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (162007) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (162007) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (162007) LED_FIREBASE: LED ON[0m
+[0;32mI (164607) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (166517) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (166517) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (166517) LED_FIREBASE: LED ON[0m
+[0;32mI (169137) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (170207) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (170207) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (170207) LED_FIREBASE: LED ON[0m
+[0;32mI (172797) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (173687) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (173687) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (173687) LED_FIREBASE: LED ON[0m
+[0;32mI (176497) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (177577) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (177577) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (177577) LED_FIREBASE: LED ON[0m
+[0;32mI (180177) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (181257) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (181257) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (181267) LED_FIREBASE: LED ON[0m
+[0;32mI (183857) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (184947) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (184947) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (184947) LED_FIREBASE: LED ON[0m
+[0;32mI (187547) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (188637) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (188637) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (188637) LED_FIREBASE: LED ON[0m
+[0;32mI (191327) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (192317) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (192317) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (192317) LED_FIREBASE: LED ON[0m
+[0;32mI (194927) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (195817) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (195817) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (195817) LED_FIREBASE: LED ON[0m
+[0;32mI (198397) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (199287) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (199287) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (199287) LED_FIREBASE: LED ON[0m
+[0;32mI (201877) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (202787) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (202787) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (202787) LED_FIREBASE: LED ON[0m
+[0;32mI (205407) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (207187) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (207187) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (207187) LED_FIREBASE: LED ON[0m
+[0;32mI (209667) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (210547) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (210547) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (210547) LED_FIREBASE: LED ON[0m
+[0;32mI (213167) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (214237) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (214237) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (214237) LED_FIREBASE: LED ON[0m
+[0;32mI (217247) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (218147) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (218147) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (218147) LED_FIREBASE: LED ON[0m
+[0;32mI (220767) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (223037) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (223037) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (223037) LED_FIREBASE: LED ON[0m
+[0;32mI (225637) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (226527) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (226527) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (226527) LED_FIREBASE: LED OFF[0m
+[0;32mI (229127) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (230227) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (230227) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (230227) LED_FIREBASE: LED OFF[0m
+[0;32mI (233007) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (234117) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (234117) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (234117) LED_FIREBASE: LED OFF[0m
+[0;32mI (236767) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (238007) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (238017) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (238017) LED_FIREBASE: LED ON[0m
+[0;32mI (240607) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (241467) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (241477) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (241477) LED_FIREBASE: LED ON[0m
+[0;32mI (244067) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (245157) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (245157) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (245157) LED_FIREBASE: LED ON[0m
+[0;32mI (247957) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (248867) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (248867) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (248867) LED_FIREBASE: LED ON[0m
+[0;32mI (251487) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (252737) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (252737) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (252737) LED_FIREBASE: LED ON[0m
+[0;32mI (255337) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (256467) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (256467) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (256467) LED_FIREBASE: LED ON[0m
+[0;32mI (259017) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (260517) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (260517) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (260517) LED_FIREBASE: LED ON[0m
+[0;32mI (263327) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (264227) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (264227) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (264227) LED_FIREBASE: LED ON[0m
+[0;32mI (266647) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (267687) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (267687) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (267687) LED_FIREBASE: LED ON[0m
+[0;32mI (270287) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (271187) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (271187) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (271187) LED_FIREBASE: LED ON[0m
+[0;32mI (273997) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (275077) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (275077) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (275077) LED_FIREBASE: LED ON[0m
+[0;32mI (277727) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (278867) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (278867) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (278867) LED_FIREBASE: LED ON[0m
+[0;32mI (281347) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (282227) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (282227) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (282227) LED_FIREBASE: LED ON[0m
+[0;32mI (284617) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (285707) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (285707) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (285707) LED_FIREBASE: LED ON[0m
+[0;32mI (288307) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (289397) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (289397) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (289397) LED_FIREBASE: LED ON[0m
+[0;32mI (291997) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (293287) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (293287) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (293287) LED_FIREBASE: LED ON[0m
+[0;32mI (295887) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (296787) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (296787) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (296797) LED_FIREBASE: LED ON[0m
+[0;32mI (299577) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (300777) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (300777) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (300777) LED_FIREBASE: LED ON[0m
+[0;32mI (303327) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (304577) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (304577) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (304577) LED_FIREBASE: LED ON[0m
+[0;32mI (307167) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (308317) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (308317) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (308317) LED_FIREBASE: LED ON[0m
+[0;32mI (311057) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (312167) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (312167) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (312167) LED_FIREBASE: LED ON[0m
+[0;32mI (314927) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (316037) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (316047) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (316047) LED_FIREBASE: LED ON[0m
+[0;32mI (318727) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (319827) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (319827) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (319827) LED_FIREBASE: LED ON[0m
+[0;32mI (323827) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (324627) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (324627) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (324627) LED_FIREBASE: LED ON[0m
+[0;32mI (327217) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (328507) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (328517) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (328517) LED_FIREBASE: LED ON[0m
+[0;32mI (331117) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (332207) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (332207) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (332207) LED_FIREBASE: LED ON[0m
+[0;32mI (334997) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (335907) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (335907) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (335907) LED_FIREBASE: LED OFF[0m
+[0;32mI (338527) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (339677) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (339677) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (339677) LED_FIREBASE: LED OFF[0m
+[0;32mI (342187) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (343877) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (343877) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (343877) LED_FIREBASE: LED OFF[0m
+[0;32mI (346477) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (347557) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (347557) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (347557) LED_FIREBASE: LED ON[0m
+[0;32mI (350367) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (351267) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (351277) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (351277) LED_FIREBASE: LED ON[0m
+[0;32mI (353897) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (355027) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (355027) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (355027) LED_FIREBASE: LED ON[0m
+[0;32mI (357947) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (359027) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (359027) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (359027) LED_FIREBASE: LED ON[0m
+[0;32mI (361827) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (363017) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (363017) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (363027) LED_FIREBASE: LED ON[0m
+[0;32mI (365557) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (366677) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (366677) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (366677) LED_FIREBASE: LED ON[0m
+[0;32mI (369217) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (370087) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (370087) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (370087) LED_FIREBASE: LED ON[0m
+[0;32mI (372887) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (373977) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (373977) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (373987) LED_FIREBASE: LED ON[0m
+[0;32mI (376417) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (377557) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (377567) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (377567) LED_FIREBASE: LED ON[0m
+[0;32mI (380067) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (381147) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (381147) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (381147) LED_FIREBASE: LED ON[0m
+[0;32mI (383747) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (384647) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (384647) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (384647) LED_FIREBASE: LED ON[0m
+[0;32mI (387297) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (388517) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (388517) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (388517) LED_FIREBASE: LED ON[0m
+[0;32mI (391147) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (396547) esp-tls: Failed to open new connection in specified timeout[0m
+[1;31mE (396547) transport_base: Failed to open a new connection[0m
+[1;31mE (396547) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (396547) LED_FIREBASE: Failed to open HTTP connection[0m
+[0;32mI (403407) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (404287) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (404287) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (404287) LED_FIREBASE: LED ON[0m
+[0;32mI (408117) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (410247) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (410247) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (410247) LED_FIREBASE: LED ON[0m
+[0;32mI (412897) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (414037) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (414037) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (414037) LED_FIREBASE: LED ON[0m
+[0;32mI (416507) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (417437) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (417447) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (417447) LED_FIREBASE: LED ON[0m
+[0;32mI (419997) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (420807) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (420807) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (420817) LED_FIREBASE: LED ON[0m
+[0;32mI (423287) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (424567) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (424567) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (424567) LED_FIREBASE: LED ON[0m
+[0;32mI (427157) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (428117) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (428117) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (428117) LED_FIREBASE: LED ON[0m
+[0;32mI (430647) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (431527) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (431527) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (431527) LED_FIREBASE: LED ON[0m
+[0;32mI (434327) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (435217) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (435217) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (435217) LED_FIREBASE: LED ON[0m
+[0;32mI (437807) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (438697) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (438697) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (438697) LED_FIREBASE: LED ON[0m
+[0;32mI (441297) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (442177) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (442177) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (442177) LED_FIREBASE: LED ON[0m
+[0;32mI (444777) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (445657) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (445657) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (445657) LED_FIREBASE: LED ON[0m
+[0;32mI (448457) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (449347) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (449347) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (449347) LED_FIREBASE: LED ON[0m
+[0;32mI (451937) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (453027) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (453027) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (453027) LED_FIREBASE: LED ON[0m
+[0;32mI (455627) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (456507) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (456517) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (456517) LED_FIREBASE: LED ON[0m
+[0;32mI (459107) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (460197) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (460197) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (460197) LED_FIREBASE: LED ON[0m
+[0;32mI (462797) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (463677) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (463677) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (463677) LED_FIREBASE: LED ON[0m
+[0;32mI (466277) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (467157) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (467167) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (467167) LED_FIREBASE: LED ON[0m
+[0;32mI (469757) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (470647) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (470647) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (470647) LED_FIREBASE: LED ON[0m
+[0;32mI (473237) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (474127) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (474127) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (474127) LED_FIREBASE: LED ON[0m
+[0;32mI (476727) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (477607) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (477607) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (477607) LED_FIREBASE: LED ON[0m
+[0;32mI (480207) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (481087) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (481087) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (481087) LED_FIREBASE: LED ON[0m
+[0;32mI (483897) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (484777) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (484777) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (484777) LED_FIREBASE: LED ON[0m
+[0;32mI (487387) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (488267) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (488267) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (488267) LED_FIREBASE: LED ON[0m
+[0;32mI (491057) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (492147) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (492147) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (492147) LED_FIREBASE: LED ON[0m
+[0;32mI (494947) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (496467) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (496467) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (496467) LED_FIREBASE: LED ON[0m
+[0;32mI (499077) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (500217) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (500217) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (500217) LED_FIREBASE: LED ON[0m
+[0;32mI (502917) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (506687) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (506687) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (506687) LED_FIREBASE: LED ON[0m
+[0;32mI (510737) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (512017) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (512017) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (512017) LED_FIREBASE: LED ON[0m
+[0;32mI (514607) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (515577) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (515577) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (515577) LED_FIREBASE: LED ON[0m
+[0;32mI (518107) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (519587) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (519587) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (519587) LED_FIREBASE: LED ON[0m
+[0;32mI (522397) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (523277) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (523277) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (523277) LED_FIREBASE: LED ON[0m
+[0;32mI (525957) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (527187) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (527187) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (527187) LED_FIREBASE: LED ON[0m
+[0;32mI (529797) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (530647) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (530647) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (530647) LED_FIREBASE: LED ON[0m
+[0;32mI (533247) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (534337) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (534337) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (534337) LED_FIREBASE: LED ON[0m
+[0;32mI (537137) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (539897) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (539897) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (539897) LED_FIREBASE: LED ON[0m
+[0;32mI (542687) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (543757) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (543757) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (543757) LED_FIREBASE: LED OFF[0m
+[0;32mI (546437) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (547647) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (547647) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (547647) LED_FIREBASE: LED OFF[0m
+[0;32mI (550277) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (551437) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (551437) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (551437) LED_FIREBASE: LED OFF[0m
+[0;32mI (553947) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (555017) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (555017) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (555017) LED_FIREBASE: LED ON[0m
+[0;32mI (558667) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (561657) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (561657) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (561657) LED_FIREBASE: LED ON[0m
+[0;32mI (564187) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (565057) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (565057) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (565057) LED_FIREBASE: LED ON[0m
+[0;32mI (567857) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (568947) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (568947) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (568947) LED_FIREBASE: LED OFF[0m
+[0;32mI (571547) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (572837) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (572837) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (572837) LED_FIREBASE: LED OFF[0m
+[0;32mI (577157) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (578387) LED_FIREBASE: Bytes Read = 15[0m
+[0;32mI (578387) LED_FIREBASE: Firebase Response = {"state":"OFF"}[0m
+[0;32mI (578387) LED_FIREBASE: LED OFF[0m
+[0;32mI (580997) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (582257) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (582257) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (582257) LED_FIREBASE: LED ON[0m
+[0;32mI (584857) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (585977) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (585977) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (585977) LED_FIREBASE: LED ON[0m
+[0;32mI (588767) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (589837) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (589837) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (589837) LED_FIREBASE: LED ON[0m
+[0;32mI (592517) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (593727) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (593727) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (593727) LED_FIREBASE: LED ON[0m
+[0;32mI (596357) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (598647) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (598647) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (598647) LED_FIREBASE: LED ON[0m
+[0;32mI (601057) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (602327) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (602327) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (602327) LED_FIREBASE: LED ON[0m
+[0;32mI (604927) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (605807) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (605807) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (605817) LED_FIREBASE: LED ON[0m
+[0;32mI (608427) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (609507) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (609507) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (609517) LED_FIREBASE: LED ON[0m
+[0;32mI (612217) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (613197) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (613197) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (613197) LED_FIREBASE: LED ON[0m
+[0;32mI (615777) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (617277) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (617277) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (617277) LED_FIREBASE: LED ON[0m
+[0;32mI (619887) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (620757) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (620757) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (620767) LED_FIREBASE: LED ON[0m
+[0;32mI (623357) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (624247) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (624247) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (624247) LED_FIREBASE: LED ON[0m
+[0;32mI (626937) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (627927) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (627927) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (627927) LED_FIREBASE: LED ON[0m
+[0;32mI (630527) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (631617) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (631617) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (631617) LED_FIREBASE: LED ON[0m
+[0;32mI (634217) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (635297) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (635307) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (635307) LED_FIREBASE: LED ON[0m
+[0;32mI (638107) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (639197) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (639197) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (639197) LED_FIREBASE: LED ON[0m
+[0;32mI (641787) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (642787) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (642787) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (642787) LED_FIREBASE: LED ON[0m
+[0;32mI (645307) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (646357) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (646357) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (646367) LED_FIREBASE: LED ON[0m
+[0;32mI (648957) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (649837) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (649847) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (649847) LED_FIREBASE: LED ON[0m
+[0;32mI (652537) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (653527) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (653527) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (653527) LED_FIREBASE: LED ON[0m
+[0;32mI (656127) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (657007) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (657007) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (657007) LED_FIREBASE: LED ON[0m
+[0;32mI (659627) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (660707) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (660707) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (660707) LED_FIREBASE: LED ON[0m
+[0;32mI (663417) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (664387) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (664387) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (664387) LED_FIREBASE: LED ON[0m
+[0;32mI (666987) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (668067) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (668067) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (668067) LED_FIREBASE: LED ON[0m
+[0;32mI (670667) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (671657) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (671657) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (671657) LED_FIREBASE: LED ON[0m
+[0;32mI (674147) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (675237) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (675237) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (675237) LED_FIREBASE: LED ON[0m
+[0;32mI (677837) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (678717) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (678717) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (678717) LED_FIREBASE: LED ON[0m
+[0;32mI (681317) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (682197) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (682197) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (682207) LED_FIREBASE: LED ON[0m
+[0;32mI (684797) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (685887) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (685887) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (685887) LED_FIREBASE: LED ON[0m
+[0;32mI (688487) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (689367) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (689367) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (689367) LED_FIREBASE: LED ON[0m
+[0;32mI (691967) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (693667) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (693667) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (693667) LED_FIREBASE: LED ON[0m
+[0;32mI (696267) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (697147) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (697157) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (697157) LED_FIREBASE: LED ON[0m
+[0;32mI (699747) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (700837) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (700837) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (700837) LED_FIREBASE: LED ON[0m
+[0;32mI (703437) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (704317) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (704317) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (704317) LED_FIREBASE: LED ON[0m
+[0;32mI (706917) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (708007) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (708007) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (708007) LED_FIREBASE: LED ON[0m
+[0;32mI (710807) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (711697) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (711697) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (711697) LED_FIREBASE: LED ON[0m
+[0;32mI (714287) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (715177) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (715177) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (715177) LED_FIREBASE: LED ON[0m
+[0;32mI (717767) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (718657) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (718657) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (718657) LED_FIREBASE: LED ON[0m
+[0;32mI (721077) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (722137) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (722137) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (722137) LED_FIREBASE: LED ON[0m
+[0;32mI (724737) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (725617) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (725617) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (725617) LED_FIREBASE: LED ON[0m
+[0;32mI (728217) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (729097) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (729097) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (729097) LED_FIREBASE: LED ON[0m
+[0;32mI (731697) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (734217) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (734217) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (734217) LED_FIREBASE: LED ON[0m
+[0;32mI (736817) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (737907) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (737907) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (737907) LED_FIREBASE: LED ON[0m
+[0;32mI (740507) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (742207) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (742207) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (742207) LED_FIREBASE: LED ON[0m
+[0;32mI (744807) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (745687) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (745687) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (745687) LED_FIREBASE: LED ON[0m
+[0;32mI (748287) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (749377) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (749377) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (749377) LED_FIREBASE: LED ON[0m
+[0;32mI (751977) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (752857) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (752857) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (752857) LED_FIREBASE: LED ON[0m
+[0;32mI (755457) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (756337) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (756337) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (756337) LED_FIREBASE: LED ON[0m
+[0;32mI (758937) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (759817) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (759817) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (759817) LED_FIREBASE: LED ON[0m
+[0;32mI (762417) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (763507) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (763517) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (763517) LED_FIREBASE: LED ON[0m
+[0;32mI (766107) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (767807) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (767807) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (767807) LED_FIREBASE: LED ON[0m
+[0;32mI (770407) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (771287) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (771287) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (771287) LED_FIREBASE: LED ON[0m
+[0;32mI (773887) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (774767) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (774767) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (774767) LED_FIREBASE: LED ON[0m
+[0;32mI (777367) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (778257) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (778257) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (778257) LED_FIREBASE: LED ON[0m
+[0;32mI (780857) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (781937) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (781937) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (781937) LED_FIREBASE: LED ON[0m
+[0;32mI (784537) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (785417) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (785417) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (785417) LED_FIREBASE: LED ON[0m
+[0;32mI (788017) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (789107) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (789107) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (789107) LED_FIREBASE: LED ON[0m
+[0;32mI (791707) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (793407) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (793407) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (793407) LED_FIREBASE: LED ON[0m
+[0;32mI (796007) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (796887) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (796887) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (796887) LED_FIREBASE: LED ON[0m
+[0;32mI (799487) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (800577) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (800577) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (800577) LED_FIREBASE: LED ON[0m
+[0;32mI (803177) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (804257) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (804257) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (804267) LED_FIREBASE: LED ON[0m
+[0;32mI (806857) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (807747) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (807747) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (807747) LED_FIREBASE: LED ON[0m
+[0;32mI (810337) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (811227) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (811227) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (811227) LED_FIREBASE: LED ON[0m
+[0;32mI (813827) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (814707) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (814707) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (814707) LED_FIREBASE: LED ON[0m
+[0;32mI (817307) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (819007) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (819007) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+[0;32mI (819007) LED_FIREBASE: LED ON[0m
+[0;32mI (821607) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (822487) LED_FIREBASE: Bytes Read = 14[0m
+[0;32mI (822487) LED_FIREBASE: Firebase Response = {"state":"ON"}[0m
+

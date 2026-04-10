@@ -1,0 +1,8 @@
+Command: ninja all
+[1/4] C:\Windows\system32\cmd.exe /C "cd /D "C:\ESP 32 PROJECTS\led_firebase\build\esp-idf\esptool_py" && C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/anees/esp/v5.5.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/ESP 32 PROJECTS/led_firebase/build/partition_table/partition-table.bin" "C:/ESP 32 PROJECTS/led_firebase/build/led_firebase.bin""
+led_firebase.bin binary size 0xea840 bytes. Smallest app partition is 0x100000 bytes. 0x157c0 bytes (8%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D "C:\ESP 32 PROJECTS\led_firebase\build\bootloader\esp-idf\esptool_py" && C:\Users\anees\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/anees/esp/v5.5.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "C:/ESP 32 PROJECTS/led_firebase/build/bootloader/bootloader.bin""
+Bootloader binary size 0x66c0 bytes. 0x940 bytes (8%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'
