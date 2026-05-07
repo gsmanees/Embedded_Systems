@@ -3,6 +3,7 @@
 int main()
 {
     int n, i, a=0, b=1, c;
+    // a=first, b=second, c=next
     printf("Enter number of terms: ");
     scanf("%d", &n);
 
