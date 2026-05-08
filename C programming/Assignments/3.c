@@ -21,3 +21,5 @@ int main()
 
      printf("Factorial of the number %d is : %d", n, f);
 }
+
+
