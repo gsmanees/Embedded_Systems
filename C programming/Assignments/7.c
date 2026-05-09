@@ -9,7 +9,7 @@ void countDigits(int num) {
         num = -num;
     }
 
-    // Handle 0 - direclyu pushes to 0th posision in array 
+    // Handle 0 - direcly pushes to 0th posision in array 
     if (num==0) {
         freq[0] = 1;
     }
