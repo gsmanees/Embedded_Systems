@@ -19,10 +19,10 @@
 #include <util/delay.h>
 
 /*
-bit0 - 
-bit1 - 
-bit2 - 
-bit3 - 
+bit0 - PORTB0
+bit1 - PORTB1
+bit2 - PORTB2
+bit3 - PORTB3
 
 */
 
