@@ -59,16 +59,13 @@ void delay_3s()
 
 int main(void)
 {
+	// macros for LED pins 
 	#define GreenLED PORTB5
 	#define OrangeLED PORTB4
 	#define RedLED PORTB3
-	
-	
-    
-    while (1) 
-    {
 		
-		DDRB|=(1<<DDB5)|(1<<DDB4)|(1<<DDB3);
+	// set LED pins as output 
+	DDRB|=(1<<DDB5)|(1<<DDB4)|(1<<DDB3);
 		
 		while (1)
 		{
@@ -83,6 +80,5 @@ int main(void)
 			PORTB&=~(1<<RedLED);
 			
 		}
-    }
 }
 
