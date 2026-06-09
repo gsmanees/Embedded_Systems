@@ -1,0 +1,39 @@
+int main(void)
+{
+    I2C1_GPIOInit();
+    I2C1_Init_Config();
+
+    I2C_PeripheralControl(I2C1, ENABLE);
+
+    uint8_t cmd[2];
+    uint8_t data[129];
+
+    while(1)
+    {
+        /* Page 0 */
+        cmd[0] = 0x00;
+        cmd[1] = 0xB0;
+        I2C_MasterSendData(&I2C1Handle, cmd, 2, 0x3C, I2C_DISABLE_SR);
+
+        cmd[1] = 0x00;
+        I2C_MasterSendData(&I2C1Handle, cmd, 2, 0x3C, I2C_DISABLE_SR);
+
+        cmd[1] = 0x10;
+        I2C_MasterSendData(&I2C1Handle, cmd, 2, 0x3C, I2C_DISABLE_SR);
+
+        data[0] = 0x40;
+
+        for(int i=1;i<129;i++)
+        {
+            data[i] = 0xFF;
+        }
+
+        I2C_MasterSendData(&I2C1Handle,
+                           data,
+                           129,
+                           0x3C,
+                           I2C_DISABLE_SR);
+
+        while(1);
+    }
+}

@@ -20,31 +20,53 @@
 #include "stm32f446xx.h"
 #include "stm32f446xx_gpio_driver.h"
 
+#define button GPIO_PIN_NO_13
+#define led GPIO_PIN_NO_5
 
-
-void delay (void)
+void delay(void)
 {
-	for(int i=0;i<50000;i++);
+	for (uint32_t i=0; i<50000; i++);
 }
+
 
 int main(void)
 {
+	// handles declaration
+	GPIO_Handle_t led_h;
+	GPIO_Handle_t button_h;
 
-	GPIO_Handle_t led;
-	led.pGPIOx = GPIOA;
-	led.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_5;
-	led.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
+	// LED configuration
+	led_h.pGPIOx = GPIOA;
+	led_h.GPIO_PinConfig.GPIO_PinNumber = led;
+	led_h.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
 
-	GPIO_Init(&led);
+	// button configuration
+	button_h.pGPIOx = GPIOC;
+	button_h.GPIO_PinConfig.GPIO_PinNumber = button;
+	button_h.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_IN;
 
-	GPIO_PeriClockControl(GPIOA, ENABLE);
+
+	// handles initialization
+	GPIO_Init(&led_h);
+	GPIO_Init(&button_h);
+
+	// clock enabling
+	GPIO_PeriClockControl(GPIOA, ENABLE); // led
+	GPIO_PeriClockControl(GPIOC, ENABLE); // button
+
 
 	while(1)
 	{
-		GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, 1);
-		delay();
-		GPIO_WriteToOutputPin(GPIOA, GPIO_PIN_NO_5, 0);
-		delay();
+		if (GPIO_ReadFromInputPin(GPIOC, button)==0)
+		{
+
+			delay();
+			while(GPIO_ReadFromInputPin(GPIOC, button)==0)
+			{
+				GPIO_ToggleOutputPin(GPIOA, led);
+
+			}
+		}
 	}
 
 }
