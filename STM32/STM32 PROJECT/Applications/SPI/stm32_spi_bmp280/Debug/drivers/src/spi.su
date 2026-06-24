@@ -1,0 +1,5 @@
+../drivers/src/spi.c:13:6:BMP280_SPI_GPIOInits	24	static
+../drivers/src/spi.c:41:6:BMP280_SPI_Init	40	static
+../drivers/src/spi.c:59:9:SPI_Transfer	16	static
+../drivers/src/spi.c:67:6:BMP280_WriteRegister	16	static
+../drivers/src/spi.c:75:6:BMP280_ReadRegisters	32	static

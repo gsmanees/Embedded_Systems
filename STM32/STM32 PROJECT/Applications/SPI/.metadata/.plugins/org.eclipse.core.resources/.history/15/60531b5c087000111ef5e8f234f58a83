@@ -1,0 +1,17 @@
+/*
+ * bmp280.c
+ *
+ *  Created on: 25-Jun-2026
+ *      Author: anees
+ */
+#include "bmp280.h"
+
+// Global Structure to hold factory calibration data
+struct {
+    uint16_t dig_T1; int16_t dig_T2; int16_t dig_T3;
+    uint16_t dig_P1; int16_t dig_P2; int16_t dig_P3;
+    int16_t  dig_P4; int16_t dig_P5; int16_t dig_P6;
+    int16_t  dig_P7; int16_t dig_P8; int16_t dig_P9;
+} calib;
+
+int32_t t_fine; // Global variable used by the compensation formulas

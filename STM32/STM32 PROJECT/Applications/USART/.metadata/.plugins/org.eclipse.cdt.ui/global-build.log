@@ -1,11 +1,54 @@
-06:45:41 **** Incremental Build of configuration Debug for project usart ****
+03:10:45 **** Clean-only build of configuration Debug for project usart ****
+make -j12 clean 
+rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Drivers/src/stm32f446xx_gpio_driver.cyclo ./Drivers/src/stm32f446xx_gpio_driver.d ./Drivers/src/stm32f446xx_gpio_driver.o ./Drivers/src/stm32f446xx_gpio_driver.su
+rm -rf default.size.stdout usart.elf usart.list usart.map
+ 
+03:10:46 **** Build of configuration Debug for project usart ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32 PROJECT/Applications/USART/usart/Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32 PROJECT/Applications/USART/usart/Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32 PROJECT/Applications/USART/usart/Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Drivers/src/stm32f446xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32 PROJECT/Applications/USART/usart/Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/src/stm32f446xx_gpio_driver.d" -MT"Drivers/src/stm32f446xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/src/stm32f446xx_gpio_driver.o"
+../Src/main.c: In function 'main':
+../Src/main.c:62:25: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   62 |                         while(GPIO_ReadFromInputPin(GPIOC, button)==0);
+      |                         ^~~~~
+../Src/main.c:63:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+   63 |                                 delay();
+      |                                 ^~~~~
+../Src/main.c:66:33: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   66 |                                 printf("\nButton pressed");
+      |                                 ^~~~~~
+../Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include "stm32f446xx_gpio_driver.h"
+  +++ |+#include <stdio.h>
+   22 | 
+../Src/main.c:66:33: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   66 |                                 printf("\nButton pressed");
+      |                                 ^~~~~~
+../Src/main.c:66:33: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "usart.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\STM32 PROJECT\Applications\USART\usart\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="usart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: usart.elf
+ 
+arm-none-eabi-size  usart.elf 
+arm-none-eabi-objdump -h -S usart.elf  > "usart.list"
+   text	   data	    bss	    dec	    hex	filename
+   6428	     92	   1900	   8420	   20e4	usart.elf
+Finished building: default.size.stdout
+ 
+Finished building: usart.list
+ 
+03:10:56 **** Incremental Build of configuration Debug for project usart ****
 make -j12 all 
 arm-none-eabi-size  usart.elf 
    text	   data	    bss	    dec	    hex	filename
    6428	     92	   1900	   8420	   20e4	usart.elf
 Finished building: default.size.stdout
  
-06:46:11 **** Incremental Build of configuration Debug for project usart ****
+03:10:59 **** Incremental Build of configuration Debug for project usart ****
 make -j12 all 
 arm-none-eabi-size  usart.elf 
    text	   data	    bss	    dec	    hex	filename

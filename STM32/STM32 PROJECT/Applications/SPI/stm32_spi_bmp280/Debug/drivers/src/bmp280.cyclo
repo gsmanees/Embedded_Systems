@@ -1,0 +1,4 @@
+../drivers/src/bmp280.c:24:6:BMP280_ReadCalibrationData	1
+../drivers/src/bmp280.c:44:6:BMP280_WakeUp	1
+../drivers/src/bmp280.c:58:9:BMP280_Compensate_Temperature	1
+../drivers/src/bmp280.c:69:10:BMP280_Compensate_Pressure	2

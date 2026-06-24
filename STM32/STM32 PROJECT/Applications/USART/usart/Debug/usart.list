@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000037ab  00000000  00000000  00004b90  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00001e05  00000000  00000000  0000833b  2**0
+ 17 .debug_line   00001e09  00000000  00000000  0000833b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0000d3e9  00000000  00000000  0000a140  2**0
+ 18 .debug_str    0000d3e9  00000000  00000000  0000a144  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00017529  2**0
+ 19 .comment      00000043  00000000  00000000  0001752d  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000cfc  00000000  00000000  0001756c  2**2
+ 20 .debug_frame  00000cfc  00000000  00000000  00017570  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000076  00000000  00000000  00018268  2**0
+ 21 .debug_line_str 00000076  00000000  00000000  0001826c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -995,26 +995,24 @@ int main(void)
  800083e:	2b00      	cmp	r3, #0
  8000840:	d1f8      	bne.n	8000834 <main+0x40>
 		{
-
-			delay();
- 8000842:	f7ff ffc2 	bl	80007ca <delay>
-			while(GPIO_ReadFromInputPin(GPIOC, button)==0)
- 8000846:	e006      	b.n	8000856 <main+0x62>
+			while(GPIO_ReadFromInputPin(GPIOC, button)==0);
+ 8000842:	bf00      	nop
+ 8000844:	210d      	movs	r1, #13
+ 8000846:	4809      	ldr	r0, [pc, #36]	@ (800086c <main+0x78>)
+ 8000848:	f7ff ff94 	bl	8000774 <GPIO_ReadFromInputPin>
+ 800084c:	4603      	mov	r3, r0
+ 800084e:	2b00      	cmp	r3, #0
+ 8000850:	d0f8      	beq.n	8000844 <main+0x50>
+				delay();
+ 8000852:	f7ff ffba 	bl	80007ca <delay>
 			{
 				GPIO_ToggleOutputPin(GPIOA, led);
- 8000848:	2105      	movs	r1, #5
- 800084a:	4807      	ldr	r0, [pc, #28]	@ (8000868 <main+0x74>)
- 800084c:	f7ff ffa8 	bl	80007a0 <GPIO_ToggleOutputPin>
+ 8000856:	2105      	movs	r1, #5
+ 8000858:	4803      	ldr	r0, [pc, #12]	@ (8000868 <main+0x74>)
+ 800085a:	f7ff ffa1 	bl	80007a0 <GPIO_ToggleOutputPin>
 				printf("\nButton pressed");
- 8000850:	4807      	ldr	r0, [pc, #28]	@ (8000870 <main+0x7c>)
- 8000852:	f000 f9c7 	bl	8000be4 <iprintf>
-			while(GPIO_ReadFromInputPin(GPIOC, button)==0)
- 8000856:	210d      	movs	r1, #13
- 8000858:	4804      	ldr	r0, [pc, #16]	@ (800086c <main+0x78>)
- 800085a:	f7ff ff8b 	bl	8000774 <GPIO_ReadFromInputPin>
- 800085e:	4603      	mov	r3, r0
- 8000860:	2b00      	cmp	r3, #0
- 8000862:	d0f1      	beq.n	8000848 <main+0x54>
+ 800085e:	4804      	ldr	r0, [pc, #16]	@ (8000870 <main+0x7c>)
+ 8000860:	f000 f9c0 	bl	8000be4 <iprintf>
 		if (GPIO_ReadFromInputPin(GPIOC, button)==0)
  8000864:	e7e6      	b.n	8000834 <main+0x40>
  8000866:	bf00      	nop

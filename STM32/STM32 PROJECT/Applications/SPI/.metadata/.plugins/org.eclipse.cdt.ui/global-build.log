@@ -1,0 +1,14 @@
+02:30:00 **** Incremental Build of configuration Debug for project stm32_spi_bmp280 ****
+make -j12 all 
+arm-none-eabi-size  stm32_spi_bmp280.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10572	     92	   1932	  12596	   3134	stm32_spi_bmp280.elf
+Finished building: default.size.stdout
+ 
+02:30:21 **** Incremental Build of configuration Debug for project stm32_spi_bmp280 ****
+make -j12 all 
+arm-none-eabi-size  stm32_spi_bmp280.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10572	     92	   1932	  12596	   3134	stm32_spi_bmp280.elf
+Finished building: default.size.stdout
+ 

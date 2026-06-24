@@ -1,17 +1,10 @@
-23:44:56 **** Incremental Build of configuration Debug for project driverDev ****
+17:55:49 **** Build of configuration Debug for project driverDev ****
 make -j12 all 
-arm-none-eabi-gcc "../Drivers/Src/stm32f446xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/driverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f446xx_spi_driver.d" -MT"Drivers/Src/stm32f446xx_spi_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/Src/stm32f446xx_spi_driver.o"
-arm-none-eabi-gcc -o "driverDev.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\driverDev\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="driverDev.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: driverDev.elf
- 
 arm-none-eabi-size  driverDev.elf 
-arm-none-eabi-objdump -h -S driverDev.elf  > "driverDev.list"
    text	   data	    bss	    dec	    hex	filename
     712	      0	   1568	   2280	    8e8	driverDev.elf
 Finished building: default.size.stdout
  
-Finished building: driverDev.list
- 
 
-23:44:58 Build Finished. 0 errors, 0 warnings. (took 2s.463ms)
+17:55:52 Build Finished. 0 errors, 0 warnings. (took 2s.564ms)
 

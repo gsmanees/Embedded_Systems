@@ -1,0 +1,7 @@
+1782340967031	Move 'Core' to 'oled_i2c'
+1782340971917	Move 'Debug' to 'oled_i2c'
+1782340975377	Move 'Drivers' to 'oled_i2c'
+1782340979074	Move 'oled.ioc' to 'oled_i2c'
+1782340981742	Move 'oled.launch' to 'oled_i2c'
+1782340986536	Move 'STM32F446RETX_FLASH.ld' to 'oled_i2c'
+1782340991386	Move 'STM32F446RETX_RAM.ld' to 'oled_i2c'

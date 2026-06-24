@@ -1,18 +1,11 @@
-22:06:52 **** Build of configuration Debug for project LED_Toggle_Button ****
+02:47:07 **** Incremental Build of configuration Debug for project LED_Toggle_Button ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/EmbeddedSystemsProjectsEntri/STM32/STM32 PROJECT/Applications/GPIO/LED_Toggle_Button/Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "LED_Toggle_Button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\EmbeddedSystemsProjectsEntri\STM32\STM32 PROJECT\Applications\GPIO\LED_Toggle_Button\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_Toggle_Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: LED_Toggle_Button.elf
- 
 arm-none-eabi-size  LED_Toggle_Button.elf 
-arm-none-eabi-objdump -h -S LED_Toggle_Button.elf  > "LED_Toggle_Button.list"
    text	   data	    bss	    dec	    hex	filename
    2168	      0	   1568	   3736	    e98	LED_Toggle_Button.elf
 Finished building: default.size.stdout
  
-Finished building: LED_Toggle_Button.list
- 
-22:07:05 **** Incremental Build of configuration Debug for project LED_Toggle_Button ****
+02:47:15 **** Incremental Build of configuration Debug for project LED_Toggle_Button ****
 make -j12 all 
 arm-none-eabi-size  LED_Toggle_Button.elf 
    text	   data	    bss	    dec	    hex	filename

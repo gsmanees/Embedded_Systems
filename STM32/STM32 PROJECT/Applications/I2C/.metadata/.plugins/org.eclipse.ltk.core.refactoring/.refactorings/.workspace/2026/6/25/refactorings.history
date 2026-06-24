@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;bmp280_i2c&apos;" deleteContents="false" description="Delete resource &apos;bmp280_i2c&apos;" element1="/bmp280_i2c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1781916053408"/>
+</session>

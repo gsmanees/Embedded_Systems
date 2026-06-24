@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;stm32f446xx_gpio_driver.h, stm32f446xx_i2c_driver.h, stm32f446xx_rcc_driver.h, stm32f446xx_spi_driver.h, stm32f446xx_usart_driver.h, stm32f446xx.h&apos; to &apos;Inc&apos;" description="Move 6 resources to &apos;Inc&apos;" destination="Drivers/Inc" element1="Drivers/stm32f446xx_gpio_driver.h" element2="Drivers/stm32f446xx_i2c_driver.h" element3="Drivers/stm32f446xx_rcc_driver.h" element4="Drivers/stm32f446xx_spi_driver.h" element5="Drivers/stm32f446xx_usart_driver.h" element6="Drivers/stm32f446xx.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="6" stamp="1781916587208" updateReferences="true"/>
+</session>

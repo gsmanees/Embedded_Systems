@@ -1,0 +1,24 @@
+/*
+ * bmp280.h
+ *
+ *  Created on: 25-Jun-2026
+ *      Author: anees
+ */
+
+#include "stm32f446xx.h"
+#ifndef INC_BMP280_H_
+#define INC_BMP280_H_
+
+#define BMP280_REG_ID        0xD0
+#define BMP280_REG_CTRL_MEAS 0xF4
+#define BMP280_REG_CONFIG    0xF5
+#define BMP280_REG_CALIB     0x88
+#define BMP280_REG_DATA      0xF7
+
+void BMP280_ReadCalibrationData(void);
+void BMP280_WakeUp(void);
+int32_t BMP280_Compensate_Temperature(int32_t adc_T);
+uint32_t BMP280_Compensate_Pressure(int32_t adc_P);
+
+
+#endif /* INC_BMP280_H_ */

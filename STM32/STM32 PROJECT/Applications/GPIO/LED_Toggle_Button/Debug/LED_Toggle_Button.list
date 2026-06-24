@@ -935,23 +935,22 @@ int main(void)
  8000792:	2b00      	cmp	r3, #0
  8000794:	d1f8      	bne.n	8000788 <main+0x40>
 		{
-
-			delay();
- 8000796:	f7ff ffc2 	bl	800071e <delay>
 			while(GPIO_ReadFromInputPin(GPIOC, button)==0)
- 800079a:	e003      	b.n	80007a4 <main+0x5c>
+ 8000796:	e001      	b.n	800079c <main+0x54>
+				delay();
+ 8000798:	f7ff ffc1 	bl	800071e <delay>
+			while(GPIO_ReadFromInputPin(GPIOC, button)==0)
+ 800079c:	210d      	movs	r1, #13
+ 800079e:	4806      	ldr	r0, [pc, #24]	@ (80007b8 <main+0x70>)
+ 80007a0:	f7ff ff92 	bl	80006c8 <GPIO_ReadFromInputPin>
+ 80007a4:	4603      	mov	r3, r0
+ 80007a6:	2b00      	cmp	r3, #0
+ 80007a8:	d0f6      	beq.n	8000798 <main+0x50>
 			{
 				GPIO_ToggleOutputPin(GPIOA, led);
- 800079c:	2105      	movs	r1, #5
- 800079e:	4805      	ldr	r0, [pc, #20]	@ (80007b4 <main+0x6c>)
- 80007a0:	f7ff ffa8 	bl	80006f4 <GPIO_ToggleOutputPin>
-			while(GPIO_ReadFromInputPin(GPIOC, button)==0)
- 80007a4:	210d      	movs	r1, #13
- 80007a6:	4804      	ldr	r0, [pc, #16]	@ (80007b8 <main+0x70>)
- 80007a8:	f7ff ff8e 	bl	80006c8 <GPIO_ReadFromInputPin>
- 80007ac:	4603      	mov	r3, r0
- 80007ae:	2b00      	cmp	r3, #0
- 80007b0:	d0f4      	beq.n	800079c <main+0x54>
+ 80007aa:	2105      	movs	r1, #5
+ 80007ac:	4801      	ldr	r0, [pc, #4]	@ (80007b4 <main+0x6c>)
+ 80007ae:	f7ff ffa1 	bl	80006f4 <GPIO_ToggleOutputPin>
 		if (GPIO_ReadFromInputPin(GPIOC, button)==0)
  80007b2:	e7e9      	b.n	8000788 <main+0x40>
  80007b4:	40020000 	.word	0x40020000

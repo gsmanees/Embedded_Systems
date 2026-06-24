@@ -59,9 +59,8 @@ int main(void)
 	{
 		if (GPIO_ReadFromInputPin(GPIOC, button)==0)
 		{
-
-			delay();
-			while(GPIO_ReadFromInputPin(GPIOC, button)==0)
+			while(GPIO_ReadFromInputPin(GPIOC, button)==0);
+				delay();
 			{
 				GPIO_ToggleOutputPin(GPIOA, led);
 				printf("\nButton pressed");
