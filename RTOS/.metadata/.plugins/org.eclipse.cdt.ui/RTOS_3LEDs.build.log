@@ -1,0 +1,10 @@
+06:02:20 **** Incremental Build of configuration Debug for project RTOS_3LEDs ****
+make -j12 all 
+arm-none-eabi-size  RTOS_3LEDs.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22996	    108	  79196	 102300	  18f9c	RTOS_3LEDs.elf
+Finished building: default.size.stdout
+ 
+
+06:02:20 Build Finished. 0 errors, 0 warnings. (took 248ms)
+
