@@ -1,4 +1,4 @@
-02:30:21 **** Incremental Build of configuration Debug for project stm32_spi_bmp280 ****
+07:35:49 **** Incremental Build of configuration Debug for project stm32_spi_bmp280 ****
 make -j12 all 
 arm-none-eabi-size  stm32_spi_bmp280.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  stm32_spi_bmp280.elf
 Finished building: default.size.stdout
  
 
-02:30:21 Build Finished. 0 errors, 0 warnings. (took 206ms)
+07:35:49 Build Finished. 0 errors, 0 warnings. (took 252ms)
 
