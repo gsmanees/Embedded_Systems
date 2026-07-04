@@ -26,15 +26,15 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/FreeRTOS.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/FreeRTOSConfig.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/projdefs.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/portable.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/deprecated_definitions.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/mpu_wrappers.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/task.h \
- C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/list.h
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/FreeRTOS.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/FreeRTOSConfig.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/projdefs.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/portable.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/deprecated_definitions.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/mpu_wrappers.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/task.h \
+ /home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/list.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -63,12 +63,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/FreeRTOS.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/FreeRTOSConfig.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/projdefs.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/portable.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/deprecated_definitions.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/mpu_wrappers.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/task.h:
-C:/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/list.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/FreeRTOS.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/FreeRTOSConfig.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/projdefs.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/portable.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/deprecated_definitions.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/mpu_wrappers.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/task.h:
+/home/anees/EmbeededSystemProjects/Embedded_Systems/RTOS/RTOS_3LEDs/ThirdParty/FreeRTOS/include/list.h:
