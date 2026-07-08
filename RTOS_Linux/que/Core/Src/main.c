@@ -18,9 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
+
+#include "FreeRTOS.h"
 #include "task.h"
+#include "queue.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -51,11 +55,19 @@
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
+static void ReadButton(void * pvParameters);
+static void ledToggle(void * pvParameters);
 
 /* USER CODE END PFP */
 
+
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+TaskHandle_t buttonHandle;
+	TaskHandle_t ledHandle;
+	QueueHandle_t xLedQueue;
+	BaseType_t xReturned;
 
 /* USER CODE END 0 */
 
@@ -67,8 +79,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	TaskHandle_t button_task;
-	TaskHandle_t led_task;
+
 
   /* USER CODE END 1 */
 
@@ -92,23 +103,44 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
-  xReturned = xTaskCreate(
-                      ReadButton,       /* Function that implements the task. */
-                      "button_task",          /* Text name for the task. */
-                      STACK_SIZE,      /* Stack size in words, not bytes. */
-                      ( void * ) 1,    /* Parameter passed into the task. */
-                      tskIDLE_PRIORITY,/* Priority at which the task is created. */
-                      &xHandle );      /* Used to pass out the created task's handle. */
-
-
-
-  /* USER CODE END 2 */
-
   /* Initialize leds */
   BSP_LED_Init(LED2);
 
   /* Initialize USER push-button, will be used to trigger an interrupt each time it's pressed.*/
   BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
+
+  xLedQueue = xQueueCreate(5, sizeof(uint8_t));
+
+  configASSERT(xLedQueue != NULL);
+
+  xReturned = xTaskCreate(
+                      ReadButton,       /* Function that implements the task. */
+                      "button_task",          /* Text name for the task. */
+                      100,  /* Stack size in words, not bytes. */
+                      "Button pressed",    /* Parameter passed into the task. */
+                      2,/* Priority at which the task is created. */
+                      &buttonHandle );      /* Used to pass out the created task's handle. */
+
+  configASSERT(xReturned == pdPASS);
+
+
+  xReturned = xTaskCreate(
+                      ledToggle,       /* Function that implements the task. */
+                      "led_task",          /* Text name for the task. */
+                      100,  /* Stack size in words, not bytes. */
+                      "LED Toggle",    /* Parameter passed into the task. */
+                      2,/* Priority at which the task is created. */
+                      &ledHandle );      /* Used to pass out the created task's handle. */
+
+  configASSERT(xReturned == pdPASS);
+
+
+  vTaskStartScheduler();
+
+
+  /* USER CODE END 2 */
+
+
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -217,6 +249,55 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+static void ReadButton(void *pvParameters)
+{
+    uint8_t ledState;
+
+    while (1)
+    {
+        /* Read Button (PC13 is Active LOW on Nucleo boards) */
+        if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET)
+        {
+            ledState = 1;
+        }
+        else
+        {
+            ledState = 0;
+        }
+
+        /* Send the state to the queue */
+        xQueueSend(xLedQueue, &ledState, portMAX_DELAY);
+
+        /* Button debounce */
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}
+
+
+static void ledToggle(void *pvParameters)
+{
+    uint8_t ledState;
+
+    while (1)
+    {
+        /* Wait until data is available in the queue */
+        if (xQueueReceive(xLedQueue, &ledState, portMAX_DELAY) == pdPASS)
+        {
+            if (ledState == 1)
+            {
+                HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+                printf("Button pressed\n");
+
+            }
+            else
+            {
+                HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+                printf("Button released\n");
+            }
+        }
+    }
+}
 
 /* USER CODE END 4 */
 
